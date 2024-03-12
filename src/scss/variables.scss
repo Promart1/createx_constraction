@@ -1,0 +1,62 @@
+$main-white: rgba(255, 255, 255, 1);
+$primary: rgba(255, 90, 48, 1);
+$success: rgba(3, 206, 164, 1);
+$danger: rgba(255, 66, 66, 1);
+$gray-200: rgba(244, 245, 246, 1);
+$gray-300: rgba(229, 232, 237, 1);
+$gray-600: rgba(154, 156, 165, 1);
+$gray-700: rgba(120, 122, 128, 1);
+$gray-800: rgba(66, 69, 81, 1);
+$gray-900: rgba(30, 33, 44, 1);
+
+
+$mobile: 376px;
+$l-mobile: 425px;
+$m-mobile: 560px;
+$s-tablet: 695px;
+$m-tablet: 730px;
+$l-tablet: 767px;
+$tablet: 768px;
+$desktop: 992px;
+$l-desktop: 1200px;
+$LapTop: 1440px;
+
+@mixin respond-to($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+////h1
+
+$main-heading-font-size: 46px;
+$main-heading-font-weight: 700;
+$main-heading-color: $gray-900;
+
+@mixin main-heading {
+    font-size: $main-heading-font-size;
+    font-weight: $main-heading-font-weight;
+    color: $main-heading-color;
+}
+
+
+$secondary-heading-font-size: 32px;
+$secondary-heading-font-weight: 700;
+$secondary-heading-color: $gray-900;
+
+@mixin secondary-heading {
+    font-size: $secondary-heading-font-size;
+    font-weight: $secondary-heading-font-weight;
+    color: $secondary-heading-color;
+}
+
+
+$third-heading-font-size: 28px;
+$third-heading-font-weight: 700;
+$third-heading-color: $gray-900;
+
+@mixin third-heading {
+    font-size: $third-heading-font-size;
+    font-weight: $third-heading-font-weight;
+    color: $third-heading-color;
+}

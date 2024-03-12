@@ -1,19 +1,72 @@
 
 // @import "fonts";
+@import "nullStyle.scss";
+@import "variables.scss";
 
 
 body {
-    background-color: aquamarine;
+font-family: "Ubuntu", sans-serif;
+font-weight: 400;
+margin: 0;
+background: $main-white;
 }
 
-@media (max-width: 768) {
-    body {
-        background-color: black;
-    }
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-@media (max-width: 768) {
-    body {
-        color: black;
+//////////////header///////////////////////
+
+.header {
+
+    &__wrapper {
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 23px;
+    padding-bottom: 20px;
     }
+    
+&__social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+&__social-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: $gray-900;
+    transition: color 0.3s ease;
+
+    a:hover {
+        color: $primary;
+    }
+}
+}
+
+.nav {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-left: -13%;
+    }
+
+    &__item {
+font-size: 16px;
+font-weight: 700;
+color: $gray-800;
+transition: color 0.3s ease;
+    }
+
+        &__item:hover {
+            color: $gray-600;
+        }
 }

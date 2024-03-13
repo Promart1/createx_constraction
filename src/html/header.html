@@ -1,59 +1,76 @@
+<div class="menu--close"></div>
 <header class="header">
   <div class="container">
     <div class="header__wrapper">
-    <div class="header__logo-wrapper">
-      <a href="./">
-        <img src="@img/icons/logo.svg" alt="logo" />
-      </a>
+      <div class="header__logo-wrapper">
+        <a href="./">
+          <img src="@img/icons/logo.svg" alt="logo" />
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__close">
+            <button class="menu__close-btn">
+              <img src="@img/icons/cross.svg" alt="Close cross" />
+            </button>
+          </li>
+
+          <li class="menu__item">
+            <a href="./">About Us</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./">Services</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./">Work</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./">News</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./">Contacts</a>
+          </li>
+
+          <li class="menu__item">
+            <ul class="header__social-wrapper">
+              <li class="header__social-list">
+                <div class="header__img-wrapper">
+                  <img src="@img/icons/iphone.svg" alt="phone" />
+
+                  <div class="header__content-wrapper header__dropdown">
+                    <p class="header__content-text">Call us</p>
+                    <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="header__social-list">
+                <div class="header__img-wrapper">
+                  <img src="@img/icons/chat.svg" alt="chat" />
+
+                  <div class="header__content-wrapper header__dropdown">
+                    <p class="header__content-text">Talk to us</p>
+                    <p>
+                      <a href="mailto:hello@createx.com">hello@createx.com</a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="menu__button">
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+      </button>
     </div>
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="./">About Us</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="./">Services</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="./">Work</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="./">News</a>
-        </li>
-
-        <li class="nav__item">
-          <a href="./">Contacts</a>
-        </li>
-      </ul>
-    </nav>
-
-    <ul class="header__social-wrapper">
-      <li class="header__social-list">
-        <div class="header__img-wrapper">
-          <img src="@img/icons/iphone.svg" alt="phone" />
-        </div>
-
-        <div class="header__content-wrapper">
-          <p class="header__content-text">Call us</p>
-          <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
-        </div>
-      </li>
-
-      <li class="header__social-list">
-        <div class="header__img-wrapper">
-          <img src="@img/icons/chat.svg" alt="chat" />
-        </div>
-
-        <div class="header__content-wrapper">
-          <p class="header__content-text">Talk to us</p>
-          <p><a href="mailto:hello@createx.com">hello@createx.com</a></p>
-        </div>
-      </li>
-    </ul>
-  </div>
   </div>
 </header>

@@ -67,7 +67,7 @@ body {
       transform: translate(-50%, -50%);
       background-color: rgba(255, 255, 255, 0);
       padding: 10px;
-      width: 150px;
+      width: 160px;
       z-index: 101;
       transition: background-color 0.5s ease;
     }
@@ -270,6 +270,31 @@ body {
   }
 }
 
-
 ////////////application////////////////////
 
+.application {
+  &__inner {
+
+
+    img {
+      width: 100%;
+      // object-fit: cover;
+      max-height: 826px;
+      object-position: center;
+      display: block;
+      margin: 0 auto;
+    position: relative;
+    }
+  }
+
+  &__form {
+    width: 495px;
+    height: 666px;
+    border-radius: 4px;
+    background: $main-white;
+    position: absolute;
+    top: 175%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

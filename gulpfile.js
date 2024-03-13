@@ -30,6 +30,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
+
 export { svgSprive };
 
 const fonts = gulp.series(otfToTtf, TtfToWoff, fontsStyle);

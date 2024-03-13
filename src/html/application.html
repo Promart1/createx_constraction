@@ -3,28 +3,31 @@
     <img src="@img/application-image.jpg" alt="aplication-img" />
 <div class="application__form">
     <h3 class="application__title">A quick way to discuss details</h3>
-    <form>
+    <form id="form" action="">
       <div>
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required />
+        <label for="name" class="application__subtitle">Name*</label>
+        <input type="text" id="name" name="name" class="application__input" placeholder="Your name"/>
       </div>
       <div>
-        <label for="phone">Phone*</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+        <label for="phone" class="application__subtitle">Phone*</label>
+        <input type="tel" id="phone" name="phone" class="application__input" placeholder="Your phone number"/>
       </div>
       <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your working email"/>
+        <label for="email" class="application__subtitle">Email</label>
+        <input type="email" id="email" name="email" class="application__input" placeholder="Your working email"/>
       </div>
       <div>
-        <label for="message">Message*</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+        <label for="message" class="application__subtitle">Message*</label>
+        <textarea id="message" name="message" rows="4"class="application__input" placeholder="Your message"></textarea>
       </div>
-      <div>
-        <input type="checkbox" id="agree" name="agree" required />
-        <label for="agree">I agree to receive communications from Createx Construction Bureau.</label>
+      <div class="application__checkbox-wrapper">
+        <input type="checkbox" class="application__checkbox" id="agree" name="agree" required />
+        <span class="application__custom-checkbox"></span>
+        <label for="agree" class="application__agree">I agree to receive communications from Createx Construction Bureau.</label>
       </div>
-      <button type="submit">send request</button>
+      <div class="application__btn-wrapper">
+      <button type="submit" class="application__btn">send request</button>
+    </div>
     </form>
     </div>
   </div>

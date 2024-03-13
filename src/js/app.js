@@ -1,3 +1,5 @@
+// const { validate } = require("webpack");
+
 const menuBtn = document.querySelector('.menu__button');
 const menuClose = document.querySelector('.menu__close');
 const menuList = document.querySelector('.menu__list');
@@ -25,3 +27,27 @@ menuShadow.addEventListener('click', (event) => {
         console.log("close");
     }
 });
+
+
+/////validation form
+
+// import validator from 'validator';
+
+// const form = document.querySelector("#form");
+// const nameInput = document.querySelector("#name");
+// const phoneInput = document.querySelector("#phone");
+// const messageInput = document.querySelector("#message");
+// const emailInput = document.querySelector("#email");
+
+// let isFormValid = false;
+
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+
+//   validateInputs()
+// })
+
+// const validateInputs = () => {
+//   const name = validator.isEmpty(nameInput.value.trim());
+//   console.log(name)
+// }

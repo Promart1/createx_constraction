@@ -60,3 +60,15 @@ $third-heading-color: $gray-900;
     font-weight: $third-heading-font-weight;
     color: $third-heading-color;
 }
+
+@mixin main-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: $main-white;
+    line-height: 44px;
+    padding: 0 32px;
+    background: $primary;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}

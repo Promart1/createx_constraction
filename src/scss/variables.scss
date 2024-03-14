@@ -30,35 +30,58 @@ $LapTop: 1440px;
 ////h1
 
 $main-heading-font-size: 46px;
-$main-heading-font-weight: 700;
+$heading-font-weight: 700;
 $main-heading-color: $gray-900;
 
 @mixin main-heading {
     font-size: $main-heading-font-size;
-    font-weight: $main-heading-font-weight;
+    font-weight: $heading-font-weight;
     color: $main-heading-color;
 }
 
+///h2
 
 $secondary-heading-font-size: 32px;
-$secondary-heading-font-weight: 700;
 $secondary-heading-color: $gray-900;
 
 @mixin secondary-heading {
     font-size: $secondary-heading-font-size;
-    font-weight: $secondary-heading-font-weight;
+    font-weight: $heading-font-weight;
     color: $secondary-heading-color;
 }
 
 
+///h3
+
 $third-heading-font-size: 28px;
-$third-heading-font-weight: 700;
 $third-heading-color: $gray-900;
 
 @mixin third-heading {
     font-size: $third-heading-font-size;
-    font-weight: $third-heading-font-weight;
+    font-weight: $heading-font-weight;
     color: $third-heading-color;
+}
+
+///h4
+
+$forth-heading-font-size: 24px;
+
+
+@mixin fourth-heading {
+    font-size: $forth-heading-font-size;
+    font-weight: $heading-font-weight;
+    
+}
+
+///h6
+
+$sixth-heading-font-size: 16px;
+
+
+@mixin sixth-heading {
+    font-size: $sixth-heading-font-size;
+    font-weight: $heading-font-weight;
+
 }
 
 @mixin main-btn {

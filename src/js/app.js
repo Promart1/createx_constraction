@@ -51,3 +51,46 @@ menuShadow.addEventListener('click', (event) => {
 //   const name = validator.isEmpty(nameInput.value.trim());
 //   console.log(name)
 // }
+
+
+
+///////slider
+
+var menu = ['01', '02', '03', '04']
+var mySwiper = new Swiper('.swiper-container', {
+  slidesPerView: 1, // Показувати лише один слайд зараз
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+// var mySwiper = new Swiper('.swiper-container', {
+//     // Налаштування слайдера
+//     slidesPerView: 1, // Кількість видимих слайдів
+//     spaceBetween: 30, // Відступ між слайдами
+//     loop: true, // Зациклювання слайдів
+
+//     // Пагінація
+//     pagination: {
+//       el: '.swiper-pagination', // Клас елементу для пагінації
+//       clickable: true, // Робить пагінацію клікабельною
+//     },
+
+//     // Навігація кнопками
+//     navigation: {
+//       nextEl: '.swiper-button-next', // Клас елементу для кнопки "Next"
+//       prevEl: '.swiper-button-prev', // Клас елементу для кнопки "Prev"
+//     },
+//   });

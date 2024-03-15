@@ -5,11 +5,98 @@
 })
 <body>
   @@include('html/header.html',{})
-    <mail class="main">
-        
+    <main class="main">
+    <!----------------------- HERO_SECTION -------------------->
+<section class="hero">
+  <div class="hero__inner">
+    <img src="@img/bg-image.jpg" alt="bg">
+
+<div class="swiper-container hero__swiper-container">
+    
+    <div class="swiper-wrapper">
+       
+        <div class="swiper-slide hero__swiper-slide">
+          <div class="hero__content">
+      <h1 class="hero__title">CREATE<span>X</span> CONSTRUCTION</h1>
+      <p class="hero__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis. </p>
+      <div class="hero__btn-wrapper">
+        <a href="#" class="hero__sec-btn">LEARN MORE ABOUT US</a>
+        <button class="hero__main-btn">SUBMIT REQUEST</button>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="swiper-slide hero__swiper-slide">
+          <div class="hero__content">
+      <h1 class="hero__title">SERVICES</h1>
+      <p class="hero__text">If you are looking for a full-service construction company, look to Createx Construction Bureau. We are doing our best to be a partner for all of your construction needs.</p>
+      <div class="hero__btn-wrapper">
+        <a href="#" class="hero__sec-btn">LEARN MORE</a>
+        <button class="hero__main-btn">SUBMIT REQUEST</button>
+      </div>
+    </div>
+   
+  </div>
+
+      <div class="swiper-slide hero__swiper-slide">
+        <div class="hero__content">
+      <h1 class="hero__title">OUR WORK</h1>
+      <p class="hero__text">Our portfolio represents 20 years of construction experience backed by a passion for perfect client service, quality and innovations in consctuction industry.</p>
+      <div class="hero__btn-wrapper">
+        <a href="#" class="hero__sec-btn">Learn more</a>
+        <button class="hero__main-btn">SUBMIT REQUEST</button>
+      </div>
+    </div>
+      </div>
+      <div class="swiper-slide hero__swiper-slide">
+        <div class="hero__content">
+      <h1 class="hero__title">NEWS</h1>
+      <p class="hero__text">Stay tuned with our news, expert tips and articles.</p>
+      <div class="hero__btn-wrapper">
+        <a href="#" class="hero__sec-btn">Learn more</a>
+        <button class="hero__main-btn">SUBMIT REQUEST</button>
+      </div>
+    </div>
+      </div>
+    </div>
+    
+    <div class="swiper-pagination hero__swiper-pagination"></div>
+    
+    
+    <div class="swiper-button-prev hero__swiper-button-prev">
+      <img src="@img/icons/Left.svg" alt="left">
+    </div>
+    <div class="swiper-button-next hero__swiper-button-next">
+      <img src="@img/icons/Right.svg" alt="right">
+    </div>
+</div>
+
+    
+  </div>
+</section>
+
+<section class="video">
+<div class="container">
+  <div class="video__inner">
+    <h2 class="video__title">We are Createx Construction Bureau</h2>
+    <p class="video__text">We are rightfully considered to be the best construction company in the USA.</p>
+  <div class="video__block">
+  <iframe
+    src="https://www.youtube.com/embed/EoOQLZzQuvk?autoplay=1&loop=1&playlist=EoOQLZzQuvk"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  ></iframe>
+</div>
+  </div>
+</div>
+</section>
+
  @@include('html/application.html',{})
-    </mail>
+    </main>
   @@include('html/footer.html',{})
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/app.min.js"></script>
 </body>
 </html>

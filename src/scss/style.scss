@@ -55,6 +55,56 @@ body {
   }
 }
 
+.view-all {
+  &__btn-wrapper {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    &__btn-subtitle {
+      @include third-heading;
+    }
+  
+    &__btn {
+      @include main-btn;
+      padding: 0 46px;
+      line-height: 52px;
+      transition: background 0.5s ease;
+    }
+  
+    &__btn:hover {
+      background: $danger;
+    }
+
+        @include respond-to($m-tablet) {
+    
+          &__btn-subtitle {
+            font-size: 21px;
+          }
+        }
+    
+        @include respond-to($s-mobile) {
+    
+          &__btn-wrapper {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 40px;
+          }
+    
+          &__btn-subtitle {
+            margin-bottom: 25px;
+          }
+
+          &__btn {
+            padding: 11px 36px;
+          }
+        }
+}
+
 //////////////header///////////////////////
 
 .header {
@@ -1271,7 +1321,7 @@ body {
     top: 0;
     right: 0;
     height: 100%;
-    width: 3px;
+    width: 1px;
     background: linear-gradient(
       270.01deg,
       rgba(218, 219, 221, 0) 0%,
@@ -1490,60 +1540,87 @@ body {
     padding-top: 89px;
     border: 1px solid $gray-300;
     border-radius: 1px;
-    // background-color: $main-white;
+    background: $main-white;
     cursor: pointer;
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-    box-shadow: 0px 12px 10px -6px rgba(154, 156, 165, 0.04);
-    box-shadow: 0px 30px 24px -10px rgba(154, 156, 165, 0.05);
-    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+        0px 80px 80px -20px rgba(154, 156, 165, 0.08);
     margin-right: auto;
     margin-left: auto;
-    background-image: url('@img/image.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      position: relative;
+      z-index: 3;
+     
+      
 
-    img {
+
+    img{
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 24px;
       fill: blue;
-    }
-
-    img:hover {
-      fill: black;
+      z-index: 4;
     }
 
     p {
       @include lead-bold;
+      z-index: 4;
+      transition: color 0.5s ease;
     }
   }
 
-  &__item:hover {
+
+  &__item:hover::after {
+    background: $gray-900;
+    opacity: 60%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     p {
       color: $main-white;
     }
 
-    background-image: url('@img/application-image.jpg');
+    background-image: url('@img/image.svg');
   }
 
-  &__btn-wrapper {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
+    &__item:hover {
+img {
+  filter: brightness(600%) grayscale(0%);
+}
+  
+      p {
+        color: $main-white;
+      }
+  
+     
+    }
 
-  &__btn-subtitle {
-    @include third-heading;
-  }
+  // &__btn-wrapper {
+  //   margin-top: 80px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 40px;
+  // }
 
-  &__btn {
-    @include main-btn;
-    padding: 0 46px;
-    line-height: 52px;
-  }
+  // &__btn-subtitle {
+  //   @include third-heading;
+  // }
+
+  // &__btn {
+  //   @include main-btn;
+  //   padding: 0 46px;
+  //   line-height: 52px;
+  //   transition: background 0.5s ease;
+  // }
+
+  // &__btn:hover {
+  //   background: $danger;
+  // }
 
   @include respond-to($l-desktop) {
     &__inner {

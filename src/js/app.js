@@ -76,21 +76,22 @@ var mySwiper = new Swiper('.swiper-container', {
     },
   })
 
-// var mySwiper = new Swiper('.swiper-container', {
-//     // Налаштування слайдера
-//     slidesPerView: 1, // Кількість видимих слайдів
-//     spaceBetween: 30, // Відступ між слайдами
-//     loop: true, // Зациклювання слайдів
 
-//     // Пагінація
-//     pagination: {
-//       el: '.swiper-pagination', // Клас елементу для пагінації
-//       clickable: true, // Робить пагінацію клікабельною
-//     },
 
-//     // Навігація кнопками
-//     navigation: {
-//       nextEl: '.swiper-button-next', // Клас елементу для кнопки "Next"
-//       prevEl: '.swiper-button-prev', // Клас елементу для кнопки "Prev"
-//     },
-//   });
+//////video
+
+const videoImg = document.querySelector('.video__img');
+const videoFrame = document.querySelector('.video__block');
+const videoBtn = document.querySelector('.video__btn');
+
+videoImg.addEventListener('click', () => {
+  videoImg.classList.toggle('video__img-hidden');
+  videoFrame.classList.toggle('video__frame');
+   videoBtn.classList.toggle('video__img-hidden');
+});
+
+videoBtn.addEventListener('click', () => {
+  videoBtn.classList.toggle('video__img-hidden');
+  videoFrame.classList.toggle('video__frame');
+  videoImg.classList.toggle('video__img-hidden');
+});

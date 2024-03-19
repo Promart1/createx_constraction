@@ -117,3 +117,12 @@ $sixth-heading-font-size: 16px;
     color: $gray-700;
     line-height: 26px;
 }
+
+//small/regular
+
+@mixin small-regular {
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-700;
+    line-height: 21px;
+}

@@ -57,7 +57,7 @@ menuShadow.addEventListener('click', (event) => {
 ///////slider
 
 var menu = ['01', '02', '03', '04']
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('#hero-swiper', {
   slidesPerView: 1, // Показувати лише один слайд зараз
     loop: true,
     // If we need pagination
@@ -95,3 +95,35 @@ videoBtn.addEventListener('click', () => {
   videoFrame.classList.toggle('video__frame');
   videoImg.classList.toggle('video__img-hidden');
 });
+
+
+///portfolio slider
+
+var swiper = new Swiper("#portfolio-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+      
+        
+        navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+        
+  breakpoints: {
+            1920: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+       
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    },
+      });

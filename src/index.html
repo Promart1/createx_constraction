@@ -9,7 +9,7 @@
         <div class="hero__inner">
           <img src="@img/bg-image.jpg" alt="bg" />
 
-          <div class="swiper-container hero__swiper-container">
+          <div class="swiper-container hero__swiper-container" id="hero-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide hero__swiper-slide">
                 <div class="hero__content">
@@ -214,41 +214,150 @@
       <!----------------------- SERVICES_SECTION -------------------->
 
       <section class="services">
-        <img src="@img/mater-bgjpg.jpg" alt="bg" class="services__bg"/>
+        <img src="@img/mater-bgjpg.jpg" alt="bg" class="services__bg" />
         <div class="services__inner">
           <h2 class="block__title">Our services</h2>
           <p class="block__text services__text">
-           Createx Construction Bureau is a construction giant with a full range of construction services.
+            Createx Construction Bureau is a construction giant with a full
+            range of construction services.
           </p>
           <ul class="services__list">
+            <li class="services__item">
+              <img
+                src="@img/icons/ic-construction.svg"
+                alt="Construction"
+                class="services__item-icon"
+              />
+              <p>Construction</p>
+            </li>
 
             <li class="services__item">
-                <img src="@img/icons/ic-construction.svg" alt="Construction" class="services__item-icon">
-                <p>Construction</p>
-              
+              <img
+                src="@img/icons/ic-plan.svg"
+                alt="plan"
+                class="services__item-icon"
+              />
+              <p>Project Development</p>
             </li>
 
-             <li class="services__item">
-                <img src="@img/icons/ic-plan.svg" alt="plan" class="services__item-icon">
-                <p>Project Development</p>
-              
+            <li class="services__item">
+              <img
+                src="@img/icons/ic-pantone.svg"
+                alt="pantone"
+                class="services__item-icon"
+              />
+              <p>Interior Design</p>
             </li>
 
-             <li class="services__item">
-                <img src="@img/icons/ic-pantone.svg" alt="pantone" class="services__item-icon">
-                <p>Interior Design</p>
+            <li class="services__item">
+              <img
+                src="@img/icons/ic-painting.svg"
+                alt="painting"
+                class="services__item-icon"
+              />
+              <p>Repairs</p>
             </li>
-
-             <li class="services__item">
-                <img src="@img/icons/ic-painting.svg" alt="painting" class="services__item-icon">
-                <p>Repairs</p>
-            </li>
-
           </ul>
 
           <div class="view-all__btn-wrapper">
-            <h3 class="view-all__btn-subtitle">Learn more about our services</h3>
+            <h3 class="view-all__btn-subtitle">
+              Learn more about our services
+            </h3>
             <a href="" class="view-all__btn">View services</a>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------- PORTFOLIO_SECTION -------------------->
+
+      <section class="portfolio">
+        <div class="container">
+          <div class="portfolio__inner">
+            <h2 class="portfolio__title">Browse our selected projects and learn more about our work</h2>
+
+            <div class="swiper-container portfolio__swiper-container" id="portfolio-swiper">
+              <div class="swiper-wrapper portfolio__swiper-wrapper">
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/red-build.jpg" alt="red build" />
+                    <div>
+                    <h5 class="portfolio__block-title">Red Finger Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                   </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/cubes-build.png" alt="Cubes Building" />
+                    <div>
+                    <h5 class="portfolio__block-title">Cubes Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                   </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/pencil.png" alt="pencil build" />
+                    <div>
+                    <h5 class="portfolio__block-title">Red Finger Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                    </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/pencil.png" alt="pencil build" />
+                    <div>
+                    <h5 class="portfolio__block-title">Red Finger Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                    </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+               <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/red-build.jpg" alt="red build" />
+                    <div>
+                    <h5 class="portfolio__block-title">Red Finger Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                   </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/cubes-build.png" alt="Cubes Building" />
+                    <div>
+                    <h5 class="portfolio__block-title">Cubes Building</h5>
+                    <p class="portfolio__block-subtitle">Business Centers</p>
+                   </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Додайте навігацію слайдера, якщо потрібно -->
+              
+
+               <div class="swiper-button-prev portfolio__swiper-button-prev">
+              <img src="@img/icons/Left.svg" alt="left" />
+            </div>
+            <div class="swiper-button-next portfolio__swiper-button-next">
+              <img src="@img/icons/Right.svg" alt="right" />
+            </div>
+
+            <!-- <div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div> -->
+            </div>
+
+            <div class="view-all__btn-wrapper portfolio__btn-wrapper">
+            <h3 class="view-all__btn-subtitle">
+             Explore all our works
+            </h3>
+            <a href="" class="view-all__btn">View portfolio</a>
+          </div>
           </div>
         </div>
       </section>

@@ -57,52 +57,50 @@ body {
 
 .view-all {
   &__btn-wrapper {
-      margin-top: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-  
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__btn-subtitle {
+    @include third-heading;
+  }
+
+  &__btn {
+    @include main-btn;
+    padding: 0 46px;
+    line-height: 52px;
+    transition: background 0.5s ease;
+  }
+
+  &__btn:hover {
+    background: $danger;
+  }
+
+  @include respond-to($m-tablet) {
     &__btn-subtitle {
-      @include third-heading;
+      font-size: 21px;
     }
-  
+  }
+
+  @include respond-to($s-mobile) {
+    &__btn-wrapper {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 40px;
+    }
+
+    &__btn-subtitle {
+      margin-bottom: 25px;
+    }
+
     &__btn {
-      @include main-btn;
-      padding: 0 46px;
-      line-height: 52px;
-      transition: background 0.5s ease;
+      padding: 11px 36px;
     }
-  
-    &__btn:hover {
-      background: $danger;
-    }
-
-        @include respond-to($m-tablet) {
-    
-          &__btn-subtitle {
-            font-size: 21px;
-          }
-        }
-    
-        @include respond-to($s-mobile) {
-    
-          &__btn-wrapper {
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 40px;
-          }
-    
-          &__btn-subtitle {
-            margin-bottom: 25px;
-          }
-
-          &__btn {
-            padding: 11px 36px;
-          }
-        }
+  }
 }
 
 //////////////header///////////////////////
@@ -1543,18 +1541,15 @@ body {
     background: $main-white;
     cursor: pointer;
     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
-        0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-        0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-        0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 80px 80px -20px rgba(154, 156, 165, 0.08);
     margin-right: auto;
     margin-left: auto;
-      position: relative;
-      z-index: 3;
-     
-      
+    position: relative;
+    z-index: 3;
 
-
-    img{
+    img {
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 24px;
@@ -1569,11 +1564,10 @@ body {
     }
   }
 
-
   &__item:hover::after {
     background: $gray-900;
     opacity: 60%;
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -1584,20 +1578,18 @@ body {
       color: $main-white;
     }
 
-    background-image: url('@img/image.svg');
+    background-image: url("@img/image.svg");
   }
 
-    &__item:hover {
-img {
-  filter: brightness(600%) grayscale(0%);
-}
-  
-      p {
-        color: $main-white;
-      }
-  
-     
+  &__item:hover {
+    img {
+      filter: brightness(600%) grayscale(0%);
     }
+
+    p {
+      color: $main-white;
+    }
+  }
 
   // &__btn-wrapper {
   //   margin-top: 80px;
@@ -1666,4 +1658,203 @@ img {
       margin-bottom: 25px;
     }
   }
+}
+
+.portfolio {
+  &__inner {
+    margin-top: 120px;
+    position: relative;
+  }
+
+  &__title {
+    @include main-heading;
+    max-width: 705px;
+    margin-bottom: 60px;
+    line-height: 60px;
+  }
+
+  &__block {
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    background: $main-white;
+    width: 390px;
+    padding-bottom: 24px;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      object-fit: cover;
+      height: 345px;
+    }
+
+    div {
+      background-color: $main-white;
+      padding-top: 16px;
+      padding-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    h5 {
+      @include lead-bold;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    p {
+      @include small-regular;
+      text-align: center;
+    }
+
+    button {
+      height: 44px;
+      background: $main-white;
+      color: $primary;
+      text-transform: uppercase;
+      border: 1px solid $primary;
+      border-radius: 4px;
+      padding: 0 32px;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.5s, bottom 0.5s;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background: $primary;
+      color: $main-white;
+    }
+  }
+
+  &__block:hover {
+    button {
+      opacity: 1;
+      bottom: 24px;
+    }
+
+    div {
+      transform: translateY(-70px);
+    }
+  }
+
+  &__swiper-container {
+    max-width: 1230px;
+    overflow: hidden;
+  }
+
+  // &__swiper-wrapper {
+  //   overflow: hidden;
+  // }
+
+  &__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__swiper-button-prev:hover,
+  &__swiper-button-next:hover {
+    width: 48px;
+    height: 48px;
+    background-color: $primary;
+    border-radius: 50px;
+
+    img {
+      filter: brightness(600%) grayscale(0%);
+    }
+  }
+
+  &__swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 12%);
+    right: var(--swiper-navigation-sides-offset, 50px);
+    left: auto;
+  }
+
+  &__swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 12%);
+    right: var(--swiper-navigation-sides-offset, 0);
+    left: auto;
+  }
+
+    @include respond-to($l-desktop) {
+      &__title {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+            &__swiper-button-prev {
+              top: var(--swiper-navigation-top-offset, 90%);
+              
+            }
+      
+            &__swiper-button-next {
+              top: var(--swiper-navigation-top-offset, 90%);
+              
+            }
+
+            &__btn-wrapper {
+              margin-top: 90px;
+            }
+
+    }
+
+        @include respond-to($s-mobile) {
+&__title {
+  font-size: 32px;
+  line-height: 35px;
+}
+
+&__inner {
+  margin-top: 90px;
+  
+}
+
+ &__btn-wrapper {
+   margin-top: 100px;
+  text-align: center;
+ }
+
+ &__swiper-button-prev {
+   top: var(--swiper-navigation-top-offset, 80%);
+
+ }
+
+ &__swiper-button-next {
+   top: var(--swiper-navigation-top-offset, 80%);
+
+ }
+        }
 }

@@ -100,7 +100,7 @@ $sixth-heading-font-size: 16px;
     transition: background 0.3s ease;
 }
 
-//lead/bolt
+//lead/bold
 
 @mixin lead-bold {
     font-size: 20px;
@@ -114,6 +114,15 @@ $sixth-heading-font-size: 16px;
 @mixin base-regular {
     font-size: 16px;
     font-weight: 400;
+    color: $gray-700;
+    line-height: 26px;
+}
+
+//base/bold
+
+@mixin base-bold {
+    font-size: 16px;
+    font-weight: 700;
     color: $gray-700;
     line-height: 26px;
 }

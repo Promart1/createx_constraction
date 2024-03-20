@@ -126,4 +126,20 @@ var swiper = new Swiper("#portfolio-swiper", {
             spaceBetween: 10,
         },
     },
+});
+      
+
+///testimonials-swiper
+
+var swiper = new Swiper("#testimonials-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        // freeMode: true,
+      
+        
+        navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+      
       });

@@ -109,6 +109,15 @@ $sixth-heading-font-size: 16px;
         line-height: 30px;
 }
 
+//lead/regular
+
+@mixin lead-regular {
+    font-size: 20px;
+    font-weight: 400;
+    color: $gray-700;
+    line-height: 30px;
+}
+
 //base/regular
 
 @mixin base-regular {
@@ -134,4 +143,13 @@ $sixth-heading-font-size: 16px;
     font-weight: 400;
     color: $gray-700;
     line-height: 21px;
+}
+
+//display/1
+
+@mixin display-f {
+    font-size: 72px;
+    font-weight: 700;
+    color: $gray-900;
+    line-height: 94px;
 }

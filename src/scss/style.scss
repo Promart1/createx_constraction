@@ -2,6 +2,7 @@
 @import "nullStyle.scss";
 @import "variables.scss";
 @import "homePage.scss";
+@import "services.scss";
 
 body {
   font-family: "Ubuntu", sans-serif;
@@ -122,6 +123,11 @@ body {
     gap: 36px;
   }
 
+  &__logo-wrapper {
+    position: relative;
+      z-index: 3;
+  }
+
   &__img-wrapper {
     display: flex;
     align-items: center;
@@ -224,6 +230,15 @@ body {
     color: $gray-800;
     transition: color 0.3s ease;
   }
+
+  &__link {
+    color: $gray-800;
+    transition: color 0.3s ease;
+  }
+
+&__link.active {
+  color: $primary;
+}
 
   &__item:nth-last-child(1) {
     margin-left: 130px;
@@ -830,3 +845,81 @@ line-height: 18px;
   }
 }
 
+////////////////main//////////////////
+
+.main {
+background: $gray-200;
+
+&__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 600px;
+  object-fit: cover;
+  object-position: right;
+}
+
+&__header-wrapper {
+  background: $gray-200;
+}
+
+&__inner {
+  padding-top: 80px;
+  // 
+  height: 510px;
+  position: relative;
+  margin-top: -1px;
+}
+
+&__breadcrumb {
+  a {
+    @include small-regular;
+    color: $gray-800;
+  }
+margin-bottom: 40px;
+}
+
+&__link.active{
+color: $gray-600;
+}
+
+&__title {
+  @include display-f;
+  margin-bottom: 24px;
+}
+
+&__text {
+  @include lead-regular;
+  max-width: 600px;
+}
+
+@include respond-to($m-desktop) {
+
+  &__bg {
+    opacity: 0.4;
+  }
+
+    &__inner {
+      padding-top: 40px;
+      height: 530px;
+    }
+  
+    &__breadcrumb {
+      a {
+       font-size: 12px;
+      }
+  
+      margin-bottom: 30px;
+    }
+  
+    &__title {
+     font-size: 62px;
+      margin-bottom: 24px;
+    }
+  
+    &__text {
+      font-size: 18px;
+      line-height: 25px;
+    }
+}
+}

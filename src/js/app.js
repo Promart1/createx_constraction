@@ -56,26 +56,6 @@ menuShadow.addEventListener('click', (event) => {
 
 ///////slider
 
-// var menu = ['01', '02', '03', '04']
-// var mySwiper = new Swiper('#hero-swiper', {
-//   slidesPerView: 1,
-//     loop: true,
-   
-//     pagination: {
-//       el: '.swiper-pagination',
-// 			clickable: true,
-//         renderBullet: function (index, className) {
-//           return '<span class="' + className + '">' + (menu[index]) + '</span>';
-//         },
-//     },
-
-    
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   })
-
 var menu = ['01', '02', '03', '04']
 var mySwiper = new Swiper('#hero-swiper', {
   slidesPerView: 1, 
@@ -100,21 +80,42 @@ var mySwiper = new Swiper('#hero-swiper', {
 
 //////video
 
-const videoImg = document.querySelector('.video__img');
-const videoFrame = document.querySelector('.video__block');
-const videoBtn = document.querySelector('.video__btn');
+// const videoImg = document.querySelector('.video__img');
+// const videoFrame = document.querySelector('.video__block');
+// const videoBtn = document.querySelector('.video__btn');
 
-videoImg.addEventListener('click', () => {
-  videoImg.classList.toggle('video__img-hidden');
-  videoFrame.classList.toggle('video__frame');
-   videoBtn.classList.toggle('video__img-hidden');
+// videoImg.addEventListener('click', () => {
+//   videoImg.classList.toggle('video__img-hidden');
+//   videoFrame.classList.toggle('video__frame');
+//    videoBtn.classList.toggle('video__img-hidden');
+// });
+
+// videoBtn.addEventListener('click', () => {
+//   videoBtn.classList.toggle('video__img-hidden');
+//   videoFrame.classList.toggle('video__frame');
+//   videoImg.classList.toggle('video__img-hidden');
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const videoImg = document.querySelector('.video__img');
+    const videoFrame = document.querySelector('.video__block');
+    const videoBtn = document.querySelector('.video__btn');
+
+    if (videoImg && videoFrame && videoBtn) {
+        videoImg.addEventListener('click', () => {
+            videoImg.classList.toggle('video__img-hidden');
+            videoFrame.classList.toggle('video__frame');
+            videoBtn.classList.toggle('video__img-hidden');
+        });
+
+        videoBtn.addEventListener('click', () => {
+            videoBtn.classList.toggle('video__img-hidden');
+            videoFrame.classList.toggle('video__frame');
+            videoImg.classList.toggle('video__img-hidden');
+        });
+    }
 });
 
-videoBtn.addEventListener('click', () => {
-  videoBtn.classList.toggle('video__img-hidden');
-  videoFrame.classList.toggle('video__frame');
-  videoImg.classList.toggle('video__img-hidden');
-});
 
 
 ///portfolio slider
@@ -162,4 +163,36 @@ var swiper = new Swiper("#testimonials-swiper", {
       prevEl: '.swiper-button-prev',
     },
       
-      });
+});
+      
+
+///////navigation
+
+document.addEventListener('DOMContentLoaded', function () {
+   
+    var currentUrl = window.location.href;
+    var menuLinks = document.querySelectorAll('.menu__link');
+
+    menuLinks.forEach(function (link) {
+      
+      if (link.href === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+});
+  
+document.addEventListener('DOMContentLoaded', function () {
+   
+    var currentUrl = window.location.href;
+    var menuLinks = document.querySelectorAll('.main__link');
+
+    menuLinks.forEach(function (link) {
+      
+      if (link.href === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+});
+
+
+

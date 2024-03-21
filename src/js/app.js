@@ -56,20 +56,40 @@ menuShadow.addEventListener('click', (event) => {
 
 ///////slider
 
+// var menu = ['01', '02', '03', '04']
+// var mySwiper = new Swiper('#hero-swiper', {
+//   slidesPerView: 1,
+//     loop: true,
+   
+//     pagination: {
+//       el: '.swiper-pagination',
+// 			clickable: true,
+//         renderBullet: function (index, className) {
+//           return '<span class="' + className + '">' + (menu[index]) + '</span>';
+//         },
+//     },
+
+    
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//   })
+
 var menu = ['01', '02', '03', '04']
 var mySwiper = new Swiper('#hero-swiper', {
-  slidesPerView: 1, // Показувати лише один слайд зараз
+  slidesPerView: 1, 
     loop: true,
-    // If we need pagination
+   
     pagination: {
       el: '.swiper-pagination',
 			clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+          return '<span class="' + className + '">' + '<span class="hero__pagination-number">' + (menu[index]) + '</span>' + '</span>';
         },
     },
 
-    // Navigation arrows
+    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

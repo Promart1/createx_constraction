@@ -194,5 +194,76 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/////offer
+
+document.addEventListener('DOMContentLoaded', function() {
+    const offerBlocks = document.querySelectorAll('.offer__block');
+    
+    offerBlocks.forEach(function(offerBlock) {
+        offerBlock.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+            const plusIcon = this.querySelector('.offer__plus');
+            plusIcon.src = this.classList.contains('expanded') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
+        });
+    });
+});
+
+
+///////footer
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const navBlockTitles = document.querySelectorAll('.footer__nav-block-title');
+//     const plusIcons = document.querySelectorAll('.footer__plus');
+
+//     navBlockTitles.forEach(function(navBlockTitle, index) {
+//         navBlockTitle.addEventListener('click', function() {
+//             const subMenu = this.nextElementSibling;
+//             subMenu.classList.toggle('open');
+
+            
+//             const plusIcon = plusIcons[index];
+//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
+//         });
+//     });
+
+//     plusIcons.forEach(function(plusIcon, index) {
+//         plusIcon.addEventListener('click', function() {
+//             const subMenu = this.nextElementSibling;
+//             subMenu.classList.toggle('open');
+
+           
+//             const navBlockTitle = navBlockTitles[index];
+//             navBlockTitle.nextElementSibling.classList.toggle('open');
+//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
+//         });
+//     });
+// });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footerNavBlocks = document.querySelectorAll('.footer__nav-mob');
+
+    footerNavBlocks.forEach(function(navBlock) {
+        const plusIcon = navBlock.querySelector('.footer__plus');
+        const navBlockTitle = navBlock.querySelector('.footer__nav-block-title');
+        const subMenu = navBlock.querySelector('.footer__sub-menu');
+
+        navBlockTitle.addEventListener('click', function() {
+            subMenu.classList.toggle('open'); 
+            plusIcon.classList.toggle('open');
+        });
+
+        plusIcon.addEventListener('click', function() {
+            subMenu.classList.toggle('open'); 
+            plusIcon.classList.toggle('open');
+        });
+    });
+});
+
+
+
+
 
 

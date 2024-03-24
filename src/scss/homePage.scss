@@ -666,11 +666,27 @@
     }
 
     &__input {
-        margin-bottom: 0;
+        width: 100%;
+            padding: 12px 16px 12px 16px;
+            background: #f4f5f6;
+            border: 1px solid #d7dadd;
+            border-radius: 1px;
+            font-size: 14px;
+            margin-bottom: 0;
+            font-family: Ubuntu, sans-serif;
+            color: #9a9ca5;
     }
 
     &__message {
-        margin-bottom: -4px;
+    width: 100%;
+        padding: 12px 16px 12px 16px;
+        background: #f4f5f6;
+        border: 1px solid #d7dadd;
+        border-radius: 1px;
+        font-size: 14px;
+        margin-bottom: 0;
+        font-family: Ubuntu, sans-serif;
+        color: #9a9ca5;
     }
 
     @include respond-to($l-desktop) {
@@ -712,7 +728,7 @@
     position: relative;
 
     &__bg {
-        margin-top: -90px;
+        margin-top: -94px;
         object-fit: cover;
         object-position: center;
         height: 880px;
@@ -742,7 +758,7 @@
     }
 
     &__item {
-        width: 285px;
+        width: 100%;
         height: 285px;
         padding-top: 89px;
         border: 1px solid $gray-300;
@@ -775,7 +791,7 @@
 
     &__item:hover::after {
         background: $gray-900;
-        opacity: 60%;
+        opacity: 0.6;
         content: "";
         position: absolute;
         top: 0;
@@ -788,7 +804,11 @@
             color: $main-white;
         }
 
-        background-image: url("@img/image.svg");
+        background-image: url("../img/image.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                background-position: center;
     }
 
     &__item:hover {
@@ -801,13 +821,10 @@
         }
     }
 
-    // &__btn-wrapper {
-    //   margin-top: 80px;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   gap: 40px;
-    // }
+    &__btn-wrapper {
+      margin-top: 80px;
+      
+    }
 
     // &__btn-subtitle {
     //   @include third-heading;
@@ -848,7 +865,7 @@
 
     @include respond-to($s-mobile) {
         &__item {
-            width: 225px;
+          
             height: 225px;
             padding-top: 59px;
         }
@@ -881,6 +898,10 @@
         max-width: 705px;
         margin-bottom: 60px;
         line-height: 60px;
+    }
+
+    &__btn-wrapper {
+        margin-top: 80px;
     }
 
     &__block {
@@ -1054,11 +1075,11 @@
         }
 
         &__swiper-button-prev {
-            top: var(--swiper-navigation-top-offset, 80%);
+            top: var(--swiper-navigation-top-offset, 85%);
         }
 
         &__swiper-button-next {
-            top: var(--swiper-navigation-top-offset, 80%);
+            top: var(--swiper-navigation-top-offset, 85%);
         }
     }
 }
@@ -1107,6 +1128,7 @@
     @include respond-to($s-tablet) {
         &__inner {
             margin-top: 80px;
+            padding-top: 0;
         }
 
         &__title {

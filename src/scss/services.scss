@@ -1,14 +1,16 @@
 .services-content {
   position: relative;
+  overflow: hidden;
 
   &__right {
     position: absolute;
-    top: 50%;
+    top: 681px;
+    right: -30%;
   }
 
   &__left {
     position: absolute;
-    bottom: 50px;
+    bottom: -40%;
   }
 
   &__inner {
@@ -25,12 +27,16 @@
     gap: 30px;
   }
 
+  &__block-s {
+    margin-bottom: 180px;
+  }
+
   &__info {
     max-width: 575px;
 
     h2 {
       @include secondary-heading;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     p {
@@ -46,7 +52,8 @@
       font-size: 14px;
       font-weight: 700;
       border-radius: 4px;
-      padding: 15px 32px;
+      padding: 15px 33px;
+      text-transform: uppercase;
       transition: background 0.5s ease, color 0.5s ease;
     }
 
@@ -68,6 +75,10 @@
       margin-right: auto;
       margin-left: auto;
       max-width: 575px;
+    }
+
+    &__block-s {
+      margin-bottom: 90px;
     }
 
     &__block::after {
@@ -108,34 +119,207 @@
         background: $primary;
         color: $main-white;
       }
+
+      a:hover {
+        color: $primary;
+        background: $main-white;
+      }
     }
+  }
+
+  @include respond-to($s-mobile) {
+    &__info {
+      padding: 10px;
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 8px;
+      }
+
+      a {
+        padding: 9px 19px;
+      }
+    }
+
+    &__block {
+      margin-bottom: 40px;
+    }
+  }
 }
 
-    @include respond-to($s-mobile) {
-      &__info {
-       
-        padding: 10px;
+.offer {
+  &__inner {
+    margin-top: 120px;
+    display: flex;
+    gap: 105px;
+  }
 
-        h2 {
-         font-size: 20px;
-         margin-bottom: 10px;
-        }
+  &__img {
+    max-width: 705px;
+    max-height: 440px;
+  }
 
-        p {
-         
-          font-size: 11px;
-          line-height: 16px;
-          margin-bottom: 8px;
-        }
+  &__content {
+    max-width: 420px;
+  }
 
-        a {
-          padding: 9px 19px;
-        }
-      }
+  &__block {
+    padding-left: 42px;
+    margin-bottom: 24px;
+    position: relative;
+  }
 
-      &__block {
-        margin-bottom: 40px;
-      }
-    }}
-  
+  &__plus {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
 
+  .expanded .offer__plus {
+    transform: rotate(180deg);
+  }
+
+  &__title {
+    @include main-heading;
+    margin-bottom: 68px;
+  }
+
+  &__block-title {
+    @include third-heading;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 42px;
+  }
+
+  &__block-title:hover {
+    color: $primary;
+  }
+
+  &__text {
+    display: none;
+    @include base-regular;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__block.expanded .offer__text {
+    display: block;
+    opacity: 1;
+  }
+
+  @include respond-to($l-desktop) {
+    &__inner {
+      display: block;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 505px;
+    }
+
+    &__img {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__inner {
+      margin-top: 80px;
+    }
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 28px;
+    }
+
+    &__block-title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+.steps {
+  &__inner {
+    margin-top: 180px;
+  }
+
+  &__title {
+    @include main-heading;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 285px;
+  }
+
+  &__item-number::after {
+    content: "";
+    width: 209px;
+    height: 1px;
+    border: 1px dashed rgba(215, 218, 221, 1);
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+
+  &__list li:last-child .steps__item-number::after {
+    display: none;
+  }
+
+  &__item-number {
+    @include main-heading;
+    color: $gray-400;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  &__item-title {
+    @include lead-bold;
+    margin-bottom: 8px;
+  }
+
+  &__item-text {
+    @include base-regular;
+  }
+
+  @include respond-to($l-desktop) {
+    &__item-number::after {
+      width: 160px;
+      right:auto;
+      left: 30%;
+    }
+  }
+
+  @include respond-to($m-desktop) {
+
+  }
+}

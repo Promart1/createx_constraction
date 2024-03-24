@@ -59,7 +59,7 @@ body {
 
 .view-all {
   &__btn-wrapper {
-    margin-top: 80px;
+    // margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,7 @@ body {
   &__img-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
   }
 
   &__social-list {
@@ -612,6 +612,15 @@ body {
     margin-bottom: 31px;
   }
 
+  &__plus {
+    display: none;
+  transition: transform 0.3s ease;
+  }
+  
+  &__plus.open {
+    transform: rotate(45deg);
+  }
+
   &__form-subscribe {
     margin-bottom: 16px;
 
@@ -826,6 +835,24 @@ line-height: 18px;
       display: block;
     }
 
+    &__nav-item {
+      margin-bottom: 30px;
+      
+    }
+
+&__nav-mob {
+position: relative;
+z-index: 2;
+}
+
+&__nav-block-item {
+  position: relative;
+}
+
+&__nav-blocks {
+  max-width: 100%;
+}
+
     &__section {
       display: block;
     }
@@ -842,6 +869,23 @@ line-height: 18px;
     &__btn-top-wrapper {
       justify-content: end;
     }
+
+    &__sub-menu {
+      display: none;
+    }
+
+        &__sub-menu.open {
+          display: block;
+        }
+
+                &__plus {
+                  display: block;
+                  position: absolute;
+                  top: 5%;
+                   right: 0;
+                    
+                  z-index: 2;
+                }
   }
 }
 
@@ -864,7 +908,7 @@ background: $gray-200;
 }
 
 &__inner {
-  padding-top: 80px;
+  padding-top: 60px;
   // 
   height: 510px;
   position: relative;
@@ -886,6 +930,7 @@ color: $gray-600;
 &__title {
   @include display-f;
   margin-bottom: 24px;
+  max-width: 600px;
 }
 
 &__text {

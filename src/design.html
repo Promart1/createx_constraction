@@ -3,8 +3,94 @@
   @@include('html/head.html',{ "title":"About us" })
   <body>
     @@include('html/header.html',{})
-    <main class="main"></main>
+    <main>
+      <!-- /////////////MAIN_SECTION/////////////////// -->
+
+      <section class="main">
+        <img src="@img/desing-bg.png" alt="paper" class="main__bg"/>
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__breadcrumb">
+              <a href="./" class="main__link">Homepage</a>
+              <span> / </span>
+              <a href="./services.html" class="main__link">Services</a>
+            <span> / </span>
+              <a href="./design.html" class="main__link">Interior Design</a>
+            </div>
+            <h1 class="main__title">INTERIOR DESIGN</h1>
+            <p class="main__text">
+              Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit amet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+        <!-- /////////////OFFER_SECTION/////////////////// -->
+
+      <section class="offer">
+        <div class="container">
+          <div class="offer__inner">
+            <img src="@img/offer-img.jpg" alt="room" class="offer__img">
+            <div class="offer__content">
+<h2 class="offer__title">We offer</h2>
+
+              <div class="offer__block">
+              <img src="@img/icons/plus.svg" alt="plus" class="offer__plus">
+              <h3 class="offer__block-title">Interior design of apartments</h3>
+              <p class="offer__text">Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+              </div>
+
+               <div class="offer__block">
+              <img src="@img/icons/plus.svg" alt="plus" class="offer__plus">
+              <h3 class="offer__block-title">Interior design of private houses</h3>
+              <p class="offer__text">Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /////////////STEPS_SECTION/////////////////// -->
+
+      <section class="steps">
+        <div class="container">
+          <div class="steps__inner">
+            <h2 class="steps__title">That’s how we do it</h2>
+            <ul class="steps__list">
+              
+              <li class="steps__item">
+                <p class="steps__item-number">01</p>
+                <h4 class="steps__item-title">Work Estimate</h4>
+                <p class="steps__item-text">Culpa nostrud commodo ea consequat aliquip reprehenderit.</p>
+              </li>
+
+              <li class="steps__item">
+                <p class="steps__item-number">02</p>
+                <h4 class="steps__item-title">Contract</h4>
+                <p class="steps__item-text">Laoreet ultrices curabitur luctus quisque consequat. Leo lorem velit imperdiet auctor et tempor.</p>
+              </li>
+
+              <li class="steps__item">
+                <p class="steps__item-number">03</p>
+                <h4 class="steps__item-title">Mobilization </h4>
+                <p class="steps__item-text">Odio massa scelerisque purus arcu sed velit eleifend cursus leo.</p>
+              </li>
+
+              <li class="steps__item">
+                <p class="steps__item-number">04</p>
+                <h4 class="steps__item-title">Construction Work</h4>
+                <p class="steps__item-text">Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.</p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
     @@include('html/footer.html',{})
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

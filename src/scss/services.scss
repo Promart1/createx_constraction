@@ -268,7 +268,7 @@
 
   &__title {
     @include main-heading;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
   }
 
   &__list {
@@ -336,7 +336,7 @@
   &__item-number {
     @include main-heading;
     color: $gray-400;
-    margin-bottom: 16px;
+    margin-bottom: 23px;
     position: relative;
   }
 
@@ -352,7 +352,6 @@
   @include respond-to($l-desktop) {
     &__list {
       display: block;
-     
     }
 
     &__item-number::after {
@@ -432,8 +431,8 @@
   }
 
   @include respond-to($m-mobile) {
-&__inner {
-        margin-top: 80px;
+    &__inner {
+      margin-top: 80px;
     }
 
     &__item::before {
@@ -449,7 +448,166 @@
     &__list li:nth-last-child(-n + 2) {
       margin-bottom: 50px;
     }
-
-    
   }
+}
+
+.benefits {
+  &__inner {
+    padding-top: 80px;
+    padding-bottom: 126px;
+    background: $gray-900;
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+  }
+
+  &__title {
+    color: $main-white;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: $main-white;
+  }
+
+  &__item-text {
+    font-size: 16px;
+    line-height: 26px;
+    opacity: 60%;
+    color: $main-white;
+    max-width: 285px;
+  }
+
+  &__item-line-r {
+    position: relative;
+  }
+
+  &__item-line-r::after {
+    content: "";
+    height: 188px;
+    width: 1px;
+    position: absolute;
+    border: 1px solid;
+    top: 0;
+    right: -40%;
+    background: $main-white;
+    opacity: 40%;
+    border-image-source: linear-gradient(
+      270.01deg,
+      rgba(218, 219, 221, 0) 0%,
+      rgba(218, 219, 221, 0.5) 12.33%,
+      #dadbdd 51.91%,
+      rgba(218, 219, 221, 0.5) 87.85%,
+      rgba(218, 219, 221, 0) 100%
+    );
+  }
+
+&__btn {
+    padding: 1px 116px;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+  }
+
+  @include respond-to($l-desktop) {
+    &__item-line-r::after {
+      right: -20%;
+    }
+
+        &__btn {
+            bottom: 0;
+            font-size: 12px;
+            padding: 0 50px;
+        }
+  }
+
+  @include respond-to($m-desktop) {
+    &__item-line-r::after {
+      right: -10%;
+    }
+  }
+
+  @include respond-to($desktop) {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+        margin-bottom: 60px;
+    }
+
+    &__item-text {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+         &__inner {
+             
+             padding-bottom: 80px;
+             
+         }
+
+                 &__item-line-r::after {
+                    display: none;
+                 }
+  }
+
+   @include respond-to($s-mobile) {
+    &__btn {
+        padding: 0 10px;
+    }
+   }
+}
+
+.portfolio-des {
+&__inner {
+    margin-top: 180px;
+}
+
+    &__swiper-button-prev {
+            top: var(--swiper-navigation-top-offset, 6%);
+            right: var(--swiper-navigation-sides-offset, 50px);
+            left: auto;
+        }
+    
+        &__swiper-button-next {
+            top: var(--swiper-navigation-top-offset, 6%);
+            right: var(--swiper-navigation-sides-offset, 0);
+            left: auto;
+        }
+
+                @include respond-to($l-desktop) {
+                    
+        
+                    &__swiper-button-prev {
+                        top: var(--swiper-navigation-top-offset, 87%);
+                    }
+        
+                    &__swiper-button-next {
+                        top: var(--swiper-navigation-top-offset, 87%);
+                    }
+        
+                   
+                }
+
+                          @include respond-to($mobile) {
+                            h5 {
+                                font-size: 19px;
+                            }
+                          }
 }

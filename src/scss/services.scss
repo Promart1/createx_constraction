@@ -279,6 +279,44 @@
 
   &__item {
     max-width: 285px;
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    .steps__item-number {
+      position: relative;
+      color: $primary;
+    }
+
+    .steps__item-number::before {
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 84px;
+      border-radius: 50px;
+      background-color: $primary;
+      opacity: 12%;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .steps__item-title {
+      position: relative;
+    }
+
+    .steps__item-title::before {
+      content: "";
+      position: absolute;
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      background-color: $primary;
+      opacity: 6%;
+      top: -150%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__item-number::after {
@@ -312,14 +350,106 @@
   }
 
   @include respond-to($l-desktop) {
+    &__list {
+      display: block;
+     
+    }
+
     &__item-number::after {
-      width: 160px;
-      right:auto;
-      left: 30%;
+      display: none;
+    }
+
+    &__item {
+      display: flex;
+      position: relative;
+      max-width: 925px;
+      margin-bottom: 130px;
+    }
+
+    &__item::before {
+      content: "";
+      height: 130px;
+      width: 1px;
+      border: 1px dashed rgba(215, 218, 221, 1);
+      position: absolute;
+      top: 90px;
+      left: 45px;
+    }
+
+    &__list li:last-child::before {
+      display: none;
+    }
+
+    &__item-content {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    &__item-number {
+      font-size: 76px;
+      margin-bottom: 0;
+    }
+
+    &__item-title {
+      font-size: 35px;
+    }
+
+    &__item-text {
+      font-size: 26px;
+    }
+
+    &__item:hover {
+      .steps__item-number::before {
+        background-color: transparent;
+      }
+
+      .steps__item-title::before {
+        background-color: transparent;
+      }
     }
   }
 
-  @include respond-to($m-desktop) {
+  @include respond-to($m-tablet) {
+    &__item-text {
+      font-size: 19px;
+    }
 
+    &__item {
+      margin-bottom: 90px;
+    }
+
+    &__item-title {
+      font-size: 25px;
+    }
+
+    &__list li:nth-last-child(-n + 2) {
+      margin-bottom: 90px;
+    }
+
+    &__item::before {
+      height: 80px;
+    }
+  }
+
+  @include respond-to($m-mobile) {
+&__inner {
+        margin-top: 80px;
+    }
+
+    &__item::before {
+      height: 120px;
+    }
+  }
+
+  @include respond-to($l-mobile) {
+    &__item {
+      margin-bottom: 40px;
+    }
+
+    &__list li:nth-last-child(-n + 2) {
+      margin-bottom: 50px;
+    }
+
+    
   }
 }

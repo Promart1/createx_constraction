@@ -573,10 +573,14 @@
 }
 
 .portfolio-des {
+    background: $main-white;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 105px;
   &__inner {
     margin-top: 180px;
     position: relative;
-    z-index: 2;
+   
   }
 
   &__swiper-button-prev {
@@ -610,7 +614,7 @@
 
 .pricing {
   &__inner {
-    margin-top: 105px;
+    // margin-top: 105px;
     padding-top: 80px;
     padding-bottom: 120px;
     background: $gray-200;
@@ -638,6 +642,7 @@
     position: absolute;
     top: -50%;
     left: 0;
+    z-index: 2;
   }
 
   &__table-main-title {
@@ -811,4 +816,12 @@
         }
 
         
+}
+
+.clients-des {
+    &__inner {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 120px;
+    }
 }

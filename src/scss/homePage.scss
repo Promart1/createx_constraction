@@ -917,6 +917,8 @@
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
 
         img {
             object-fit: cover;

@@ -303,6 +303,32 @@
             font-size: 10px;
         }
     }
+
+        .swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width,
+                    var(--swiper-pagination-bullet-size, 178px));
+            height: var(--swiper-pagination-bullet-height,
+                    var(--swiper-pagination-bullet-size, 2px));
+            display: inline-block;
+            border-radius: var(--swiper-pagination-bullet-border-radius, 2%);
+            background: var(--swiper-pagination-bullet-inactive-color, #fff);
+            // opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
+    
+            @include respond-to($LapTop) {
+                width: var(--swiper-pagination-bullet-width,
+                        var(--swiper-pagination-bullet-size, 78px));
+            }
+    
+            @include respond-to($desktop) {
+                width: var(--swiper-pagination-bullet-width,
+                        var(--swiper-pagination-bullet-size, 48px));
+            }
+    
+            @include respond-to($m-mobile) {
+                width: var(--swiper-pagination-bullet-width,
+                        var(--swiper-pagination-bullet-size, 28px));
+            }
+        }
 }
 
 .swiper-button-prev::after,
@@ -310,31 +336,7 @@
     content: "";
 }
 
-.swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width,
-            var(--swiper-pagination-bullet-size, 178px));
-    height: var(--swiper-pagination-bullet-height,
-            var(--swiper-pagination-bullet-size, 2px));
-    display: inline-block;
-    border-radius: var(--swiper-pagination-bullet-border-radius, 2%);
-    background: var(--swiper-pagination-bullet-inactive-color, #fff);
-    // opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
 
-    @include respond-to($LapTop) {
-        width: var(--swiper-pagination-bullet-width,
-                var(--swiper-pagination-bullet-size, 78px));
-    }
-
-    @include respond-to($desktop) {
-        width: var(--swiper-pagination-bullet-width,
-                var(--swiper-pagination-bullet-size, 48px));
-    }
-
-    @include respond-to($m-mobile) {
-        width: var(--swiper-pagination-bullet-width,
-                var(--swiper-pagination-bullet-size, 28px));
-    }
-}
 
 :root {
     --swiper-theme-color: #fff;

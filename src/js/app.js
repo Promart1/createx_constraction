@@ -389,7 +389,27 @@ var galleryTop = new Swiper('.gallery-top', {
     galleryTop.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryTop;
 
+////history slider
 
+var menu = ['01', '02', '03', '04']
+var mySwiper = new Swiper('#about-swiper', {
+  slidesPerView: 1, 
+    loop: true,
+   
+    pagination: {
+      el: '.swiper-pagination',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + '<span class="hero__pagination-number">' + (menu[index]) + '</span>' + '</span>';
+        },
+    },
+
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
 
 
 

@@ -5,6 +5,7 @@
 @import "homePage.scss";
 @import "services.scss";
 @import "work.scss";
+@import "about.scss";
 
 
 //////////////header///////////////////////
@@ -859,7 +860,7 @@ color: $gray-600;
     }
   
     &__title {
-     font-size: 62px;
+     font-size: 53px;
       margin-bottom: 24px;
     }
   

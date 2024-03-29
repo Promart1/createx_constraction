@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title":"About us" })
+  <body>
+   <div class="menu--close"></div>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper" id="header" >
+      <div class="header__logo-wrapper">
+        <a href="./" class="header__logo">
+          <img src="@img/icons/logo.svg" alt="logo" />
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__close">
+            <button class="menu__close-btn">
+              <img src="@img/icons/cross.svg" alt="Close cross" />
+            </button>
+          </li>
+
+          <li class="menu__item">
+            <a href="./about.html" class="menu__link">About Us</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./services.html" class="menu__link">Services</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./work.html" class="menu__link">Work</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__link">News</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contacts</a>
+          </li>
+
+          <li class="menu__item">
+            <ul class="header__social-wrapper">
+              <li class="header__social-list">
+                <div class="header__img-wrapper">
+                  <img src="@img/icons/iphone.svg" alt="phone" />
+
+                  <div class="header__content-wrapper header__dropdown">
+                    <p class="header__content-text">Call us</p>
+                    <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="header__social-list">
+                <div class="header__img-wrapper">
+                  <img src="@img/icons/chat.svg" alt="chat" />
+
+                  <div class="header__content-wrapper header__dropdown">
+                    <p class="header__content-text">Talk to us</p>
+                    <p>
+                      <a href="mailto:hello@createx.com">hello@createx.com</a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="menu__button">
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <!-- /////////////MAIN_SECTION/////////////////// -->
+
+      <section class="project-main">
+        <img
+          src="@img/desing-bg.png"
+          alt="paper"
+          class="project-main__bg main__bg"
+        />
+        <div class="container">
+          <div class="project-main__inner">
+            <div class="main__breadcrumb">
+              <a href="./" class="main__link">Homepage</a>
+              <span> / </span>
+              <a href="./work.html" class="main__link">Work</a>
+              <span> / </span>
+              <a href="./project.html" class="main__link">Modern Cottage</a>
+            </div>
+            <h1 class="main__title">Modern Cottage</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-swipper">
+        <div class="container">
+          <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-container">
+                    <img src="@img/cotage-swiper.jpg" alt="Cottage">
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+           <div class="swiper-button-prev hero__swiper-button-prev">
+              <img src="@img/icons/Left.svg" alt="left" />
+            </div>
+            <div class="swiper-button-next hero__swiper-button-next">
+              <img src="@img/icons/Right.svg" alt="right" />
+            </div>
+          </div>
+          <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+               <div class="swiper-slide">
+                <div class="swiper-slide-small-container"><img src="@img/small-cottage.jpg" alt="Cottage"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------- PROJECT-ABOUT_SECTION -------------------->
+
+      <section class="project-about">
+        <div class="container">
+          <div class="project-about__inner">
+            <div class="project-about__content">
+              <h2 class="project-about__title">Project goal</h2>
+              <p class="project-about__text project-about__first-text">
+                Build a private house 840 sq. feet with a large living room,
+                three bedrooms, two bathrooms, a terrace, a pool and a garage
+                for two cars.
+              </p>
+              <p class="project-about__text">
+                Modern design and care for each family member to feel
+                as comfortable as possible in the new home.
+              </p>
+            </div>
+
+            <div class="project-about__card">
+              <ul class="project-about__title-list">
+                <li class="project-about__title-text">
+                  <p>LOCATION</p>
+                </li>
+
+                <li class="project-about__title-text">
+                  <p>CLIENT</p>
+                </li>
+
+                <li class="project-about__title-text">
+                  <p>ARCHITECT</p>
+                </li>
+
+                <li class="project-about__title-text">
+                  <p>SIZE</p>
+                </li>
+
+                <li class="project-about__title-text">
+                  <p>VALUE</p>
+                </li>
+
+                <li class="project-about__title-text">
+                  <p>COMPLETED</p>
+                </li>
+              </ul>
+
+              <ul class="project-about__context-list">
+                <li class="project-about__context-text">
+                  <p>2464 Royal Ln. Mesa, New Jersey</p>
+                </li>
+
+                <li class="project-about__context-text">
+                  <p>Darlene Robertson</p>
+                </li>
+
+                <li class="project-about__context-text">
+                  <p>HIK Architecture</p>
+                </li>
+
+                <li class="project-about__context-text">
+                  <p>840 sq. feet</p>
+                </li>
+
+                <li class="project-about__context-text">
+                  <p>$2 million</p>
+                </li>
+
+                <li class="project-about__context-text">
+                  <p>May 2020</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------------- DECISIONS_SECTION -------------------->
+
+      <section class="decisions">
+        <div class="decisions__inner">
+          <div class="container">
+            <div class="decisions__block">
+              <img
+                src="@img/constraction.jpg"
+                alt="constraction"
+                class="decisions__bg"
+              />
+              <div class="decisions__content">
+                <h2 class="decisions__title">Constructive decisions</h2>
+                <ul class="decisions__list">
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      Vitae ultrices ornare eu sed in est quisque duis id.
+                    </p>
+                  </li>
+
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      A fermentum in morbi pretium aliquam adipiscing donec
+                      tempus.
+                    </p>
+                  </li>
+
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      Mauris odio pellentesque commodo, diam.
+                    </p>
+                  </li>
+
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      Fermentum vestibulum est fermentum, egestas gravida
+                      scelerisque quis.
+                    </p>
+                  </li>
+
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      At pharetra libero blandit risus, fringilla sed commodo
+                      diam.
+                    </p>
+                  </li>
+
+                  <li class="decisions__item">
+                    <img src="@img/icons/check-const.svg" alt="check" />
+                    <p class="decisions__text">
+                      Integer ultricies viverra ut enim viverra ut.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------- PORTFOLIO_SECTION -------------------->
+
+      <section class="portfolio portfolio-des">
+        <div class="container">
+          <div class="portfolio__inner portfolio-des__inner">
+            <h2 class="portfolio__title">Related projects</h2>
+
+            <div
+              class="swiper-container portfolio__swiper-container"
+              id="portfolio-swiper"
+            >
+              <div class="swiper-wrapper portfolio__swiper-wrapper">
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/luxury-house.png" alt="Modern Cottage" />
+                    <div>
+                      <h5 class="portfolio__block-title">Luxury Beach House</h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/brown-house.png" alt="brown-house" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Brown and Gray Painted House
+                      </h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/vintag.jpg" alt="pencil build" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Scandinavian Style Interior
+                      </h5>
+                      <p class="portfolio__block-subtitle">
+                        Scandinavian Style Interior
+                      </p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/pencil.png" alt="pencil build" />
+                    <div>
+                      <h5 class="portfolio__block-title">
+                        Red Finger Building
+                      </h5>
+                      <p class="portfolio__block-subtitle">Business Centers</p>
+                    </div>
+                    <button class="portfolio__btn">View Project</button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/luxury-house.png" alt="Modern Cottage" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Luxury Beach House
+                      </h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/Modern-Cottage.png" alt="Modern Cottage" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Modern Cottage
+                      </h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/cubes-build.png" alt="Cubes Building" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Cubes Building
+                      </h5>
+                      <p class="portfolio__block-subtitle">Business Centers</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/kids.jpg" alt="kids room" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Kids Bedroom With Decorations
+                      </h5>
+                      <p class="portfolio__block-subtitle">
+                        Apartments & flats
+                      </p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/luxury-house.png" alt="Modern Cottage" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Luxury Beach House
+                      </h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide portfolio__slide">
+                  <div class="portfolio__block">
+                    <img src="@img/Modern-Cottage.png" alt="Modern Cottage" />
+                    <div>
+                      <h5 class="portfolio__block-title work-portfolio__title">
+                        Modern Cottage
+                      </h5>
+                      <p class="portfolio__block-subtitle">Private houses</p>
+                    </div>
+                    <button class="portfolio__btn work-portfolio__btn">
+                      View Project
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="swiper-button-prev portfolio__swiper-button-prev portfolio-des__swiper-button-prev"
+              >
+                <img src="@img/icons/Left.svg" alt="left" />
+              </div>
+              <div
+                class="swiper-button-next portfolio__swiper-button-next portfolio-des__swiper-button-next"
+              >
+                <img src="@img/icons/Right.svg" alt="right" />
+              </div>
+            </div>
+
+            <div class="view-all__btn-wrapper portfolio__btn-wrapper">
+              <h3 class="view-all__btn-subtitle">Explore all our works</h3>
+              <a href="" class="view-all__btn">View portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/application.html',{})
+    </main>
+    @@include('html/footer.html',{})
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

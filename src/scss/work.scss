@@ -89,7 +89,6 @@
       font-size: 14px;
     }
   }
-
 }
 
 .work-portfolio {
@@ -103,6 +102,39 @@
     grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     gap: 30px;
     justify-content: center;
+  }
+
+  &__block {
+    a {
+      // height: 44px;
+      background: $main-white;
+      color: $primary;
+      text-transform: uppercase;
+      border: 1px solid $primary;
+      border-radius: 4px;
+      padding: 15px 32px;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.5s, bottom 0.5s;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a:hover {
+      background: $primary;
+      color: $main-white;
+    }
+  }
+
+  &__block:hover {
+    a {
+      opacity: 1;
+      bottom: 24px;
+    }
   }
 
   #showMoreBtn {
@@ -144,32 +176,303 @@
       }
     }
 
-        &__block {
-            height: 340px;
+    &__block {
+      height: 340px;
 
-            h5 {
-                font-size: 18px;
-            }
-        }
+      h5 {
+        font-size: 18px;
+      }
+    }
 
-                button {
-                    font-size: 10px;
-                }
+    button {
+      font-size: 10px;
+    }
   }
 }
 
-
 .work-clients {
-    &__inner {
-        background: $main-white;
-        padding-top: 0;
-        margin-top: 180px;
-        margin-bottom: 125px;
-    }
+  &__inner {
+    background: $main-white;
+    padding-top: 0;
+    margin-top: 180px;
+    margin-bottom: 125px;
+  }
 }
 
 .work-testimonials {
+  &__inner {
+    padding-top: 88px;
+  }
+}
+
+.project-main {
+
+  &__inner {
+    height: auto;
+    padding-top: 60px;
+    position: relative;
+  }
+
+
+  &__bg {
+    opacity: 12%;
+    top: 48px;
+    right: -30%;
+  }
+}
+
+// .project-portfolio {
+//   position: relative;
+
+//   &__swiper-button-prev {
+//       top: var(--swiper-navigation-top-offset, 14%);
+//       right: var(--swiper-navigation-sides-offset, 50px);
+//       left: auto;
+//     }
+
+//     &__swiper-button-next {
+//       top: var(--swiper-navigation-top-offset, 14%);
+//       right: var(--swiper-navigation-sides-offset, 0);
+//       left: auto;
+//     }
+// }
+
+.decisions {
+  &__inner {
+    margin-top: 120px;
+    padding-top: 80px;
+    padding-bottom: 114px;
+    background-color: $gray-200;
+  }
+
+  &__bg {
+    max-width: 495px;
+    max-height: 550px;
+    position: absolute;
+    left: 0;
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__title {
+    @include main-heading;
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: $gray-800;
+  }
+
+  @include respond-to($l-desktop) {
     &__inner {
-        padding-top: 88px;
+      padding-bottom: 80px;
+    }
+
+    &__bg {
+      display: none;
+    }
+
+    &__block {
+      justify-content: center;
+    }
+  }
+
+  @include respond-to($m-mobile) {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+    }
+
+    &__inner {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+  }
+}
+
+.project-about {
+
+  &__inner {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+  }
+
+  &__content {
+    max-width: 600px;
+    margin-right: auto;
+      margin-left: auto;
+  }
+
+  &__title {
+@include main-heading;
+margin-bottom: 40px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    color: $gray-800;
+  }
+
+  &__first-text {
+    margin-bottom: 20px;
+  }
+
+  &__card {
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+     0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+     0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+     0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+     padding: 40px 60px;
+     background: $main-white;
+     display: flex;
+     justify-content: center;
+     gap: 32px;
+     max-width: 495px;
+    margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+  }
+
+  &__title-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 16px;
+  }
+
+  &__context-text {
+    font-size: 16px;
+    color: $gray-700;
+    margin-bottom: 16px;
+  }
+
+    @include respond-to($l-desktop) {
+
+      &__inner {
+        display: block;
+      }
+
+             &__content {
+              text-align: center;
+             }
+    }
+
+        @include respond-to($m-mobile) {
+
+          &__card {
+            padding: 20px 15px;
+            gap: 10px;
+          }
+
+          &__title-text, &__context-text {
+            font-size: 14px;
+          }
+
+          &__text {
+            font-size: 16px;
+          }
+        }
+
+                @include respond-to($xs-mobile) {
+&__title-list li:first-child {
+    margin-bottom: 31px;
+  }
+                }
+}
+
+.project-swipper {
+
+  margin-top: 60px;
+  
+  .swiper-container {
+      // width: 100%;
+      max-width: 1230px;
+      height: 300px;
+      margin: 20px auto;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .swiper-slide-container {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+     
+    }
+
+        .swiper-slide-small-container {
+          width: 100px;
+            height: 100px;
+           
+        }
+  
+    .gallery-top {
+      height: 80%;
+      width: 100%;
+    }
+  
+    .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+
+      
+    }
+  
+    .gallery-thumbs .swiper-slide {
+      width: 20%;
+      height: 100%;
+      opacity: 0.4;
+    }
+  
+    .gallery-thumbs .swiper-slide-active {
+      opacity: 1;
     }
 }

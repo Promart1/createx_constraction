@@ -1077,16 +1077,16 @@ box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
         }
 
         &__btn-wrapper {
-            margin-top: 100px;
+            margin-top: 80px;
             text-align: center;
         }
 
         &__swiper-button-prev {
-            top: var(--swiper-navigation-top-offset, 85%);
+            top: var(--swiper-navigation-top-offset, 80%);
         }
 
         &__swiper-button-next {
-            top: var(--swiper-navigation-top-offset, 85%);
+            top: var(--swiper-navigation-top-offset, 80%);
         }
     }
 }

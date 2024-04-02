@@ -266,44 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /////// Load more
 
-// // JavaScript
-// document.addEventListener('DOMContentLoaded', function() {
-//     const showMoreBtn = document.getElementById('showMoreBtn');
-//     const portfolioItems = document.querySelectorAll('.work-portfolio__item');
-//     const itemsToShow = 3; // Кількість елементів для показу за раз
-//     let visibleItems = 9; // Початкова кількість видимих елементів
-
-//     // Показати початкову кількість елементів
-//     showItems();
-
-//     // Додати обробник події для кліку на кнопку "Показати більше"
-//     showMoreBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Зупиняємо стандартну дію кнопки
-        
-//         // Збільшити кількість видимих елементів на itemsToShow
-//         visibleItems += itemsToShow;
-//         // Показати елементи
-//         showItems();
-//     });
-
-//     // Функція, яка показує або приховує елементи відповідно до кількості visibleItems
-//     function showItems() {
-//         portfolioItems.forEach(function(item, index) {
-//             if (index < visibleItems) {
-//                 item.style.display = 'flex'; // Показуємо елемент
-//             } else {
-//                 item.style.display = 'none'; // Ховаємо елемент
-//             }
-//         });
-
-//         // Перевіряємо, чи всі елементи показані, якщо так, то ховаємо кнопку "Показати більше"
-//         if (visibleItems >= portfolioItems.length) {
-//             showMoreBtn.style.display = 'none';
-//         } else {
-//             showMoreBtn.style.display = 'flex';
-//         }
-//     }
-// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -411,5 +373,67 @@ var mySwiper = new Swiper('#about-swiper', {
     },
   })
 
+
+/////// Load more
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const showMoreBtn = document.getElementById('showMoreBtnPartners');
+    const portfolioItems = document.querySelectorAll('.clients__item');
+    let visibleItems; // Початкова кількість видимих елементів
+
+    // Оновлення кількості видимих елементів при завантаженні сторінки
+    updateVisibleItems();
+
+    // Додати обробник події для кліку на кнопку "Показати більше"
+    showMoreBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Зупиняємо стандартну дію кнопки
+        
+        // Збільшити кількість видимих елементів на itemsToShow
+        visibleItems += getItemsToShow();
+        // Показати елементи
+        showItems();
+    });
+
+    // Функція, яка визначає кількість елементів, які треба показати в залежності від розміру вікна
+    function getItemsToShow() {
+        if (window.innerWidth > 1024) {
+            return 12; 
+        } else if (window.innerWidth > 768) {
+            return 6; 
+        } else if (window.innerWidth > 425) {
+            return 3; 
+        } else{
+            return 4; 
+        }
+    }
+
+    // Функція, яка оновлює кількість видимих елементів при завантаженні сторінки або зміні розміру вікна
+    function updateVisibleItems() {
+        visibleItems = getItemsToShow();
+        showItems();
+    }
+
+    // Функція, яка показує або приховує елементи відповідно до кількості visibleItems
+    function showItems() {
+        portfolioItems.forEach(function(item, index) {
+            if (index < visibleItems) {
+                item.style.display = 'flex'; // Показуємо елемент
+            } else {
+                item.style.display = 'none'; // Ховаємо елемент
+            }
+        });
+
+        // Перевіряємо, чи всі елементи показані, якщо так, то ховаємо кнопку "Показати більше"
+        if (visibleItems >= portfolioItems.length) {
+            showMoreBtn.style.display = 'none';
+        } else {
+            showMoreBtn.style.display = 'flex';
+        }
+    }
+
+    // Додати обробник події для зміни розміру вікна
+    window.addEventListener('resize', updateVisibleItems);
+});
 
 

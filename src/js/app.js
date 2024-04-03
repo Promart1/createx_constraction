@@ -362,7 +362,7 @@ var mySwiper = new Swiper('#about-swiper', {
       el: '.swiper-pagination',
 			clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + '<span class="hero__pagination-number">' + (menu[index]) + '</span>' + '</span>';
+          return '<span class="' + className + '">' + '<span class="history__pagination-number">' + (menu[index]) + '</span>' + '</span>';
         },
     },
 

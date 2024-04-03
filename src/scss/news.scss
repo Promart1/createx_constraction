@@ -1,0 +1,111 @@
+.category {
+  &__inner {
+    margin-top: 120px;
+    text-align: center;
+    margin-bottom: 180px;
+  }
+
+  &__list {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    @include base-bold;
+    padding: 10px 0;
+    border: 1px solid transparent;
+  }
+
+  &__item-active {
+    border: 1px solid $primary;
+        color: $primary;
+        border-radius: 4px;
+  }
+
+  &__item:hover {
+    
+    color: $primary;
+    
+  }
+
+  &__posts-list {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 60px 30px;
+    text-align: start;
+  }
+
+  &__post-item {
+    max-width: 600px;
+    max-height: 482px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    border-radius: 4px;
+    background: $main-white;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+
+  &__post-item:hover {
+    box-shadow: 0px 8px 8px -6px rgba(30, 33, 44, 0.1),
+      0px 16px 12px -8px rgba(154, 156, 165, 0.12),
+      0px 32px 24px -16px rgba(154, 156, 165, 0.15),
+      0px 80px 80px -32px rgba(154, 156, 165, 0.2);
+    transform: scale(1.05);
+    
+    .news__item-title {
+      color: $primary;
+    }
+  }
+
+  &__pagination-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  &__pagination-item {
+    font-weight: 700;
+    font-size: 16px;
+    color: $gray-800;
+    opacity: 1;
+    transition: opasity 3ms ease-in;
+  }
+
+  &__pagination-item:hover {
+      opacity: 0.6;
+  }
+
+   &__pagination-item-active {
+    color: $primary;
+   }
+
+  @include respond-to($l-tablet) {
+    &__posts-list {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+         &__inner {
+             margin-top: 60px;
+             text-align: center;
+             margin-bottom: 80px;
+         }
+  }
+
+  @include respond-to($l-mobile) {
+    &__posts-list {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+  }
+}

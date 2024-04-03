@@ -109,3 +109,61 @@
     }
   }
 }
+
+.post {
+    &__main-title {
+        font-size: 64px;
+            font-weight: 700;
+            color: #1e212c;
+            line-height: 77px;
+            margin-bottom: 48px
+    }
+
+    &__data {
+       font-size: 16px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    &__data-active {
+        color: $primary;
+    }
+
+    &__info-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 12px;
+        text-align: center;
+
+        img {
+            width: 24px;
+            height: 24px;
+        filter: invert(50%);
+        opacity: 1;
+        transition: opacity 3ms ease-in;
+        }
+    }
+
+    &__social-item:hover {
+        img {
+            opacity: 0.6;
+        }
+    }
+
+        @include respond-to($m-desktop) {
+            &__title {
+                    font-size: 43px;
+                    margin-bottom: 24px;
+                    line-height: 30px;
+                }
+        }
+}

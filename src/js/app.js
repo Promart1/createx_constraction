@@ -353,7 +353,7 @@ var galleryTop = new Swiper('.gallery-top', {
 
 ////history slider
 
-var menu = ['01', '02', '03', '04']
+var menu = ['Present', 'March 2019', 'November 2018', 'July 2015', 'August 2010', 'February 2007', 'May 2004', 'October 2001', 'June 2000']
 var mySwiper = new Swiper('#about-swiper', {
   slidesPerView: 1, 
     loop: true,
@@ -362,7 +362,7 @@ var mySwiper = new Swiper('#about-swiper', {
       el: '.swiper-pagination',
 			clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + '<span class="history__pagination-number">' + (menu[index]) + '</span>' + '</span>';
+          return '<span class="' + className + '">' + '<span class="history__pagination-subtitle">' + (menu[index]) + '</span>' + '</span>';
         },
     },
 

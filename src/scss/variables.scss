@@ -19,6 +19,7 @@ $s-tablet: 695px;
 $m-tablet: 730px;
 $l-tablet: 767px;
 $tablet: 768px;
+$xl-tablet: 830px;
 $desktop: 992px;
 $m-desktop: 1090px;
 $l-desktop: 1250px;
@@ -166,6 +167,15 @@ $sixth-heading-font-size: 16px;
 @mixin large-regular {
     font-size: 18px;
     font-weight: 400;
+    color: $gray-900;
+    line-height: 27px;
+}
+
+//large/bold
+
+@mixin large-bold {
+    font-size: 18px;
+    font-weight: 700;
     color: $gray-900;
     line-height: 27px;
 }

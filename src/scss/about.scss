@@ -86,10 +86,7 @@
     padding-right: 105px;
     border-radius: 4px;
     background: $main-white;
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
-      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-      0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
   &__img {
@@ -400,8 +397,14 @@
     .team__list-social {
       display: none;
 
+      img {
+        filter: brightness(900%) saturate(0%);
+        opacity: 1;
+        transition: opacity 3ms ease-in;
+      }
+
       img:hover {
-        opacity: 0.6;
+        opacity: 0.8;
       }
     }
   }
@@ -477,19 +480,60 @@
     padding-top: 80px;
     padding-bottom: 120px;
     text-align: center;
+    position: relative;
   }
 
   &__main-img {
     margin-top: 60px;
+    position: relative;
   }
 
-  &__main-img-mob {
-    display: none;
-  }
+  // &__main-img-mob {
+  //   display: none;
+  // }
 
   // &__list {
   //     display: none;
   // }
+
+  &__canada,
+  &__usa,
+  &__germany,
+  &__ukraine,
+  &__china,
+  &__australia {
+    position: absolute;
+  }
+
+  &__canada {
+    top: 35%;
+    left: 26%;
+  }
+
+  &__usa {
+    top: 45%;
+    left: 30%;
+  }
+
+  &__germany {
+    top: 40%;
+    left: 49%;
+  }
+
+  &__ukraine {
+    top: 41%;
+    left: 53%;
+  }
+
+  &__china {
+    top: 48%;
+    right: 33%;
+  }
+
+  &__australia {
+    top: 70%;
+    right: 28%;
+  }
 
   @include respond-to($tablet) {
     &__inner {
@@ -498,6 +542,77 @@
       padding-bottom: 80px;
     }
   }
+
+    @include respond-to($xl-LapTop) {
+&__canada {
+    top: 35%;
+    left: 21%;
+  }
+
+  &__usa {
+    top: 45%;
+    left: 24%;
+  }
+
+  &__china {
+    top: 48%;
+    right: 30%;
+  }
+
+  &__australia {
+    top: 70%;
+    right: 24%;
+  }
+    }
+
+        @include respond-to($LapTop) {
+          &__canada {
+            top: 34%;
+            left: 14%;
+          }
+    
+          &__usa {
+            top: 45%;
+            left: 17%;
+          }
+    
+          &__china {
+            top: 48%;
+            right: 24%;
+          }
+    
+          &__australia {
+            top: 70%;
+            right: 17%;
+          }
+        }
+
+                @include respond-to($xl-tablet) {
+                  &__canada,
+                    &__usa,
+                    &__germany,
+                    &__ukraine,
+                    &__china,
+                    &__australia {
+                      position: static;
+                    }
+
+                    &__list {
+                      display: grid;
+                      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+                        gap: 30px 30px;
+                        justify-content: center;
+                        margin-top: 30px;
+                      
+                        img {
+                          margin: 0 auto;
+                          width: 30px;
+                          height: 30px;
+                        }
+                    }
+
+                  
+                }
 }
 
 ////////////////////position/////////////////

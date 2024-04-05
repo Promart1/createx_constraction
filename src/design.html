@@ -2,7 +2,85 @@
 <html lang="en">
   @@include('html/head.html',{ "title":"About us" })
   <body>
-    @@include('html/header.html',{})
+    <div class="menu--close"></div>
+    <header class="header main__header-wrapper">
+      <div class="container">
+        <div class="header__wrapper" id="header">
+          <div class="header__logo-wrapper">
+            <a href="./" class="header__logo">
+              <img src="@img/icons/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__close">
+                <button class="menu__close-btn">
+                  <img src="@img/icons/cross.svg" alt="Close cross" />
+                </button>
+              </li>
+
+              <li class="menu__item">
+                <a href="./about.html" class="menu__link">About Us</a>
+              </li>
+
+              <li class="menu__item menu__link-active">
+                <a href="./services.html" class="menu__link">Services</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./work.html" class="menu__link">Work</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./news.html" class="menu__link">News</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./contact.html" class="menu__link">Contacts</a>
+              </li>
+
+              <li class="menu__item">
+                <ul class="header__social-wrapper">
+                  <li class="header__social-list">
+                    <div class="header__img-wrapper">
+                      <img src="@img/icons/iphone.svg" alt="phone" />
+
+                      <div class="header__content-wrapper header__dropdown">
+                        <p class="header__content-text">Call us</p>
+                        <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="header__social-list">
+                    <div class="header__img-wrapper">
+                      <img src="@img/icons/chat.svg" alt="chat" />
+
+                      <div class="header__content-wrapper header__dropdown">
+                        <p class="header__content-text">Talk to us</p>
+                        <p>
+                          <a href="mailto:hello@createx.com"
+                            >hello@createx.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="menu__button">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
     <main>
       <!-- /////////////MAIN_SECTION/////////////////// -->
 
@@ -28,40 +106,40 @@
 
       <!-- /////////////OFFER_SECTION/////////////////// -->
 
+
+
+
       <section class="offer">
-        <div class="container">
-          <div class="offer__inner">
+    <div class="container">
+        <div class="offer__inner">
             <img src="@img/offer-img.jpg" alt="room" class="offer__img" />
             <div class="offer__content">
-              <h2 class="offer__title">We offer</h2>
+                <h2 class="offer__title">We offer</h2>
 
-              <div class="offer__block">
-                <img src="@img/icons/plus.svg" alt="plus" class="offer__plus" />
-                <h3 class="offer__block-title">
-                  Interior design of apartments
-                </h3>
-                <p class="offer__text">
-                  Adipiscing nunc arcu enim elit mattis eu placerat proin.
-                  Imperdiet elementum faucibus dignissim purus. Fusce parturient
-                  diam magna ullamcorper morbi semper massa ac facilisis.
-                </p>
-              </div>
+                <div class="offer__block">
+                    <img src="@img/icons/plus.svg" alt="plus" class="offer__plus" />
+                    <h3 class="offer__block-title toggle-text">Interior design of apartments</h3>
+                    <p class="offer__text hidden-text">
+                        Adipiscing nunc arcu enim elit mattis eu placerat proin.
+                        Imperdiet elementum faucibus dignissim purus. Fusce parturient
+                        diam magna ullamcorper morbi semper massa ac facilisis.
+                    </p>
+                </div>
 
-              <div class="offer__block">
-                <img src="@img/icons/plus.svg" alt="plus" class="offer__plus" />
-                <h3 class="offer__block-title">
-                  Interior design of private houses
-                </h3>
-                <p class="offer__text">
-                  Adipiscing nunc arcu enim elit mattis eu placerat proin.
-                  Imperdiet elementum faucibus dignissim purus. Fusce parturient
-                  diam magna ullamcorper morbi semper massa ac facilisis.
-                </p>
-              </div>
+                <div class="offer__block">
+                    <img src="@img/icons/plus.svg" alt="plus" class="offer__plus" />
+                    <h3 class="offer__block-title toggle-text">Interior design of private houses</h3>
+                    <p class="offer__text hidden-text">
+                        Adipiscing nunc arcu enim elit mattis eu placerat proin.
+                        Imperdiet elementum faucibus dignissim purus. Fusce parturient
+                        diam magna ullamcorper morbi semper massa ac facilisis.
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
+
 
       <!-- /////////////STEPS_SECTION/////////////////// -->
 
@@ -131,19 +209,28 @@
               <li class="benefits__item benefits__item-line-r">
                 <img src="@img/icons/ic-contract.svg" alt="contract" />
                 <p class="benefits__item-title">Fixed Terms & Cost</p>
-                <p class="benefits__item-text">Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+                <p class="benefits__item-text">
+                  Culpa nostrud commodo ea consequat aliquip reprehenderit.
+                  Veniam velit nostrud aliquip sunt.
+                </p>
               </li>
 
-               <li class="benefits__item benefits__item-line-r">
+              <li class="benefits__item benefits__item-line-r">
                 <img src="@img/icons/ic-helmet.svg" alt="helmet" />
                 <p class="benefits__item-title">Qualified Workers</p>
-                <p class="benefits__item-text">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.</p>
+                <p class="benefits__item-text">
+                  Anim reprehenderit sint voluptate exercitation adipisicing
+                  laborum adipisicing. Minim empor est ea.
+                </p>
               </li>
 
-               <li class="benefits__item">
+              <li class="benefits__item">
                 <img src="@img/icons/ic-camera.svg" alt="camera" />
                 <p class="benefits__item-title">Supervision & Control</p>
-                <p class="benefits__item-text">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.</p>
+                <p class="benefits__item-text">
+                  Sit veniam aute dolore adipisicing nulla sit culpa. Minim
+                  mollit voluptate ullamco proident ea ad.
+                </p>
               </li>
             </ul>
 
@@ -158,13 +245,10 @@
 
       <!-- ////////////////////PORTFOLIO_DES_SECTION/////////// -->
 
-
       <section class="portfolio portfolio-des">
         <div class="container">
           <div class="portfolio__inner portfolio-des__inner">
-            <h2 class="portfolio__title">
-              Related projects
-            </h2>
+            <h2 class="portfolio__title">Related projects</h2>
 
             <div
               class="swiper-container portfolio__swiper-container"
@@ -178,7 +262,9 @@
                       <h5 class="portfolio__block-title">
                         Kids Bedroom With Decorations
                       </h5>
-                      <p class="portfolio__block-subtitle">Apartments & flats</p>
+                      <p class="portfolio__block-subtitle">
+                        Apartments & flats
+                      </p>
                     </div>
                     <button class="portfolio__btn">View Project</button>
                   </div>
@@ -187,8 +273,12 @@
                   <div class="portfolio__block">
                     <img src="@img/bedroom.jpg" alt="bedroom" />
                     <div>
-                      <h5 class="portfolio__block-title">Modern Double Bedroom</h5>
-                      <p class="portfolio__block-subtitle">Apartments & flats</p>
+                      <h5 class="portfolio__block-title">
+                        Modern Double Bedroom
+                      </h5>
+                      <p class="portfolio__block-subtitle">
+                        Apartments & flats
+                      </p>
                     </div>
                     <button class="portfolio__btn">View Project</button>
                   </div>
@@ -198,9 +288,11 @@
                     <img src="@img/vintag.jpg" alt="pencil build" />
                     <div>
                       <h5 class="portfolio__block-title">
-                       Scandinavian Style Interior
+                        Scandinavian Style Interior
                       </h5>
-                      <p class="portfolio__block-subtitle">Scandinavian Style Interior</p>
+                      <p class="portfolio__block-subtitle">
+                        Scandinavian Style Interior
+                      </p>
                     </div>
                     <button class="portfolio__btn">View Project</button>
                   </div>
@@ -222,7 +314,7 @@
                     <img src="@img/bedroom.jpg" alt="bedroom" />
                     <div>
                       <h5 class="portfolio__block-title">
-                       Modern Double Bedroom
+                        Modern Double Bedroom
                       </h5>
                       <p class="portfolio__block-subtitle">Private houses</p>
                     </div>
@@ -233,23 +325,26 @@
                   <div class="portfolio__block">
                     <img src="@img/vintag.jpg" alt="pencil build" />
                     <div>
-                      <h5 class="portfolio__block-title">Scandinavian Style Interior</h5>
+                      <h5 class="portfolio__block-title">
+                        Scandinavian Style Interior
+                      </h5>
                       <p class="portfolio__block-subtitle">Private houses</p>
                     </div>
                     <button class="portfolio__btn">View Project</button>
                   </div>
                 </div>
               </div>
-             
 
-              <div class="swiper-button-prev portfolio__swiper-button-prev portfolio-des__swiper-button-prev">
+              <div
+                class="swiper-button-prev portfolio__swiper-button-prev portfolio-des__swiper-button-prev"
+              >
                 <img src="@img/icons/Left.svg" alt="left" />
               </div>
-              <div class="swiper-button-next portfolio__swiper-button-next portfolio-des__swiper-button-next">
+              <div
+                class="swiper-button-next portfolio__swiper-button-next portfolio-des__swiper-button-next"
+              >
                 <img src="@img/icons/Right.svg" alt="right" />
               </div>
-
-              
             </div>
 
             <div class="view-all__btn-wrapper portfolio__btn-wrapper">
@@ -260,14 +355,12 @@
         </div>
       </section>
 
-
       <!-- ////////////////////PRICING_SECTION/////////// -->
 
       <section class="pricing">
-       
-          <div class="pricing__inner">
-            <img src="@img/bg-figures.png" alt="bg" class="pricing__bg">
-             <div class="container">
+        <div class="pricing__inner">
+          <img src="@img/bg-figures.png" alt="bg" class="pricing__bg" />
+          <div class="container">
             <h2 class="block__title pricing__title">Pricing</h2>
             <p class="block__text">
               We offer you three categories of construction.
@@ -275,7 +368,7 @@
 
             <table>
               <tr>
-                <td class="pricing__table-main-title ">Items</td>
+                <td class="pricing__table-main-title">Items</td>
                 <td class="pricing__table-main">
                   <p class="pricing__table-title">BASIC</p>
                   <p class="pricing__table-subtitle">$20 per m2</p>
@@ -292,58 +385,68 @@
 
               <tr class="pricing__table-line pricing__table-line-gray">
                 <td class="pricing__table-secondary">Installation plan</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line">
-                <td class="pricing__table-secondary">Planning solutions (2-3 options)</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td class="pricing__table-secondary">
+                  Planning solutions (2-3 options)
+                </td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line pricing__table-line-gray">
                 <td class="pricing__table-secondary">Lighting plan</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line">
                 <td class="pricing__table-secondary">Flooring plan</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line pricing__table-line-gray">
-                <td class="pricing__table-secondary">Heating floor laying scheme</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td class="pricing__table-secondary">
+                  Heating floor laying scheme
+                </td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line">
-                <td class="pricing__table-secondary">Air conditioner zones layout</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td class="pricing__table-secondary">
+                  Air conditioner zones layout
+                </td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line pricing__table-line-gray">
-                <td class="pricing__table-secondary">3D visualization of all rooms</td>
+                <td class="pricing__table-secondary">
+                  3D visualization of all rooms
+                </td>
                 <td>simplified</td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
-                <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line">
-                <td class="pricing__table-secondary">Visualization of each room (3-4 angles)</td>
+                <td class="pricing__table-secondary">
+                  Visualization of each room (3-4 angles)
+                </td>
                 <td></td>
                 <td></td>
-                  <td><img src="@img/icons/Mark.svg" alt="mark"></td>
+                <td><img src="@img/icons/Mark.svg" alt="mark" /></td>
               </tr>
 
               <tr class="pricing__table-line pricing__table-line-gray">
@@ -356,13 +459,19 @@
               <tr class="pricing__table-line">
                 <td class="pricing__table-secondary"></td>
                 <td>
-                  <button type="submit" class="pricing__table-btn">send request</button>
+                  <button type="submit" class="pricing__table-btn">
+                    send request
+                  </button>
                 </td>
                 <td>
-                  <button type="submit" class="pricing__table-btn">send request</button>
+                  <button type="submit" class="pricing__table-btn">
+                    send request
+                  </button>
                 </td>
                 <td>
-                  <button type="submit" class="pricing__table-btn">send request</button>
+                  <button type="submit" class="pricing__table-btn">
+                    send request
+                  </button>
                 </td>
               </tr>
             </table>
@@ -372,7 +481,7 @@
 
       <!----------------------- CLIENTS_SECTION -------------------->
 
-       <section class="clients clients-des">
+      <section class="clients clients-des">
         <div class="clients__inner clients-des__inner">
           <div class="container">
             <h2 class="clients__title">Supported by 12+ partners</h2>
@@ -435,10 +544,8 @@
         </div>
       </section>
 
-
-        <!----------------------- APPLICATION_SECTION -------------------->
-        @@include('html/application.html',{})
-
+      <!----------------------- APPLICATION_SECTION -------------------->
+      @@include('html/application.html',{})
     </main>
     @@include('html/footer.html',{})
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

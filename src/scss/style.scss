@@ -7,6 +7,7 @@
 @import "work.scss";
 @import "about.scss";
 @import "news.scss";
+@import "contactForm.scss";
 
 
 //////////////header///////////////////////
@@ -127,6 +128,8 @@
     float: right;
   }
 
+  
+
   &__item {
     font-size: 16px;
     font-weight: 700;
@@ -138,6 +141,13 @@
     color: $gray-800;
     transition: color 0.3s ease;
   }
+
+    &__link-active {
+      a {
+color: $primary;
+      }
+      
+    }
 
 &__link.active {
   color: $primary;
@@ -492,12 +502,13 @@
     gap: 16px;
 
     img {
-      fill: $main-white;
-      opacity: 0.6;
+      -webkit-filter: invert(50%);
+        filter: invert(50%);
+        transition: filter 3ms ease-in;
     }
 
     img:hover {
-      opacity: 1;
+    filter: invert(0);
     }
   }
 

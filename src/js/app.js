@@ -328,28 +328,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ////// swiper project portfolio
 
-
 var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      navigation: {
+    spaceBetween: 10,
+    navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-	 		loop: true,
-			loopedSlides: 6
-    });
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 20,
-      centeredSlides: true,
-      slidesPerView: 6,
-      touchRatio: 0.2,
-      slideToClickedSlide: true,
-			loop: true,
-      loopedSlides: 6,
+    },
+    loop: false, // Вимкнути зациклення
+    loopedSlides: 6,
+});
 
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 20,
+    centeredSlides: true,
+    slidesPerView: 6,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    loop: false, // Вимкнути зациклення
+    loopedSlides: 6,
+});
+
+galleryTop.controller.control = galleryThumbs;
+galleryThumbs.controller.control = galleryTop;
+
+
+// var galleryTop = new Swiper('.gallery-top', {
+//       spaceBetween: 10,
+//       navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//       },
+// 	 		loop: true,
+// 			loopedSlides: 6
+//     });
+//     var galleryThumbs = new Swiper('.gallery-thumbs', {
+//       spaceBetween: 20,
+//       centeredSlides: true,
+//       slidesPerView: 6,
+//       touchRatio: 0.2,
+//       slideToClickedSlide: true,
+// 			loop: true,
+//       loopedSlides: 6,
+
+//     });
+//     galleryTop.controller.control = galleryThumbs;
+//     galleryThumbs.controller.control = galleryTop;
 
 ////history slider
 
@@ -435,5 +458,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Додати обробник події для зміни розміру вікна
     window.addEventListener('resize', updateVisibleItems);
 });
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const toggleTexts = document.querySelectorAll('.toggle-text');
+
+//     toggleTexts.forEach(function(toggleText) {
+//         toggleText.addEventListener('click', function() {
+//             const textBlock = this.nextElementSibling;
+//             if (textBlock.classList.contains('hidden-text')) {
+//                 textBlock.classList.remove('hidden-text');
+//                 textBlock.classList.add('visible');
+//             } else {
+//                 textBlock.classList.remove('visible');
+//                 textBlock.classList.add('hidden-text');
+//             }
+//         });
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+
+    toggleBtns.forEach(function(toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            const targetId = this.dataset.target;
+            const textBlock = document.getElementById(targetId);
+
+            // Toggle the open class on the parent .offer__block
+            this.parentNode.classList.toggle('open');
+        });
+    });
+});
+
 
 

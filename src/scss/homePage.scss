@@ -639,13 +639,7 @@
         margin-left: auto;
         padding: 48px 60px;
         border-radius: 4px;
-        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-
-        box-shadow: 0px 12px 10px -6px rgba(154, 156, 165, 0.04);
-
-        box-shadow: 0px 30px 24px -10px rgba(154, 156, 165, 0.05);
-
-        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         position: relative;
         z-index: 50;
     }
@@ -763,10 +757,7 @@
         border-radius: 1px;
         background: $main-white;
         cursor: pointer;
-        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
-            0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-            0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-            0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         margin-right: auto;
         margin-left: auto;
         position: relative;
@@ -904,10 +895,7 @@
 
     &__block {
         border-radius: 4px;
-        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
-            0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-            0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-            0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         background: $main-white;
         width: 390px;
         padding-bottom: 24px;
@@ -1426,13 +1414,7 @@ box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
         border-radius: 4px;
         background: $main-white;
 
-        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-
-        box-shadow: 0px 12px 10px -6px rgba(154, 156, 165, 0.04);
-
-        box-shadow: 0px 30px 24px -10px rgba(154, 156, 165, 0.05);
-
-        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         cursor: pointer;
 
         .news__item-title {

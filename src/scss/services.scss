@@ -205,11 +205,12 @@
   }
 
   &__text {
-    display: none;
-    @include base-regular;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    @include base-regular;
+  display: none;
+  transition: opacity 5ms ease-in-out;
   }
+
 
   &__block.expanded .offer__text {
     display: block;
@@ -627,10 +628,7 @@
     width: 100%;
     background: $main-white;
     border: 1px solid rgba(229, 232, 237, 1);
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
-      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-      0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
   td,

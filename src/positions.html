@@ -2,9 +2,86 @@
 <html lang="en">
   @@include('html/head.html',{ "title":"About us" })
   <body>
-    @@include('html/header.html',{})
+    <div class="menu--close"></div>
+    <header class="header main__header-wrapper">
+      <div class="container">
+        <div class="header__wrapper" id="header">
+          <div class="header__logo-wrapper">
+            <a href="./" class="header__logo">
+              <img src="@img/icons/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__close">
+                <button class="menu__close-btn">
+                  <img src="@img/icons/cross.svg" alt="Close cross" />
+                </button>
+              </li>
+
+              <li class="menu__item menu__link-active">
+                <a href="./about.html" class="menu__link">About Us</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./services.html" class="menu__link">Services</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./work.html" class="menu__link">Work</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./news.html" class="menu__link">News</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="./contact.html" class="menu__link">Contacts</a>
+              </li>
+
+              <li class="menu__item">
+                <ul class="header__social-wrapper">
+                  <li class="header__social-list">
+                    <div class="header__img-wrapper">
+                      <img src="@img/icons/iphone.svg" alt="phone" />
+
+                      <div class="header__content-wrapper header__dropdown">
+                        <p class="header__content-text">Call us</p>
+                        <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="header__social-list">
+                    <div class="header__img-wrapper">
+                      <img src="@img/icons/chat.svg" alt="chat" />
+
+                      <div class="header__content-wrapper header__dropdown">
+                        <p class="header__content-text">Talk to us</p>
+                        <p>
+                          <a href="mailto:hello@createx.com"
+                            >hello@createx.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="menu__button">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
     <main>
-         <!-- /////////////MAIN_SECTION/////////////////// -->
+      <!-- /////////////MAIN_SECTION/////////////////// -->
 
       <section class="main">
         <img src="@img/position-bg.png" alt="build" class="position__bg" />
@@ -15,7 +92,9 @@
               <span> / </span>
               <a href="./about.html" class="main__link">About Us</a>
               <span> / </span>
-              <a href="./positions.html" class="main__link">Available Positions</a>
+              <a href="./positions.html" class="main__link"
+                >Available Positions</a
+              >
             </div>
             <h1 class="main__title">AVAILABLE POSITIONS</h1>
             <p class="main__text">
@@ -25,178 +104,336 @@
         </div>
       </section>
 
-       <!-- /////////////VACANCIES_SECTION/////////////////// -->
+      <!-- /////////////VACANCIES_SECTION/////////////////// -->
 
-       <section class="vacancies">
-<div class="container">
-  <div class="vacancies__inner">
-    <ul class="vacancies__list">
-      
-      <li class="vacancies__item">
-        
-        <div class="vacancies__info-wrapper">
-          <div class="vacancies__city-wrapper">
-            <div class="vacancies__block">
-            <img src="@img/icons/outline.svg" alt="pin">
-            <p>New York</p>
-            </div>
-            
-            <div class="vacancies__block-sec">
-            <img src="@img/icons/Clock.svg" alt="clock">
-            <p>Full Time</p>
+      <section class="vacancies">
+        <div class="container">
+          <div class="vacancies__inner">
+            <ul class="vacancies__list">
+              <li class="vacancies__item">
+                <div class="vacancies__info-wrapper">
+                  <div class="vacancies__city-wrapper">
+                    <div class="vacancies__block">
+                      <img src="@img/icons/outline.svg" alt="pin" />
+                      <p>New York</p>
+                    </div>
+
+                    <div class="vacancies__block-sec">
+                      <img src="@img/icons/Clock.svg" alt="clock" />
+                      <p>Full Time</p>
+                    </div>
+                  </div>
+                  <p class="vacancies__position">Heavy Equipment Operator</p>
+                </div>
+
+                <div class="vacancies__btn-wrapper">
+                  <button type="submit" class="vacancies__btn">
+                    Apply now
+                  </button>
+                </div>
+              </li>
+
+              <li class="vacancies__item">
+                <div class="vacancies__info-wrapper">
+                  <div class="vacancies__city-wrapper">
+                    <div class="vacancies__block">
+                      <img src="@img/icons/outline.svg" alt="pin" />
+                      <p>San Francisco</p>
+                    </div>
+
+                    <div class="vacancies__block-sec">
+                      <img src="@img/icons/Clock.svg" alt="clock" />
+                      <p>Full Time</p>
+                    </div>
+                  </div>
+                  <p class="vacancies__position">
+                    Financial Compliance Analyst
+                  </p>
+                </div>
+
+                <div class="vacancies__btn-wrapper">
+                  <button type="submit" class="vacancies__btn">
+                    Apply now
+                  </button>
+                </div>
+              </li>
+
+              <li class="vacancies__item">
+                <div class="vacancies__info-wrapper">
+                  <div class="vacancies__city-wrapper">
+                    <div class="vacancies__block">
+                      <img src="@img/icons/outline.svg" alt="pin" />
+                      <p>New Jersey</p>
+                    </div>
+
+                    <div class="vacancies__block-sec">
+                      <img src="@img/icons/Clock.svg" alt="clock" />
+                      <p>Full Time</p>
+                    </div>
+                  </div>
+                  <p class="vacancies__position">Project Manager - Buildings</p>
+                </div>
+
+                <div class="vacancies__btn-wrapper">
+                  <button type="submit" class="vacancies__btn">
+                    Apply now
+                  </button>
+                </div>
+              </li>
+
+              <li class="vacancies__item">
+                <div class="vacancies__info-wrapper">
+                  <div class="vacancies__city-wrapper">
+                    <div class="vacancies__block">
+                      <img src="@img/icons/outline.svg" alt="pin" />
+                      <p>New York</p>
+                    </div>
+
+                    <div class="vacancies__block-sec">
+                      <img src="@img/icons/Clock.svg" alt="clock" />
+                      <p>Part Time</p>
+                    </div>
+                  </div>
+                  <p class="vacancies__position">Environment Specialist</p>
+                </div>
+
+                <div class="vacancies__btn-wrapper">
+                  <button type="submit" class="vacancies__btn">
+                    Apply now
+                  </button>
+                </div>
+              </li>
+
+              <li class="vacancies__item">
+                <div class="vacancies__info-wrapper">
+                  <div class="vacancies__city-wrapper">
+                    <div class="vacancies__block">
+                      <img src="@img/icons/outline.svg" alt="pin" />
+                      <p>New York</p>
+                    </div>
+
+                    <div class="vacancies__block-sec">
+                      <img src="@img/icons/Clock.svg" alt="clock" />
+                      <p>Full Time</p>
+                    </div>
+                  </div>
+                  <p class="vacancies__position">Accountant</p>
+                </div>
+
+                <div class="vacancies__btn-wrapper">
+                  <button type="submit" class="vacancies__btn">
+                    Apply now
+                  </button>
+                </div>
+              </li>
+            </ul>
+
+            <div class="vacancies__cta-wrapper">
+              <h2 class="vacancies__title">
+                Didn’t find what you were looking for?
+              </h2>
+              <p class="vacancies__text">
+                Send your CV or subscribe to our newsletter to receive
+                information about new vacancies.
+              </p>
+              <div class="vacancies__cta-btn-wrapper">
+                <button
+                  type="submit"
+                  class="vacancies__cta-btn-sub"
+                  id="openModalSubBtn"
+                >
+                  subscribe
+                </button>
+                <button
+                  type="submit"
+                  class="vacancies__cta-btn-send"
+                  id="openModalCVBtn"
+                >
+                  send cv
+                </button>
+              </div>
             </div>
           </div>
-          <p class="vacancies__position">Heavy Equipment Operator</p>
         </div>
+      </section>
 
-        <div class="vacancies__btn-wrapper">
-          <button type="submit" class="vacancies__btn">Apply now</button>
-        </div>
+      <div id="modalSub" class="modal">
+        <div class="modal-content">
+          <span class="close" data-modal-id="modalSub">
+            <img src="@img/icons/cross.svg" alt="cross" />
+          </span>
+          <h3 class="modal__title">Subscribe to our newsletter</h3>
 
-      </li>
-
-      <li class="vacancies__item">
-        
-        <div class="vacancies__info-wrapper">
-          <div class="vacancies__city-wrapper">
-            <div class="vacancies__block">
-            <img src="@img/icons/outline.svg" alt="pin">
-            <p>San Francisco</p>
+          <form id="form" action="">
+            <div>
+              <label for="name" class="application__subtitle">Name*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="application__input application__modal-f-input"
+                placeholder="Your name"
+              />
             </div>
-            
-            <div class="vacancies__block-sec">
-            <img src="@img/icons/Clock.svg" alt="clock">
-            <p>Full Time</p>
+
+            <div>
+              <label for="email" class="application__subtitle">Email*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="application__input application__modal-s-input"
+                placeholder="Your working email"
+              />
             </div>
-          </div>
-          <p class="vacancies__position">Financial Compliance Analyst</p>
-        </div>
 
-        <div class="vacancies__btn-wrapper">
-          <button type="submit" class="vacancies__btn">Apply now</button>
-        </div>
-
-      </li>
-
-      <li class="vacancies__item">
-        
-        <div class="vacancies__info-wrapper">
-         <div class="vacancies__city-wrapper">
-            <div class="vacancies__block">
-            <img src="@img/icons/outline.svg" alt="pin">
-            <p>New Jersey</p>
+            <div class="application__btn-wrapper">
+              <button
+                type="submit"
+                class="application__btn application__modal-btn"
+              >
+                send
+              </button>
             </div>
-            
-            <div class="vacancies__block-sec">
-            <img src="@img/icons/Clock.svg" alt="clock">
-            <p>Full Time</p>
-            </div>
-          </div>
-          <p class="vacancies__position">Project Manager - Buildings</p>
+          </form>
         </div>
-
-        <div class="vacancies__btn-wrapper">
-          <button type="submit" class="vacancies__btn">Apply now</button>
-        </div>
-
-      </li>
-
-      <li class="vacancies__item">
-        
-        <div class="vacancies__info-wrapper">
-          <div class="vacancies__city-wrapper">
-            <div class="vacancies__block">
-            <img src="@img/icons/outline.svg" alt="pin">
-            <p>New York</p>
-            </div>
-            
-            <div class="vacancies__block-sec">
-            <img src="@img/icons/Clock.svg" alt="clock">
-            <p>Part Time</p>
-            </div>
-          </div>
-          <p class="vacancies__position">Environment Specialist</p>
-        </div>
-
-        <div class="vacancies__btn-wrapper">
-          <button type="submit" class="vacancies__btn">Apply now</button>
-        </div>
-
-      </li>
-
-      <li class="vacancies__item">
-        
-        <div class="vacancies__info-wrapper">
-          <div class="vacancies__city-wrapper">
-            <div class="vacancies__block">
-            <img src="@img/icons/outline.svg" alt="pin">
-            <p>New York</p>
-            </div>
-            
-            <div class="vacancies__block-sec">
-            <img src="@img/icons/Clock.svg" alt="clock">
-            <p>Full Time</p>
-            </div>
-          </div>
-          <p class="vacancies__position">Accountant</p>
-        </div>
-
-        <div class="vacancies__btn-wrapper">
-          <button type="submit" class="vacancies__btn">Apply now</button>
-        </div>
-
-      </li>
-    </ul>
-
-
-    <div class="vacancies__cta-wrapper">
-      <h2 class="vacancies__title">Didn’t find what you were looking for?</h2>
-      <p class="vacancies__text">Send your CV or subscribe to our newsletter to receive information about new vacancies.</p>
-      <div class="vacancies__cta-btn-wrapper">
-        <button type="submit" class="vacancies__cta-btn-sub">subscribe</button>
-        <button type="submit" class="vacancies__cta-btn-send">send cv</button>
       </div>
-    </div>
-  </div>
-</div>
-       </section>
 
-        <!----------------------- BENEFITS_SECTION -------------------->
+      <div id="modalCV" class="modal">
+        <div class="modal-content">
+          <span class="close" data-modal-id="modalCV">
+            <img src="@img/icons/cross.svg" alt="cross" />
+          </span>
+          <h3 class="modal__title">Send your CV</h3>
+
+          <form id="form" action="">
+            <div>
+              <label for="name" class="application__subtitle">Name*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="application__input application__modal-f-input"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div class="contact-form__select-wrapper application__modal-f-input">
+              <img src="@img/icons/Down-chevron.svg" alt="tip" />
+              <label for="name" class="application__subtitle"
+                >Location*</label
+              >
+              <select
+                id="country"
+                class="contact-form__select application__select"
+                name="interected"
+                required
+              >
+                <option value="" disabled selected>Choose your location</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="germany">Germany</option>
+                <option value="ukraine">Ukraine</option>
+                 <option value="china">China</option>
+                <option value="australia">Australia</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="phone" class="application__subtitle">Phone*</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="application__input application__modal-f-input"
+                placeholder="Your phone number"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="application__subtitle">Email*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="application__input application__modal-f-input"
+                placeholder="Your working email"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="application__subtitle"
+                >Сovering letter</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="2"
+                class="application__input application__modal-f-input"
+                placeholder="Your covering letter"
+              ></textarea>
+            </div>
+
+            <div class="modal__input-container">
+            <label class="modal__input-label" for="fileUpload">
+              Attach your CV*</label>
+            <input type="file" id="fileUpload" name="fileUpload">
+              <br><span class="modal__file-name"></span>
+        </div>
+
+            <div class="application__btn-wrapper">
+              <button
+                type="submit"
+                class="application__btn application__modal-btn"
+              >
+                send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!----------------------- BENEFITS_SECTION -------------------->
 
       <section class="values">
-          <div class="container">
-            <div class="values__inner benefit__inner">
-              <h2 class="block__title">Employee benefits</h2>
-              <p class="block__text">
-                There’s always room for talent.
-              </p>
-              <ul class="values__list">
-                <li class="values__item">
-                  <img src="@img/icons/ic-brain.svg" alt="brain" />
-                  <p class="values__item-title">Training</p>
-                  <p class="values__item-text">
-                    Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.
-                  </p>
-                </li>
+        <div class="container">
+          <div class="values__inner benefit__inner">
+            <h2 class="block__title">Employee benefits</h2>
+            <p class="block__text">There’s always room for talent.</p>
+            <ul class="values__list">
+              <li class="values__item">
+                <img src="@img/icons/ic-brain.svg" alt="brain" />
+                <p class="values__item-title">Training</p>
+                <p class="values__item-text">
+                  Culpa nostrud commodo ea consequat aliquip reprehenderit.
+                  Veniam velit nostrud aliquip sunt.
+                </p>
+              </li>
 
-                <li class="values__item">
-                  <img src="@img/icons/ic-success.svg" alt="success" />
-                  <p class="values__item-title">Professional Growth</p>
-                  <p class="values__item-text">
-                   Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.
-                  </p>
-                </li>
+              <li class="values__item">
+                <img src="@img/icons/ic-success.svg" alt="success" />
+                <p class="values__item-title">Professional Growth</p>
+                <p class="values__item-text">
+                  Anim reprehenderit sint voluptate exercitation adipisicing
+                  laborum adipisicing. Minim empor est ea.
+                </p>
+              </li>
 
-                <li class="values__item">
-                  <img src="@img/icons/ic-budget.svg" alt="budget" />
-                  <p class="values__item-title">Growing Salary</p>
-                  <p class="values__item-text">
-                    Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.
-                  </p>
-                </li>
-              </ul>
-            </div>
+              <li class="values__item">
+                <img src="@img/icons/ic-budget.svg" alt="budget" />
+                <p class="values__item-title">Growing Salary</p>
+                <p class="values__item-text">
+                  Sit veniam aute dolore adipisicing nulla sit culpa. Minim
+                  mollit voluptate ullamco proident ea ad.
+                </p>
+              </li>
+            </ul>
           </div>
+        </div>
       </section>
 
       @@include('html/application.html',{})

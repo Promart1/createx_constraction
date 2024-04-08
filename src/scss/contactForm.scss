@@ -13,6 +13,13 @@
     text-align: center;
   }
 
+  &__text {
+    @include large-regular;
+    margin-bottom: 65px;
+  }
+
+
+
   &__wrapper {
     display: flex;
   }
@@ -174,12 +181,12 @@ input.radio-input:checked::before {
 
     &__item-title {
         @include third-heading;
-        margin-bottom: 24px;
+        margin-bottom: 30px;
     }
 
     &__address {
         @include base-regular;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
         max-width: 250px;
     }
 
@@ -190,7 +197,7 @@ input.radio-input:checked::before {
     }
 
         &__text-wrapper {
-            margin-top: 20px;
+            margin-top: 26px;
         }
 
     &__text {
@@ -217,10 +224,15 @@ input.radio-input:checked::before {
 
     &__inner {
         background: $gray-200;
-        padding-top: 120px;
-        padding-bottom: 95px;
-        margin-top: -1px;
+        padding-top: 150px;
+        padding-bottom: 125px;
+        margin-top: -25px;
         text-align: center;
+    }
+
+    &__title {
+        @include main-heading;
+        margin-bottom: 46px;
     }
 
     &__list {

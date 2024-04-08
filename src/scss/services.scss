@@ -6,11 +6,13 @@
     position: absolute;
     top: 681px;
     right: -30%;
+    z-index: 1;
   }
 
   &__left {
     position: absolute;
     bottom: -40%;
+    z-index: 1;
   }
 
   &__inner {

@@ -242,25 +242,52 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const footerNavBlocks = document.querySelectorAll('.footer__nav-mob');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const footerNavBlocks = document.querySelectorAll('.footer__nav-mob');
 
-    footerNavBlocks.forEach(function(navBlock) {
+//     footerNavBlocks.forEach(function(navBlock) {
+//         const plusIcon = navBlock.querySelector('.footer__plus');
+//         const navBlockTitle = navBlock.querySelector('.footer__nav-block-title');
+//         const subMenu = navBlock.querySelector('.footer__sub-menu');
+
+//         navBlockTitle.addEventListener('click', function() {
+//             subMenu.classList.toggle('open');
+//             plusIcon.classList.toggle('open');
+//         });
+
+//         plusIcon.addEventListener('click', function() {
+//             subMenu.classList.toggle('open');
+//             plusIcon.classList.toggle('open');
+//         });
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navBlocks = document.querySelectorAll('.footer__nav-item');
+
+    navBlocks.forEach(function(navBlock) {
         const plusIcon = navBlock.querySelector('.footer__plus');
         const navBlockTitle = navBlock.querySelector('.footer__nav-block-title');
         const subMenu = navBlock.querySelector('.footer__sub-menu');
 
-        navBlockTitle.addEventListener('click', function() {
-            subMenu.classList.toggle('open'); 
-            plusIcon.classList.toggle('open');
-        });
+        if (plusIcon && navBlockTitle && subMenu) {
+            navBlockTitle.addEventListener('click', function() {
+                subMenu.classList.toggle('open');
+                plusIcon.classList.toggle('open');
+            });
 
-        plusIcon.addEventListener('click', function() {
-            subMenu.classList.toggle('open'); 
-            plusIcon.classList.toggle('open');
-        });
+            plusIcon.addEventListener('click', function() {
+                subMenu.classList.toggle('open');
+                plusIcon.classList.toggle('open');
+            });
+        } else {
+            console.error('One or more required elements not found.');
+        }
     });
 });
+
+
+
 
 
 
@@ -334,7 +361,7 @@ var galleryTop = new Swiper('.gallery-top', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    loop: false, // Вимкнути зациклення
+    loop: false, 
     loopedSlides: 6,
 });
 
@@ -344,7 +371,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     slidesPerView: 6,
     touchRatio: 0.2,
     slideToClickedSlide: true,
-    loop: false, // Вимкнути зациклення
+    loop: false, 
     loopedSlides: 6,
 });
 
@@ -403,22 +430,22 @@ var mySwiper = new Swiper('#about-swiper', {
 document.addEventListener('DOMContentLoaded', function() {
     const showMoreBtn = document.getElementById('showMoreBtnPartners');
     const portfolioItems = document.querySelectorAll('.clients__item');
-    let visibleItems; // Початкова кількість видимих елементів
+    let visibleItems; 
 
-    // Оновлення кількості видимих елементів при завантаженні сторінки
+    
     updateVisibleItems();
 
-    // Додати обробник події для кліку на кнопку "Показати більше"
+    
     showMoreBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Зупиняємо стандартну дію кнопки
+        event.preventDefault(); 
         
-        // Збільшити кількість видимих елементів на itemsToShow
+       
         visibleItems += getItemsToShow();
-        // Показати елементи
+        
         showItems();
     });
 
-    // Функція, яка визначає кількість елементів, які треба показати в залежності від розміру вікна
+    
     function getItemsToShow() {
         if (window.innerWidth > 1024) {
             return 12; 
@@ -431,23 +458,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Функція, яка оновлює кількість видимих елементів при завантаженні сторінки або зміні розміру вікна
+    
     function updateVisibleItems() {
         visibleItems = getItemsToShow();
         showItems();
     }
 
-    // Функція, яка показує або приховує елементи відповідно до кількості visibleItems
+    
     function showItems() {
         portfolioItems.forEach(function(item, index) {
             if (index < visibleItems) {
-                item.style.display = 'flex'; // Показуємо елемент
+                item.style.display = 'flex'; 
             } else {
-                item.style.display = 'none'; // Ховаємо елемент
+                item.style.display = 'none'; 
             }
         });
 
-        // Перевіряємо, чи всі елементи показані, якщо так, то ховаємо кнопку "Показати більше"
+       
         if (visibleItems >= portfolioItems.length) {
             showMoreBtn.style.display = 'none';
         } else {
@@ -455,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Додати обробник події для зміни розміру вікна
+   
     window.addEventListener('resize', updateVisibleItems);
 });
 
@@ -493,5 +520,129 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+///// modal window
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Функція для відкриття модального вікна за його id
+//     function openModal(modalId) {
+//         const modal = document.getElementById(modalId);
+//         if (modal) {
+//             modal.style.display = 'block';
+//         }
+//     }
+
+//     // Функція для закриття модального вікна за його id
+//     function closeModal(modalId) {
+//         const modal = document.getElementById(modalId);
+//         if (modal) {
+//             modal.style.display = 'none';
+//         }
+//     }
+
+//     // Обробники подій для кнопок відкриття модальних вікон
+//     const openModalSubBtn = document.getElementById('openModalSubBtn');
+//     if (openModalSubBtn) {
+//         openModalSubBtn.addEventListener('click', function() {
+//             openModal('myModal1');
+//         });
+//     }
+
+//     const openModal2Btn = document.getElementById('openModal2Btn');
+//     if (openModal2Btn) {
+//         openModal2Btn.addEventListener('click', function() {
+//             openModal('myModal2');
+//         });
+//     }
+
+//     // Обробник події для кнопок закриття модальних вікон
+//     const closeButtons = document.querySelectorAll('.close');
+//     closeButtons.forEach(function(closeBtn) {
+//         closeBtn.addEventListener('click', function() {
+//             const modalId = this.getAttribute('data-modal-id');
+//             closeModal(modalId);
+//         });
+//     });
+
+//     // Обробник події для закриття модального вікна при кліку поза ним
+//     window.addEventListener('click', function(event) {
+//         if (event.target.classList.contains('modal')) {
+//             event.target.style.display = 'none';
+//         }
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    let modalOpen = false;
+
+    // Функція для відкриття модального вікна за його id
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+            body.classList.add('modal-open'); // Додати клас для блокування прокрутки
+            modalOpen = true;
+        }
+    }
+
+    // Функція для закриття модального вікна за його id
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+            body.classList.remove('modal-open'); // Видалити клас для дозволу прокрутки
+            modalOpen = false;
+        }
+    }
+
+    // Обробники подій для кнопок відкриття модальних вікон
+    const openModalSubBtn = document.getElementById('openModalSubBtn');
+    if (openModalSubBtn) {
+        openModalSubBtn.addEventListener('click', function() {
+            openModal('modalSub');
+       });
+    }
+
+    const openModal2Btn = document.getElementById('openModalCVBtn');
+    if (openModal2Btn) {
+        openModal2Btn.addEventListener('click', function() {
+            openModal('modalCV');
+        });
+    }
+
+    // Обробник події для закриття модальних вікон
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(function(closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal-id');
+            closeModal(modalId);
+        });
+    });
+
+    // Обробник події для закриття модального вікна при кліку поза ним
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal') && modalOpen) {
+            const modalId = event.target.id;
+            closeModal(modalId);
+        }
+    });
+
+    // Блокування прокрутки при відкритті модального вікна
+    window.addEventListener('scroll', function() {
+        if (modalOpen) {
+            window.scrollTo(0, 0); // Повертаємо прокрутку до верху сторінки
+        }
+    });
+});
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const fileUploadInput = document.getElementById('fileUpload');
+  const fileNameElement = document.querySelector('.modal__file-name');
+
+  fileUploadInput.addEventListener('change', function() {
+    const fileName = this.files[0].name;
+    fileNameElement.textContent = fileName;
+  });
+});

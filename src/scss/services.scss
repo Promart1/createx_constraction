@@ -182,7 +182,7 @@
     left: 0;
     top: 10%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
 
   .expanded .offer__plus {
@@ -210,8 +210,22 @@
     opacity: 0;
     @include base-regular;
   display: none;
-  transition: opacity 5ms ease-in-out;
+  animation: slideDown 1s ease forwards;
   }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+       
+      }
+  
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+       
+      }
+    }
 
 
   &__block.expanded .offer__text {

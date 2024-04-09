@@ -29,7 +29,7 @@
     // width: 230px;
     width: 100%;
     background: $main-white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
     margin-right: auto;
     margin-left: auto;
@@ -52,7 +52,7 @@
 
   &__item:hover {
     background: $primary;
-   box-shadow : 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
       0px 12px 10px -6px rgba(255, 90, 48, 0.08),
       0px 26px 24px -10px rgba(255, 90, 48, 0.1),
       0px 60px 80px -20px rgba(255, 90, 48, 0.16);
@@ -203,13 +203,11 @@
 }
 
 .project-main {
-
   &__inner {
     height: auto;
     padding-top: 60px;
     position: relative;
   }
-
 
   &__bg {
     opacity: 12%;
@@ -314,25 +312,23 @@
 }
 
 .project-about {
-
   &__inner {
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    
   }
 
   &__content {
     max-width: 600px;
     margin-right: auto;
-      margin-left: auto;
+    margin-left: auto;
   }
 
   &__title {
-@include main-heading;
-margin-bottom: 40px;
+    @include main-heading;
+    margin-bottom: 40px;
   }
 
   &__text {
@@ -346,16 +342,16 @@ margin-bottom: 40px;
   }
 
   &__card {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     padding: 40px 60px;
-     background: $main-white;
-     display: flex;
-     justify-content: center;
-     gap: 32px;
-     max-width: 495px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 40px 60px;
+    background: $main-white;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    max-width: 495px;
     margin-right: auto;
-      margin-left: auto;
-      margin-top: 20px;
+    margin-left: auto;
+    margin-top: 20px;
   }
 
   &__title-text {
@@ -371,118 +367,134 @@ margin-bottom: 40px;
     margin-bottom: 16px;
   }
 
-    @include respond-to($l-desktop) {
-
-      &__inner {
-        display: block;
-      }
-
-             &__content {
-              text-align: center;
-             }
+  @include respond-to($l-desktop) {
+    &__inner {
+      display: block;
     }
 
-        @include respond-to($m-mobile) {
-
-          &__card {
-            padding: 20px 15px;
-            gap: 10px;
-          }
-
-          &__title-text, &__context-text {
-            font-size: 14px;
-          }
-
-          &__text {
-            font-size: 16px;
-          }
-        }
-
-                @include respond-to($xs-mobile) {
-&__title-list li:first-child {
-    margin-bottom: 31px;
+    &__content {
+      text-align: center;
+    }
   }
-                }
+
+  @include respond-to($m-mobile) {
+    &__card {
+      padding: 20px 15px;
+      gap: 10px;
+    }
+
+    &__title-text,
+    &__context-text {
+      font-size: 14px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @include respond-to($xs-mobile) {
+    &__title-list li:first-child {
+      margin-bottom: 31px;
+    }
+  }
 }
 
 .project-swipper {
-
   margin-top: 60px;
-  
+
   .swiper-container {
-      // width: 100%;
-      max-width: 1230px;
-      height: 300px;
-      margin: 20px auto;
-      overflow: hidden;
-      position: relative;
+    // width: 100%;
+    max-width: 1230px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide-container {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide-small-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  &__gallery-thumbs {
+    transition-duration: initial !important;
+    transform: none !important;
+  }
+
+  &__small-swiper-slide {
+    width: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .swiper-slide-small-container {
+    margin-right: 20px;
+  }
+
+  .gallery-thumbs .swiper-slide {
+    width: 20%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+  }
+
+  @include respond-to($m-tablet) {
+    .swiper-slide-small-container {
+      width: 60px;
+      height: 60px;
     }
-  
-    .swiper-slide-container {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      height: 100%;
-      width: 100%;
-      margin: auto;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-     
+  }
+
+  @include respond-to($m-mobile) {
+    .swiper-slide-small-container {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
     }
 
-        .swiper-slide-small-container {
-          width: 100px;
-            height: 100px;
-           
-        }
-  
-    .gallery-top {
-      height: 80%;
-      width: 100%;
-    }
-  
     .gallery-thumbs {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-
-      
+      margin: 0 auto;
+      padding: 0;
     }
-
-        .swiper-wrapper {
-          transition-duration: initial !important;
-          transform: none !important;
-
-        }
-    
-        .swiper-slide {
-          width: auto !important;
-          margin-right: 0 !important;
-        }
-
-                .swiper-slide-small-container {
-                  margin-right: 20px;
-                }
-
-  
-    .gallery-thumbs .swiper-slide {
-      width: 20%;
-      height: 100%;
-      opacity: 0.4;
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: var(--swiper-navigation-top-offset, 60%);
     }
-  
-    .gallery-thumbs .swiper-slide-active {
-      opacity: 1;
-    }
+  }
 }

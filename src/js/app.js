@@ -1,4 +1,205 @@
 // const { validate } = require("webpack");
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('form');
+//     const submitBtn = document.getElementById('submitBtn');
+
+//     submitBtn.addEventListener('click', function(event) {
+//         event.preventDefault(); // Заборона стандартної поведінки кнопки submit
+
+//         const inputs = form.querySelectorAll('.application__input');
+
+//         inputs.forEach(function(input) {
+//             if (input.value.trim() === '') {
+//                 input.classList.add('application__error');
+//             } else {
+//                 input.classList.remove('application__error');
+//             }
+//         });
+//     });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('form');
+//     const submitBtn = document.getElementById('submitBtn');
+
+//     submitBtn.addEventListener('click', function(event) {
+//         event.preventDefault(); // Заборона стандартної поведінки кнопки submit
+
+//         validateInputs(); // Виклик функції для валідації полів вводу
+//     });
+// });
+
+// const validateInputs = () => {
+//     const inputs = document.querySelectorAll('.application__input');
+
+//     inputs.forEach(function(input) {
+//         const value = input.value.trim();
+
+//         if (value === '') {
+//             input.classList.remove('application__success');
+//             input.classList.add('application__error');
+//         } else {
+//             input.classList.remove('application__error');
+//             input.classList.add('application__success');
+//         }
+//     });
+// };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
+    const submitBtn = document.getElementById('submitBtn');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Заборона стандартної поведінки кнопки submit
+
+        validateInputs(); // Виклик функції для валідації полів вводу
+
+        // Перевірка, чи всі поля є успішними
+        const inputs = document.querySelectorAll('.application__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            // Якщо всі поля успішні, відправляємо форму
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.application__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+
+            if (value !== '') {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+            }
+        });
+    });
+
+    // Обробник події submit для форми
+    form.addEventListener('submit', function(event) {
+        // Тут можна виконати додаткові дії після відправки форми (наприклад, оновлення сторінки)
+        location.reload(); // Оновлення сторінки після успішного сабміту
+    });
+});
+
+const validateInputs = () => {
+    const inputs = document.querySelectorAll('.application__input');
+
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+        }
+    });
+};
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('form');
+
+//     form.addEventListener('submit', e => {
+//         e.preventDefault(); // Prevent form submission for now
+//         validateForm();
+//     });
+
+//     function validateForm() {
+//         const name = document.getElementById('app-name');
+//         const phone = document.getElementById('app-phone');
+//         const email = document.getElementById('app-email');
+//         const message = document.getElementById('app-message');
+//         const agree = document.getElementById('agree');
+
+//         validateInput(name, 'Name');
+//         validatePhone(phone);
+//         validateEmail(email);
+//         validateInput(message, 'Message');
+//         validateCheckbox(agree);
+//     }
+
+//     function validateInput(inputElement, fieldName) {
+//         const value = inputElement.value.trim();
+//         const errorElement = inputElement.nextElementSibling;
+
+//         if (value === '') {
+//             displayError(inputElement, errorElement, `${fieldName} is required`);
+//         } else {
+//             clearError(inputElement, errorElement);
+//         }
+//     }
+
+//     function validatePhone(phoneElement) {
+//         const phone = phoneElement.value.trim();
+//         const errorElement = phoneElement.nextElementSibling;
+
+//         if (phone === '') {
+//             displayError(phoneElement, errorElement, 'Phone is required');
+//         } else if (!/^\d{10}$/.test(phone)) {
+//             displayError(phoneElement, errorElement, 'Invalid phone number');
+//         } else {
+//             clearError(phoneElement, errorElement);
+//         }
+//     }
+
+//     function validateEmail(emailElement) {
+//         const email = emailElement.value.trim();
+//         const errorElement = emailElement.nextElementSibling;
+
+//         if (email === '') {
+//             displayError(emailElement, errorElement, 'Email is required');
+//         } else if (!isValidEmail(email)) {
+//             displayError(emailElement, errorElement, 'Invalid email format');
+//         } else {
+//             clearError(emailElement, errorElement);
+//         }
+//     }
+
+//     function validateCheckbox(checkboxElement) {
+//         const errorElement = checkboxElement.nextElementSibling.nextElementSibling; // Access the error div
+
+//         if (!checkboxElement.checked) {
+//             displayError(null, errorElement, 'Please agree to the terms');
+//         } else {
+//             clearError(null, errorElement);
+//         }
+//     }
+
+//     function isValidEmail(email) {
+//         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         return re.test(email);
+//     }
+
+//     function displayError(inputElement, errorElement, message) {
+//         errorElement.textContent = message;
+//         if (inputElement) {
+//             inputElement.classList.add('error');
+//         }
+//         errorElement.style.display = 'block';
+//     }
+
+//     function clearError(inputElement, errorElement) {
+//         if (inputElement) {
+//             inputElement.classList.remove('error');
+//         }
+//         errorElement.textContent = '';
+//         errorElement.style.display = 'none';
+//     }
+// });
+
+
+
+
+
+
+
 
 const menuBtn = document.querySelector('.menu__button');
 const menuClose = document.querySelector('.menu__close');
@@ -430,61 +631,57 @@ var mySwiper = new Swiper('#about-swiper', {
 document.addEventListener('DOMContentLoaded', function() {
     const showMoreBtn = document.getElementById('showMoreBtnPartners');
     const portfolioItems = document.querySelectorAll('.clients__item');
-    let visibleItems; 
+    let visibleItems;
 
-    
-    updateVisibleItems();
+    // Перевірка наявності елементів showMoreBtn і portfolioItems
+    if (showMoreBtn !== null && portfolioItems.length > 0) {
+        updateVisibleItems();
 
-    
-    showMoreBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        
-       
-        visibleItems += getItemsToShow();
-        
-        showItems();
-    });
-
-    
-    function getItemsToShow() {
-        if (window.innerWidth > 1024) {
-            return 12; 
-        } else if (window.innerWidth > 768) {
-            return 6; 
-        } else if (window.innerWidth > 425) {
-            return 3; 
-        } else{
-            return 4; 
-        }
-    }
-
-    
-    function updateVisibleItems() {
-        visibleItems = getItemsToShow();
-        showItems();
-    }
-
-    
-    function showItems() {
-        portfolioItems.forEach(function(item, index) {
-            if (index < visibleItems) {
-                item.style.display = 'flex'; 
-            } else {
-                item.style.display = 'none'; 
-            }
+        showMoreBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            visibleItems += getItemsToShow();
+            showItems();
         });
 
-       
-        if (visibleItems >= portfolioItems.length) {
-            showMoreBtn.style.display = 'none';
-        } else {
-            showMoreBtn.style.display = 'flex';
+        function getItemsToShow() {
+            if (window.innerWidth > 1024) {
+                return 12;
+            } else if (window.innerWidth > 768) {
+                return 6;
+            } else if (window.innerWidth > 425) {
+                return 3;
+            } else {
+                return 4;
+            }
         }
-    }
 
-   
-    window.addEventListener('resize', updateVisibleItems);
+        function updateVisibleItems() {
+            visibleItems = getItemsToShow();
+            showItems();
+        }
+
+        function showItems() {
+            portfolioItems.forEach(function(item, index) {
+                if (index < visibleItems) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            if (visibleItems >= portfolioItems.length) {
+                showMoreBtn.style.display = 'none';
+            } else {
+                showMoreBtn.style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('resize', updateVisibleItems);
+    } else {
+        console.error('Елементи не знайдено');
+    }
 });
+
 
 
 
@@ -646,3 +843,132 @@ document.addEventListener('DOMContentLoaded', function() {
     fileNameElement.textContent = fileName;
   });
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('form');
+
+//     // Отримуємо всі поля вводу в формі
+//     const inputs = form.querySelectorAll('input, textarea');
+
+//     // Додаємо обробник подій для кожного поля вводу
+//     inputs.forEach(function(input) {
+//         // Додаємо обробник події input, який викликається при зміні вмісту поля
+//         input.addEventListener('input', function() {
+//             validateInput(input); // Викликаємо функцію валідації для даного поля
+//         });
+
+//         // Додаємо обробник події change, який викликається при зміні значення поля
+//         input.addEventListener('change', function() {
+//             validateInput(input); // Викликаємо функцію валідації для даного поля
+//         });
+//     });
+
+//     // Функція валідації поля
+//     function validateInput(input) {
+//         if (input.validity.valid) {
+//             // Якщо поле валідне, змінюємо його вигляд на валідний стан
+//             input.classList.remove('invalid');
+//             input.classList.add('valid');
+//         } else {
+//             // Якщо поле недійсне, змінюємо його вигляд на недійсний стан
+//             input.classList.remove('valid');
+//             input.classList.add('invalid');
+//         }
+//     }
+
+//     // Додаємо обробник події на відправку форми
+//     form.addEventListener('submit', function(event) {
+//         // Перевіряємо валідність всіх полів перед відправкою форми
+//         inputs.forEach(function(input) {
+//             validateInput(input);
+//         });
+
+//         // Якщо є недійсні поля, перешкоджаємо відправці форми
+//         if (!form.checkValidity()) {
+//             event.preventDefault();
+//             event.stopPropagation();
+//         }
+//     });
+// });
+
+
+/////validation
+
+// const form = document.getElementById('form');
+// const username = document.getElementById('app-name');
+// const phone = document.getElementById('app-phone');
+// const email = document.getElementById('app-email');
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     validateInputs();
+// });
+
+// const setError = (element, message) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = message;
+//     inputControl.classList.add('error');
+//     inputControl.classList.remove('success');
+// };
+
+// const setSuccess = element => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = 'Looks good';
+//     inputControl.classList.add('success');
+//     inputControl.classList.remove('error');
+// };
+
+// const isValidEmail = email => {
+//     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     return re.test(email);
+// };
+
+// const validateInputs = () => {
+//     const nameValue = username.value.trim();
+//     const phoneValue = phone.value.trim();
+//     const emailValue = email.value.trim();
+
+//     if (nameValue === '') {
+//         setError(username, 'Name is required');
+//     } else {
+//         setSuccess(username);
+//     }
+
+//     if (emailValue === '') {
+//         setError(email, 'Email is required');
+//     } else if (!isValidEmail(emailValue)) {
+//         setError(email, 'Provide a valid email address');
+//     } else {
+//         setSuccess(email);
+//     }
+
+//     if (phoneValue === '') {
+//         setError(phone, 'Phone is required');
+//     } else {
+//         setSuccess(phone);
+//     }
+// };
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('form');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const inputs = form.querySelectorAll('.application__input');
+
+                inputs.forEach(function(input) {
+                    if (input.value.trim() === '') {
+                        input.classList.add('application__error');
+                    } else {
+                        input.classList.remove('application__error');
+                    }
+                });
+            });
+        });

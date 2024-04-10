@@ -1,8 +1,13 @@
 <section class="application">
   <div class="application__inner">
-    <img src="@img/application-image.jpg" alt="aplication-img"  class="application__img"/>
+    <img
+      src="@img/application-image.jpg"
+      alt="aplication-img"
+      class="application__img"
+    />
     <div class="application__form">
       <h3 class="application__title">A quick way to discuss details</h3>
+      
       <form id="form">
         <div class="application__input-control input__control">
           <label for="app-name" class="application__subtitle">Name*</label>
@@ -13,8 +18,11 @@
             class="application__input"
             placeholder="Your name"
           />
-          <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="error"></div>
+    
+            <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
+          <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
         </div>
 
         <div class="application__input-control input__control">
@@ -26,12 +34,18 @@
             class="application__input"
             placeholder="Your phone number"
           />
-           <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="error"></div>
+          <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
         </div>
 
         <div class="application__input-control input__control">
-          <label for="app-email" class="application__subtitle">Email</label>
+          <label for="app-email" class="application__subtitle">Email*</label>
           <input
             type="email"
             name="email"
@@ -39,13 +53,19 @@
             class="application__input"
             placeholder="Your working email"
           />
-           <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="error"></div>
-        </div>
+          <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
+          </div>
 
         <div class="application__input-control input__control">
           <label for="app-message" class="application__subtitle"
-            >Message*</label
+            >Message</label
           >
           <textarea
             name="message"
@@ -54,8 +74,14 @@
             class="application__input"
             placeholder="Your message"
           ></textarea>
-           <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="error"></div>
+          <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div></div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          
         </div>
 
         <div class="application__checkbox-wrapper">
@@ -71,11 +97,13 @@
             >I agree to receive communications from Createx Construction
             Bureau.</label
           >
-          <div class="error"></div>
+          
         </div>
 
         <div class="application__btn-wrapper">
-          <button type="submit" class="application__btn" id="submitBtn">Send Request</button>
+          <button type="submit" class="application__btn" id="submitBtn">
+            Send Request
+          </button>
         </div>
       </form>
     </div>

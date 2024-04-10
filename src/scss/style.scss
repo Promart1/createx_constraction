@@ -9,7 +9,6 @@
 @import "news.scss";
 @import "contactForm.scss";
 
-
 //////////////header///////////////////////
 
 .header {
@@ -29,7 +28,7 @@
 
   &__logo-wrapper {
     position: relative;
-      z-index: 3;
+    z-index: 3;
   }
 
   &__img-wrapper {
@@ -48,6 +47,9 @@
       color: $primary;
     }
   }
+
+  
+
   @include respond-to($l-desktop) {
     &__social-list {
       font-size: 16px;
@@ -128,8 +130,6 @@
     float: right;
   }
 
-  
-
   &__item {
     font-size: 16px;
     font-weight: 700;
@@ -137,21 +137,27 @@
     transition: color 0.3s ease;
   }
 
+   
+
   &__link {
     color: $gray-800;
     transition: color 0.3s ease;
   }
 
-    &__link-active {
-      a {
-color: $primary;
-      }
-      
-    }
+     &__link:hover {
+       
+       opacity: 0.7;
+     }
 
-&__link.active {
-  color: $primary;
-}
+  &__link-active {
+    a {
+      color: $primary;
+    }
+  }
+
+  &__link.active {
+    color: $primary;
+  }
 
   &__item:nth-last-child(1) {
     margin-left: 130px;
@@ -296,15 +302,16 @@ color: $primary;
   }
 
   &__img {
-     width: 100%;
-     object-fit: cover;
-     height: 826px;
-     object-position: center;
-     display: block;
-     margin: 0 auto;
-  
-     @include respond-to($l-desktop) {}
-   }
+    width: 100%;
+    object-fit: cover;
+    height: 826px;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+
+    @include respond-to($l-desktop) {
+    }
+  }
 
   &__form {
     width: 495px;
@@ -352,56 +359,55 @@ color: $primary;
     position: relative;
   }
 
-&__mark {
-  position: absolute;
-  right: 14px;
-  top: 35px;
-  width: 16px;
-  height: 16px;
-  display: none;
-}
+  &__mark {
+    position: absolute;
+    right: 14px;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    display: none;
+  }
 
-    .application__error {
-      border-color: red;
-      background-color: #fff;
-    
+  &__denger {
+    position: absolute;
+      right: 14px;
+      top: 35px;
+      width: 16px;
+      height: 16px;
+      display: none;
+  }
+
+  .validation-text {
+    position: absolute;
+    left: 0;
+   top: 65px;
+font-size: 12px;
+color: $success;
+    display: none;
+
+    @include respond-to($m-tablet) {
+      right: 0;
+      left: auto;
+      font-size: 10px;
     }
-  
-    .application__success {
-      border-color: green;
-      background-color: #fff;
-.application__mark {
-  display: block;
-}
+  }
 
-
-  
+    .validation-text-denger {
+      position: absolute;
+        left: 0;
+        top: 65px;
+        font-size: 12px;
+        color: $danger;
+        display: none;
+      
+        @include respond-to($m-tablet) {
+          right: 0;
+          left: auto;
+          font-size: 10px;
+        }
     }
 
-     
 
-    // &__input:invalid {
-    //   border-color: red;
-    //   outline: none;
-    // }
-
-//   &__input:focus {
-//     color: #212529;
-//     background-color: #fff;
-//     border-color: $primary;
-//     outline: 0;
-//     box-shadow: 0px 4px 4px -4px #1E212C08,
-// 0px 12px 10px -6px #FF5A300A,
-// 0px 30px 24px -10px #FF5A300D,
-// 0px 80px 80px -20px #FF5A3014;
-//   }
-
-  
-
-//   &__input:valid {
-//     border-color: green;
-//     outline: none;
-//   }
 
   &__select {
     font-size: 14px;
@@ -414,12 +420,14 @@ color: $primary;
     padding-left: 30px;
     line-height: 21px;
     position: absolute;
+    cursor: pointer;
   }
 
   &__checkbox-wrapper {
     display: flex;
     align-items: start;
     position: relative;
+    
   }
 
   &__checkbox {
@@ -482,15 +490,13 @@ color: $primary;
     margin-bottom: 20px;
   }
 
-     &__modal-s-input {
-       margin-bottom: 0;
-     }
+  &__modal-s-input {
+    margin-bottom: 0;
+  }
 
-     &__modal-btn {
-      width: 100%;
-     }
-
-         
+  &__modal-btn {
+    width: 100%;
+  }
 
   @include respond-to($l-desktop) {
     &__form {
@@ -500,8 +506,8 @@ color: $primary;
 
   @include respond-to($m-tablet) {
     &__img {
-        height: 626px;
-      }
+      height: 626px;
+    }
 
     &__form {
       width: 395px;
@@ -529,9 +535,8 @@ color: $primary;
 
   @include respond-to($m-mobile) {
     &__img {
-        height: 526px;
-      }
-    
+      height: 526px;
+    }
 
     &__form {
       width: 290px;
@@ -544,21 +549,32 @@ color: $primary;
   }
 }
 
-.input__control  input:focus,
-.input__control textarea:focus {
 
-      color: #212529;
-      background-color: #fff;
-      border-color: $primary;
-      outline: 0;
-      box-shadow: 0px 4px 4px -4px #1E212C08,
-        0px 12px 10px -6px #FF5A300A,
-        0px 30px 24px -10px #FF5A300D,
-        0px 80px 80px -20px #FF5A3014;
-    
+
+.application__error {
+  border-color: red;
+
 }
 
+.application__success {
+  border-color: rgba(215, 218, 221, 1);
 
+
+}
+
+.input__control {
+  position: relative;
+}
+
+.input__control input:focus,
+.input__control textarea:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: $primary;
+  outline: 0;
+  box-shadow: 0px 4px 4px -4px #1e212c08, 0px 12px 10px -6px #ff5a300a,
+    0px 30px 24px -10px #ff5a300d, 0px 80px 80px -20px #ff5a3014;
+}
 
 /////////////////footer/////////////////////
 
@@ -586,12 +602,12 @@ color: $primary;
 
     img {
       -webkit-filter: invert(50%);
-        filter: invert(50%);
-        transition: filter 3ms ease-in;
+      filter: invert(50%);
+      transition: filter 3ms ease-in;
     }
 
     img:hover {
-    filter: invert(0);
+      filter: invert(0);
     }
   }
 
@@ -611,9 +627,9 @@ color: $primary;
 
   &__plus {
     display: none;
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
   }
-  
+
   &__plus.open {
     transform: rotate(45deg);
   }
@@ -650,7 +666,7 @@ color: $primary;
   &__form-subscribe-text {
     font-size: 12px;
     color: $main-white;
-line-height: 18px;
+    line-height: 18px;
     opacity: 0.6;
     max-width: 495px;
   }
@@ -742,10 +758,9 @@ line-height: 18px;
       background-color: $primary;
       border-radius: 4px;
       position: relative;
+      transition: transform 0.3s ease, background-color 0.3s ease;
 
-      a:hover {
-        background-color: $danger;
-      }
+      
 
       img {
         position: absolute;
@@ -753,7 +768,14 @@ line-height: 18px;
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
+        
     }
+
+                a:hover {
+                  background-color: $danger;
+                  transform: scale(1.1);
+                }
   }
 
   @include respond-to($l-desktop) {
@@ -834,21 +856,20 @@ line-height: 18px;
 
     &__nav-item {
       margin-bottom: 30px;
-      
     }
 
-&__nav-mob {
-position: relative;
-z-index: 2;
-}
+    &__nav-mob {
+      position: relative;
+      z-index: 2;
+    }
 
-&__nav-block-item {
-  position: relative;
-}
+    &__nav-block-item {
+      position: relative;
+    }
 
-&__nav-blocks {
-  max-width: 100%;
-}
+    &__nav-blocks {
+      max-width: 100%;
+    }
 
     &__section {
       display: block;
@@ -871,101 +892,99 @@ z-index: 2;
       display: none;
     }
 
-        &__sub-menu.open {
-          display: block;
-        }
+    &__sub-menu.open {
+      display: block;
+    }
 
-                &__plus {
-                  display: block;
-                  position: absolute;
-                  top: 5%;
-                   right: 0;
-                    
-                  z-index: 2;
-                }
+    &__plus {
+      display: block;
+      position: absolute;
+      top: 5%;
+      right: 0;
+
+      z-index: 2;
+    }
   }
 }
 
 ////////////////main//////////////////
 
 .main {
-background: $gray-200;
-
-&__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 600px;
-  object-fit: cover;
-  object-position: right;
-}
-
-&__header-wrapper {
   background: $gray-200;
-}
-
-&__inner {
-  padding-top: 60px;
-  // 
-  height: 510px;
-  position: relative;
-  margin-top: -1px;
-}
-
-&__breadcrumb {
-  a {
-    @include small-regular;
-    color: $gray-800;
-  }
-margin-bottom: 40px;
-}
-
-&__link.active{
-color: $gray-600;
-}
-
-&__title {
-  @include display-f;
-  margin-bottom: 24px;
-  max-width: 600px;
-}
-
-&__text {
-  @include lead-regular;
-  max-width: 600px;
-}
-
-@include respond-to($m-desktop) {
 
   &__bg {
-    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 600px;
+    object-fit: cover;
+    object-position: right;
   }
+
+  &__header-wrapper {
+    background: $gray-200;
+  }
+
+  &__inner {
+    padding-top: 60px;
+    //
+    height: 510px;
+    position: relative;
+    margin-top: -1px;
+  }
+
+  &__breadcrumb {
+    a {
+      @include small-regular;
+      color: $gray-800;
+    }
+    margin-bottom: 40px;
+  }
+
+  &__link.active {
+    color: $gray-600;
+  }
+
+  &__title {
+    @include display-f;
+    margin-bottom: 24px;
+    max-width: 600px;
+  }
+
+  &__text {
+    @include lead-regular;
+    max-width: 600px;
+  }
+
+  @include respond-to($m-desktop) {
+    &__bg {
+      opacity: 0.4;
+    }
 
     &__inner {
       padding-top: 40px;
       height: 530px;
     }
-  
+
     &__breadcrumb {
       a {
-       font-size: 12px;
+        font-size: 12px;
       }
-  
+
       margin-bottom: 30px;
     }
-  
+
     &__title {
-     font-size: 53px;
+      font-size: 53px;
       margin-bottom: 24px;
     }
-  
+
     &__text {
       font-size: 18px;
       line-height: 25px;
     }
+  }
 }
-}
-
 
 //////////modal window//////////////////
 
@@ -986,73 +1005,72 @@ color: $gray-600;
     text-align: center;
   }
 
-    &__input-container {
-      position: relative;
-      margin-bottom: 20px;
-    }
-  
-        &__input-container input[type="file"] {
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-    }
-  
-        &__input-label {
-          padding-left: 35px;
-      display: inline-block;
-      cursor: pointer;
+  &__input-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__input-container input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__input-label {
+    padding-left: 35px;
+    display: inline-block;
+    cursor: pointer;
     position: relative;
     @include small-regular;
-    
-    }
+  }
 
-       
-  
-        &__input-label::before {
-      content: "";
-      background-image: url("../img/icons/Attach.svg");
-      width: 24px;
-      height: 24px;
-      display: inline-block;
-      // margin-right: 8px;
-      position: absolute;
-      top: -1px;
-      left: 0;
-    }
+  &__input-label::before {
+    content: "";
+    background-image: url("../img/icons/Attach.svg");
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    // margin-right: 8px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+  }
 
-    &__file-name {
-      margin-top: 16px;
-    }
+  &__file-name {
+    margin-top: 16px;
+  }
 }
-
 
 .modal-content {
   background-color: $main-white;
   margin: 16% auto;
   padding: 48px;
   border-radius: 4px;
-border: 1px solid #E5E8ED;
+  border: 1px solid #e5e8ed;
   max-width: 486px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-position: relative;
+  position: relative;
 
-@include respond-to($m-mobile) {
-  padding: 48px 24px;
-}
+  @include respond-to($m-mobile) {
+    padding: 48px 24px;
+  }
 }
 
+.modal-content-cv {
+  margin: 2% auto;
+}
 
 .close {
   position: absolute;
-top: 24px;
-right: 24px;
-width: 24px;
-opacity: 1;
-cursor: pointer;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .close:hover,

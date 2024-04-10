@@ -171,7 +171,7 @@
             Want to know more? Ask us a question:
           </h3>
           <form id="request-form" class="request-form__list">
-            <div>
+            <div class="input__control">
               <label for="name" class="application__subtitle">Name</label>
               <input
                 type="text"
@@ -180,9 +180,17 @@
                 class="request-form__input"
                 placeholder="Your name"
               />
-              
+               <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
-            <div>
+
+            <div class="input__control">
               <label for="phone" class="application__subtitle">Phone</label>
               <input
                 type="tel"
@@ -191,8 +199,17 @@
                 class="request-form__input"
                 placeholder="Your phone number"
               />
+               <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
-            <div>
+
+            <div class="input__control">
               <label for="message" class="application__subtitle">Message</label>
               <textarea
                 id="message"
@@ -201,9 +218,17 @@
                 class="request-form__message"
                 placeholder="Your message"
               ></textarea>
+               <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
             <div class="request-form__btn-wrapper">
-              <button type="submit" class="application__btn request-form__btn">
+              <button type="submit" id="submitBtnReq" class="application__btn request-form__btn">
                 SEND
               </button>
             </div>
@@ -282,6 +307,7 @@
               id="portfolio-swiper"
             >
               <div class="swiper-wrapper portfolio__swiper-wrapper">
+               
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/red-build.jpg" alt="red build" />
@@ -291,9 +317,10 @@
                       </h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
+               
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/cubes-build.png" alt="Cubes Building" />
@@ -301,9 +328,10 @@
                       <h5 class="portfolio__block-title">Cubes Building</h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
+               
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/pencil.png" alt="pencil build" />
@@ -313,9 +341,10 @@
                       </h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
+                
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/pencil.png" alt="pencil build" />
@@ -325,9 +354,10 @@
                       </h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
+                
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/red-build.jpg" alt="red build" />
@@ -337,9 +367,10 @@
                       </h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
+               
                 <div class="swiper-slide portfolio__slide">
                   <div class="portfolio__block">
                     <img src="@img/cubes-build.png" alt="Cubes Building" />
@@ -347,7 +378,7 @@
                       <h5 class="portfolio__block-title">Cubes Building</h5>
                       <p class="portfolio__block-subtitle">Business Centers</p>
                     </div>
-                    <button class="portfolio__btn">View Project</button>
+                    <a href="./project.html" class="portfolio__btn work-portfolio__btn">View Project</a>
                   </div>
                 </div>
               </div>

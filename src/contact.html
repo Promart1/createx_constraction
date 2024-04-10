@@ -46,7 +46,7 @@
 
               <form id="contact-form">
                 <div class="contact-form__form-wrapper">
-                  <div>
+                  <div class="input__control">
                     <label for="name" class="comment-form__subtitle"
                       >Name*</label
                     >
@@ -57,6 +57,14 @@
                       class="comment-form__input contact-form__input"
                       placeholder="Your name"
                     />
+                    <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
                   </div>
 
                   <div class="contact-form__select-wrapper">
@@ -80,7 +88,7 @@
                     </select>
                   </div>
 
-                  <div>
+                  <div class="input__control">
                     <label for="phone" class="comment-form__subtitle"
                       >Phone*</label
                     >
@@ -91,6 +99,14 @@
                       class="comment-form__input contact-form__input"
                       placeholder="Your phone number"
                     />
+                    <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
                   </div>
 
                   <div class="contact-form__select-wrapper">
@@ -114,7 +130,7 @@
                     </select>
                   </div>
 
-                  <div>
+                  <div class="input__control">
                     <label for="email" class="comment-form__subtitle"
                       >Email</label
                     >
@@ -125,6 +141,14 @@
                       class="comment-form__input contact-form__input"
                       placeholder="Your working email"
                     />
+                    <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+         <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
                   </div>
 
                   <div>
@@ -167,7 +191,7 @@
                   </div>
                 </div>
 
-                <div>
+                <div class="input__control">
                   <label for="message" class="comment-form__subtitle"
                     >Message*</label
                   >
@@ -178,26 +202,35 @@
                     class="comment-form__comment-input"
                     placeholder="Your message"
                   ></textarea>
+                  <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div></div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
                 </div>
 
                 <div class="contact-form__bnt-checkbox-wrapper">
+
                   <div class="application__checkbox-wrapper">
-                    <input
-                      type="checkbox"
-                      class="application__checkbox"
-                      
-                      name="agree"
-                      required
-                    />
-                    <span class="application__custom-checkbox"></span>
-                    <label for="agree" class="contact-form__agree"
-                      >I agree to receive communications from Createx
-                      Construction Bureau.</label
-                    >
-                  </div>
+          <input
+            type="checkbox"
+            class="application__checkbox"
+            name="agree"
+            id="agree"
+            required
+          />
+          <span class="application__custom-checkbox"></span>
+          <label for="agree" class="application__agree"
+            >I agree to receive communications from Createx Construction
+            Bureau.</label
+          >
+          
+        </div>
 
                   <div class="contact-form__btn-wrapper">
-                    <button type="submit" class="comment-form__btn">
+                    <button type="submit" id="submitBtnContact" class="comment-form__btn">
                       send request
                     </button>
                   </div>

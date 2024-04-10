@@ -1,67 +1,62 @@
-// const { validate } = require("webpack");
-// document.addEventListener('DOMContentLoaded', function() {
-//     const form = document.getElementById('form');
-//     const submitBtn = document.getElementById('submitBtn');
-
-//     submitBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Заборона стандартної поведінки кнопки submit
-
-//         const inputs = form.querySelectorAll('.application__input');
-
-//         inputs.forEach(function(input) {
-//             if (input.value.trim() === '') {
-//                 input.classList.add('application__error');
-//             } else {
-//                 input.classList.remove('application__error');
-//             }
-//         });
-//     });
-// });
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const form = document.getElementById('form');
-//     const submitBtn = document.getElementById('submitBtn');
+// FORM-VALIDATION
+const validateInputs = () => {
+    const inputs = document.querySelectorAll('.application__input');
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
 
-//     submitBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Заборона стандартної поведінки кнопки submit
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
 
-//         validateInputs(); // Виклик функції для валідації полів вводу
-//     });
-// });
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
 
-// const validateInputs = () => {
-//     const inputs = document.querySelectorAll('.application__input');
-
-//     inputs.forEach(function(input) {
-//         const value = input.value.trim();
-
-//         if (value === '') {
-//             input.classList.remove('application__success');
-//             input.classList.add('application__error');
-//         } else {
-//             input.classList.remove('application__error');
-//             input.classList.add('application__success');
-//         }
-//     });
-// };
-
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
+        }
+    });
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     const submitBtn = document.getElementById('submitBtn');
 
     submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Заборона стандартної поведінки кнопки submit
+        event.preventDefault(); 
 
-        validateInputs(); // Виклик функції для валідації полів вводу
+        validateInputs(); 
 
-        // Перевірка, чи всі поля є успішними
+        
         const inputs = document.querySelectorAll('.application__input');
         const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
         if (isSuccess) {
-            // Якщо всі поля успішні, відправляємо форму
+            
             form.submit();
         }
     });
@@ -71,37 +66,303 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(function(input) {
         input.addEventListener('input', function() {
             const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
 
-            if (value !== '') {
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
             }
         });
     });
 
-    // Обробник події submit для форми
+    
     form.addEventListener('submit', function(event) {
-        // Тут можна виконати додаткові дії після відправки форми (наприклад, оновлення сторінки)
-        location.reload(); // Оновлення сторінки після успішного сабміту
+        
+        location.reload(); 
     });
 });
 
-const validateInputs = () => {
-    const inputs = document.querySelectorAll('.application__input');
 
+
+
+
+
+
+//////////// REQUEST-VALIDATION ///////////////////////////////////////
+const validateReqInputs = () => {
+    const inputs = document.querySelectorAll('.request-form__input');
     inputs.forEach(function(input) {
         const value = input.value.trim();
-
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
         if (value === '') {
             input.classList.remove('application__success');
             input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+
         } else {
             input.classList.remove('application__error');
             input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
         }
     });
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('request-form');
+    const submitBtn = document.getElementById('submitBtnReq');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        validateReqInputs(); 
+
+        
+        const inputs = document.querySelectorAll('.request-form__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.request-form__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
+            }
+        });
+    });
+
+    
+    form.addEventListener('submit', function(event) {
+        
+        location.reload(); 
+    });
+});
+
+
+
+
+
+//////////// REQUEST-VALIDATION ///////////////////////////////////////
+const validateContactInputs = () => {
+    const inputs = document.querySelectorAll('.contact-form__input');
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
+        }
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submitBtnContact');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        validateContactInputs(); 
+
+        
+        const inputs = document.querySelectorAll('.contact-form__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.contact-form__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
+            }
+        });
+    });
+
+    
+    form.addEventListener('submit', function(event) {
+        
+        location.reload(); 
+    });
+});
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const form = document.getElementById('form');

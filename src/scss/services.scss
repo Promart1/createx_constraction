@@ -640,6 +640,8 @@
   }
 
   table {
+    position: relative;
+    z-index: 3;
     border-collapse: collapse;
     width: 100%;
     background: $main-white;

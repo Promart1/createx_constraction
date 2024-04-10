@@ -177,6 +177,8 @@
   padding-top: 72px;
   padding-bottom: 180px;
   background: $gray-200;
+  position: relative;
+  z-index: 2;
 
   &__inner {
     margin-top: 0;
@@ -663,9 +665,11 @@
     justify-content: space-between;
     margin-bottom: 22px;
     width: 705px;
+    transition: transform 0.3s ease;
   }
 
   &__item:hover {
+    transform: scale(1.1);
     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
       0px 12px 10px -6px rgba(154, 156, 165, 0.04),
       0px 30px 24px -10px rgba(154, 156, 165, 0.05),

@@ -364,6 +364,366 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+
+
+
+
+//////////// COMMENT-VALIDATION ///////////////////////////////////////
+const validateCommentInputs = () => {
+    const inputs = document.querySelectorAll('.comment-form__input');
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
+        }
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('comment-form');
+    const submitBtn = document.getElementById('submitBtnComment');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        validateCommentInputs(); 
+
+        
+        const inputs = document.querySelectorAll('.comment-form__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.comment-form__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
+            }
+        });
+    });
+
+    
+    form.addEventListener('submit', function(event) {
+        
+        location.reload(); 
+    });
+});
+
+
+
+
+
+
+//////////// modal-VALIDATION ///////////////////////////////////////
+const validateModalInputs = () => {
+    const inputs = document.querySelectorAll('.application__input');
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
+        }
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('modalSub');
+    const submitBtn = document.getElementById('submitModalBtn');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+       validateModalInputs(); 
+
+        
+        const inputs = document.querySelectorAll('.application__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.application__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
+            }
+        });
+    });
+
+});
+
+
+
+
+
+
+//////////// modal-CV-VALIDATION ///////////////////////////////////////
+const validateModalCVInputs = () => {
+    const inputs = document.querySelectorAll('.application__input');
+    inputs.forEach(function(input) {
+        const value = input.value.trim();
+        const mark = input.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        
+        if (value === '') {
+            input.classList.remove('application__success');
+            input.classList.add('application__error');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'none';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+
+        } else {
+            input.classList.remove('application__error');
+            input.classList.add('application__success');
+            if (mark && mark.classList.contains('application__mark')) {
+                mark.style.display = 'block';
+            }
+
+             if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+            }
+            
+            if (validationTextDanger) {
+                validationTextDanger.style.display = 'none';
+            }
+        }
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('modalCV');
+    const submitBtn = document.getElementById('submitModalCVBtn');
+
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+       validateModalCVInputs(); 
+
+        
+        const inputs = document.querySelectorAll('.application__input');
+        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
+
+        if (isSuccess) {
+            
+            form.submit();
+        }
+    });
+
+    const inputs = document.querySelectorAll('.application__input');
+
+    inputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            const value = input.value.trim();
+            const mark = input.nextElementSibling; 
+            const validationText = input.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+           
+            if (value === '') {
+                input.classList.remove('application__success');
+                input.classList.add('application__error');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'none'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'block'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'none'; 
+                }
+                
+                 if (validationTextDanger) {
+                validationTextDanger.style.display = 'block'; 
+            }
+            } else {
+                input.classList.remove('application__error');
+                input.classList.add('application__success');
+                if (mark && mark.classList.contains('application__mark')) {
+                    mark.style.display = 'block'; 
+                }
+
+                if (denger && denger.classList.contains('application__denger')) {
+                    denger.style.display = 'none'; 
+                }
+
+                 if (validationText) {
+                validationText.style.display = 'block'; 
+                }
+                
+                if (validationTextDanger) {
+                validationTextDanger.style.display = 'none'; 
+            }
+            }
+        });
+    });
+
+});
+
 // document.addEventListener('DOMContentLoaded', () => {
 //     const form = document.getElementById('form');
 

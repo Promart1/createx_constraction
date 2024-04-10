@@ -351,7 +351,7 @@
             <h2 class="block__title comment-form__title">Leave your comment</h2>
             <form id="comment-form">
               <div class="comment-form__wrapper">
-                <div>
+                <div class="input__control">
                   <label for="name" class="comment-form__subtitle">Name*</label>
                   <input
                     type="text"
@@ -360,9 +360,13 @@
                     class="comment-form__input"
                     placeholder="Your name"
                   />
+                  <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
+          <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
                 </div>
 
-                <div>
+                <div class="input__control">
                   <label for="email" class="comment-form__subtitle"
                     >Email*</label
                   >
@@ -373,9 +377,14 @@
                     class="comment-form__input"
                     placeholder="Your working email"
                   />
+                  <img src="@img/icons/Mark-form.svg" alt="mark" class="application__mark">
+          <div class="validation-text">Look good!</div>
+          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+        <div class="validation-text-denger">Please provide a valid input.</div>
                 </div>
               </div>
-              <div>
+
+              <div class="input__control">
                 <label for="message" class="comment-form__subtitle"
                   >Your comment*</label
                 >
@@ -383,12 +392,19 @@
                   
                   name="message"
                   rows="4"
-                  class="comment-form__comment-input"
+                  class="comment-form__comment-input comment-form__input"
                   placeholder="Type comment here"
                 ></textarea>
+                 <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div></div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
               </div>
               <div class="application__btn-wrapper">
-                <button type="submit" class="comment-form__btn">
+                <button type="submit" id="submitBtnComment" class="comment-form__btn">
                   Post comment
                 </button>
               </div>

@@ -265,7 +265,7 @@
           <h3 class="modal__title">Subscribe to our newsletter</h3>
 
           <form id="position-form">
-            <div>
+            <div class="input__control">
               <label for="name" class="application__subtitle">Name*</label>
               <input
                 type="text"
@@ -275,9 +275,17 @@
                 class="application__input application__modal-f-input"
                 placeholder="Your name"
               />
+               <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
 
-            <div>
+            <div class="input__control">
               <label for="email" class="application__subtitle">Email*</label>
               <input
                 type="email"
@@ -287,12 +295,21 @@
                 class="application__input application__modal-s-input"
                 placeholder="Your working email"
               />
+               <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
 
             <div class="application__btn-wrapper">
               <button
                 type="submit"
                 class="application__btn application__modal-btn"
+                id="submitModalBtn"
               >
                 send
               </button>
@@ -309,7 +326,7 @@
           <h3 class="modal__title">Send your CV</h3>
 
           <form id="cv-form">
-            <div>
+            <div class="input__control">
               <label for="name" class="application__subtitle">Name*</label>
               <input
                 type="text"
@@ -319,6 +336,14 @@
                 class="application__input application__modal-f-input"
                 placeholder="Your name"
               />
+              <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
 
             <div class="contact-form__select-wrapper application__modal-f-input">
@@ -342,7 +367,7 @@
               </select>
             </div>
 
-            <div>
+            <div class="input__control">
               <label for="phone" class="application__subtitle">Phone*</label>
               <input
                 type="tel"
@@ -351,9 +376,17 @@
                 class="application__input application__modal-f-input"
                 placeholder="Your phone number"
               />
+              <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
 
-            <div>
+            <div class="input__control">
               <label for="email" class="application__subtitle">Email*</label>
               <input
                 type="email"
@@ -363,9 +396,17 @@
                 class="application__input application__modal-f-input"
                 placeholder="Your working email"
               />
+              <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div class="validation-text">Look good!</div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+          <div class="validation-text-denger">Please provide a valid input.</div>
             </div>
 
-            <div>
+            <div class="input__control">
               <label for="message" class="application__subtitle"
                 >Сovering letter</label
               >
@@ -376,6 +417,13 @@
                 class="application__input application__modal-f-input"
                 placeholder="Your covering letter"
               ></textarea>
+              <img
+            src="@img/icons/Mark-form.svg"
+            alt="mark"
+            class="application__mark"
+          />
+          <div></div>
+           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
             </div>
 
             <div class="modal__input-container">
@@ -388,6 +436,7 @@
             <div class="application__btn-wrapper">
               <button
                 type="submit"
+                id="submitModalCVBtn"
                 class="application__btn application__modal-btn"
               >
                 send

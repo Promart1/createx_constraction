@@ -355,9 +355,16 @@
     font-size: 14px;
     margin-bottom: 29px;
     font-family: "Ubuntu", sans-serif;
-    color: $gray-600;
+    color: $gray-900;
     position: relative;
   }
+
+    &__input::placeholder {
+font-size: 14px;
+  margin-bottom: 29px;
+  font-family: "Ubuntu", sans-serif;
+  color: $gray-600;
+    }
 
   &__mark {
     position: absolute;
@@ -1043,6 +1050,54 @@ color: $success;
   &__file-name {
     margin-top: 16px;
   }
+
+    .application__mark {
+      position: absolute;
+      right: 14px;
+      top: 35px;
+      width: 16px;
+      height: 16px;
+      display: none;
+    }
+  
+    .application__denger {
+      position: absolute;
+      right: 14px;
+      top: 35px;
+      width: 16px;
+      height: 16px;
+      display: none;
+    }
+  
+    .validation-text {
+      position: absolute;
+      left: 0;
+      top: 65px;
+      font-size: 12px;
+      color: $success;
+      display: none;
+  
+      @include respond-to($m-tablet) {
+        right: 0;
+        left: auto;
+        font-size: 10px;
+      }
+    }
+  
+    .validation-text-denger {
+      position: absolute;
+      left: 0;
+      top: 65px;
+      font-size: 12px;
+      color: $danger;
+      display: none;
+  
+      @include respond-to($m-tablet) {
+        right: 0;
+        left: auto;
+        font-size: 10px;
+      }
+    }
 }
 
 .modal-content {

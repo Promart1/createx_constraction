@@ -47,35 +47,43 @@
               <form id="contact-form">
                 <div class="contact-form__form-wrapper">
                   <div class="input__control">
-                    <label for="name" class="comment-form__subtitle"
+                    <label for="contact-name" class="comment-form__subtitle"
                       >Name*</label
                     >
                     <input
                       type="text"
-                      
+                      id="contact-name"
                       name="name"
                       class="comment-form__input contact-form__input"
                       placeholder="Your name"
                     />
                     <img
-            src="@img/icons/Mark-form.svg"
-            alt="mark"
-            class="application__mark"
-          />
-         <div class="validation-text">Look good!</div>
-          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
-        <div class="validation-text-denger">Please provide a valid input.</div>
+                      src="@img/icons/Mark-form.svg"
+                      alt="mark"
+                      class="application__mark"
+                    />
+                    <div class="validation-text">Look good!</div>
+                    <img
+                      src="@img/icons/danger.svg"
+                      alt="mark"
+                      class="application__denger"
+                    />
+                    <div class="validation-text-denger">
+                      Please provide a valid input.
+                    </div>
                   </div>
 
                   <div class="contact-form__select-wrapper">
                     <img src="@img/icons/Down-chevron.svg" alt="tip" />
-                    <label for="name" class="comment-form__subtitle"
+                    <label
+                      for="contact-interected"
+                      class="comment-form__subtitle"
                       >I am interested in</label
                     >
                     <select
-                      
                       class="contact-form__select"
                       name="interected"
+                      id="contact-interected"
                       required
                     >
                       <option value="" disabled selected>
@@ -89,35 +97,41 @@
                   </div>
 
                   <div class="input__control">
-                    <label for="phone" class="comment-form__subtitle"
+                    <label for="contact-phone" class="comment-form__subtitle"
                       >Phone*</label
                     >
                     <input
                       type="tel"
-                      
+                      id="contact-phone"
                       name="phone"
                       class="comment-form__input contact-form__input"
                       placeholder="Your phone number"
                     />
                     <img
-            src="@img/icons/Mark-form.svg"
-            alt="mark"
-            class="application__mark"
-          />
-         <div class="validation-text">Look good!</div>
-          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
-        <div class="validation-text-denger">Please provide a valid input.</div>
+                      src="@img/icons/Mark-form.svg"
+                      alt="mark"
+                      class="application__mark"
+                    />
+                    <div class="validation-text">Look good!</div>
+                    <img
+                      src="@img/icons/danger.svg"
+                      alt="mark"
+                      class="application__denger"
+                    />
+                    <div class="validation-text-denger">
+                      Please provide a valid input.
+                    </div>
                   </div>
 
                   <div class="contact-form__select-wrapper">
                     <img src="@img/icons/Down-chevron.svg" alt="tip" />
-                    <label for="name" class="comment-form__subtitle"
+                    <label for="contact-design" class="comment-form__subtitle"
                       >Location*</label
                     >
                     <select
-                      
                       class="contact-form__select"
-                      name="interected"
+                      name="contact-design"
+                      id="contact-design"
                       required
                     >
                       <option value="" disabled selected>
@@ -131,29 +145,35 @@
                   </div>
 
                   <div class="input__control">
-                    <label for="email" class="comment-form__subtitle"
+                    <label for="contact-email" class="comment-form__subtitle"
                       >Email</label
                     >
                     <input
                       type="email"
-                      
                       name="email"
+                      id="contact-email"
                       class="comment-form__input contact-form__input"
                       placeholder="Your working email"
                     />
                     <img
-            src="@img/icons/Mark-form.svg"
-            alt="mark"
-            class="application__mark"
-          />
-         <div class="validation-text">Look good!</div>
-          <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
-        <div class="validation-text-denger">Please provide a valid input.</div>
+                      src="@img/icons/Mark-form.svg"
+                      alt="mark"
+                      class="application__mark"
+                    />
+                    <div class="validation-text">Look good!</div>
+                    <img
+                      src="@img/icons/danger.svg"
+                      alt="mark"
+                      class="application__denger"
+                    />
+                    <div class="validation-text-denger">
+                      Please provide a valid input.
+                    </div>
                   </div>
 
                   <div>
                     <label
-                      for="phone"
+                     
                       class="comment-form__subtitle contact-form__subtitle"
                       >Preferred contact method</label
                     >
@@ -192,45 +212,51 @@
                 </div>
 
                 <div class="input__control">
-                  <label for="message" class="comment-form__subtitle"
+                  <label for="contact-message" class="comment-form__subtitle"
                     >Message*</label
                   >
                   <textarea
-                    
                     name="message"
+                    id="contact-message"
                     rows="5"
                     class="comment-form__comment-input contact-form__input"
                     placeholder="Your message"
                   ></textarea>
                   <img
-            src="@img/icons/Mark-form.svg"
-            alt="mark"
-            class="application__mark"
-          />
-          <div></div>
-           <img src="@img/icons/danger.svg" alt="mark" class="application__denger">
+                    src="@img/icons/Mark-form.svg"
+                    alt="mark"
+                    class="application__mark"
+                  />
+                  <div></div>
+                  <img
+                    src="@img/icons/danger.svg"
+                    alt="mark"
+                    class="application__denger"
+                  />
                 </div>
 
                 <div class="contact-form__bnt-checkbox-wrapper">
-
                   <div class="application__checkbox-wrapper">
-          <input
-            type="checkbox"
-            class="application__checkbox"
-            name="agree"
-            id="agree"
-            required
-          />
-          <span class="application__custom-checkbox"></span>
-          <label for="agree" class="application__agree"
-            >I agree to receive communications from Createx Construction
-            Bureau.</label
-          >
-          
-        </div>
+                    <input
+                      type="checkbox"
+                      class="application__checkbox"
+                      name="agree"
+                      id="contact-agree"
+                      required
+                    />
+                    <span class="application__custom-checkbox"></span>
+                    <label for="contact-agree" class="application__agree"
+                      >I agree to receive communications from Createx
+                      Construction Bureau.</label
+                    >
+                  </div>
 
                   <div class="contact-form__btn-wrapper">
-                    <button type="submit" id="submitBtnContact" class="comment-form__btn">
+                    <button
+                      type="submit"
+                      id="submitBtnContact"
+                      class="comment-form__btn"
+                    >
                       send request
                     </button>
                   </div>

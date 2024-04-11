@@ -16,14 +16,13 @@ const validateInputs = () => {
                 mark.style.display = 'none';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'block'; 
             }
             
             if (validationTextDanger) {
                 validationTextDanger.style.display = 'block'; 
             }
-
         } else {
             input.classList.remove('application__error');
             input.classList.add('application__success');
@@ -31,8 +30,8 @@ const validateInputs = () => {
                 mark.style.display = 'block';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'none'; 
             }
             
             if (validationTextDanger) {
@@ -46,20 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
     const submitBtn = document.getElementById('submitBtn');
 
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            validateInputs(); 
 
-        validateInputs(); 
+            const inputs = document.querySelectorAll('.application__input');
+            const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
-        
-        const inputs = document.querySelectorAll('.application__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
+            if (isSuccess) {
+                form.submit();
+            }
+        });
+    }
 
     const inputs = document.querySelectorAll('.application__input');
 
@@ -82,13 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'block'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'none'; 
+                if (validationText) {
+                    validationText.style.display = 'none'; 
                 }
                 
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
+                if (validationTextDanger) {
+                    validationTextDanger.style.display = 'block'; 
+                }
             } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
@@ -100,22 +98,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'none'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'block'; 
+                if (validationText) {
+                    validationText.style.display = 'block'; 
                 }
                 
                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
+                    validationTextDanger.style.display = 'none'; 
+                }
             }
         });
     });
 
-    
-    form.addEventListener('submit', function(event) {
-        
-        location.reload(); 
-    });
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            location.reload(); 
+        });
+    }
 });
 
 
@@ -125,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //////////// REQUEST-VALIDATION ///////////////////////////////////////
+
+
 const validateReqInputs = () => {
     const inputs = document.querySelectorAll('.request-form__input');
     inputs.forEach(function(input) {
@@ -140,14 +140,13 @@ const validateReqInputs = () => {
                 mark.style.display = 'none';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'block'; 
             }
             
             if (validationTextDanger) {
                 validationTextDanger.style.display = 'block'; 
             }
-
         } else {
             input.classList.remove('application__error');
             input.classList.add('application__success');
@@ -155,8 +154,8 @@ const validateReqInputs = () => {
                 mark.style.display = 'block';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'none'; 
             }
             
             if (validationTextDanger) {
@@ -170,20 +169,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('request-form');
     const submitBtn = document.getElementById('submitBtnReq');
 
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            validateReqInputs(); 
 
-        validateReqInputs(); 
+            const inputs = document.querySelectorAll('.request-form__input');
+            const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
-        
-        const inputs = document.querySelectorAll('.request-form__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
+            if (isSuccess) {
+                form.submit();
+            }
+        });
+    }
 
     const inputs = document.querySelectorAll('.request-form__input');
 
@@ -206,13 +204,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'block'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'none'; 
+                if (validationText) {
+                    validationText.style.display = 'none'; 
                 }
                 
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
+                if (validationTextDanger) {
+                    validationTextDanger.style.display = 'block'; 
+                }
             } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
@@ -224,36 +222,40 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'none'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'block'; 
+                if (validationText) {
+                    validationText.style.display = 'block'; 
                 }
                 
                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
+                    validationTextDanger.style.display = 'none'; 
+                }
             }
         });
     });
 
-    
-    form.addEventListener('submit', function(event) {
-        
-        location.reload(); 
-    });
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            location.reload(); 
+        });
+    }
 });
 
 
 
 
 
+
+
 //////////// REQUEST-VALIDATION ///////////////////////////////////////
+
+
 const validateContactInputs = () => {
     const inputs = document.querySelectorAll('.contact-form__input');
     inputs.forEach(function(input) {
         const value = input.value.trim();
         const mark = input.nextElementSibling;
-        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
-        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        const denger = input.nextElementSibling.nextElementSibling;
+        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling;
         
         if (value === '') {
             input.classList.remove('application__success');
@@ -262,14 +264,13 @@ const validateContactInputs = () => {
                 mark.style.display = 'none';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'block'; 
             }
             
             if (validationTextDanger) {
                 validationTextDanger.style.display = 'block'; 
             }
-
         } else {
             input.classList.remove('application__error');
             input.classList.add('application__success');
@@ -277,8 +278,8 @@ const validateContactInputs = () => {
                 mark.style.display = 'block';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'none'; 
             }
             
             if (validationTextDanger) {
@@ -292,30 +293,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submitBtnContact');
 
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            validateContactInputs(); 
 
-        validateContactInputs(); 
+            const inputs = document.querySelectorAll('.contact-form__input');
+            const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
-        
-        const inputs = document.querySelectorAll('.contact-form__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
+            if (isSuccess) {
+                form.submit();
+            }
+        });
+    }
 
     const inputs = document.querySelectorAll('.contact-form__input');
-
     inputs.forEach(function(input) {
         input.addEventListener('input', function() {
             const value = input.value.trim();
             const mark = input.nextElementSibling; 
             const validationText = input.nextElementSibling.nextElementSibling;
-            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
-            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+            const denger = input.nextElementSibling.nextElementSibling;
+            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling;
            
             if (value === '') {
                 input.classList.remove('application__success');
@@ -328,13 +327,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'block'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'none'; 
+                if (validationText) {
+                    validationText.style.display = 'none'; 
                 }
                 
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
+                if (validationTextDanger) {
+                    validationTextDanger.style.display = 'block'; 
+                }
             } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
@@ -346,31 +345,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'none'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'block'; 
+                if (validationText) {
+                    validationText.style.display = 'block'; 
                 }
                 
                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
+                    validationTextDanger.style.display = 'none'; 
+                }
             }
         });
     });
 
-    
-    form.addEventListener('submit', function(event) {
-        
-        location.reload(); 
-    });
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            location.reload(); 
+        });
+    }
 });
 
 
 
 
 
-
-
 //////////// COMMENT-VALIDATION ///////////////////////////////////////
+
 const validateCommentInputs = () => {
     const inputs = document.querySelectorAll('.comment-form__input');
     inputs.forEach(function(input) {
@@ -386,8 +384,8 @@ const validateCommentInputs = () => {
                 mark.style.display = 'none';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'block'; 
             }
             
             if (validationTextDanger) {
@@ -401,8 +399,8 @@ const validateCommentInputs = () => {
                 mark.style.display = 'block';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'none'; 
             }
             
             if (validationTextDanger) {
@@ -416,23 +414,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('comment-form');
     const submitBtn = document.getElementById('submitBtnComment');
 
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            validateCommentInputs(); 
 
-        validateCommentInputs(); 
+            const inputs = document.querySelectorAll('.comment-form__input');
+            const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
-        
-        const inputs = document.querySelectorAll('.comment-form__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
+            if (isSuccess) {
+                form.submit();
+            }
+        });
+    }
 
     const inputs = document.querySelectorAll('.comment-form__input');
-
     inputs.forEach(function(input) {
         input.addEventListener('input', function() {
             const value = input.value.trim();
@@ -452,13 +448,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'block'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'none'; 
+                if (validationText) {
+                    validationText.style.display = 'none'; 
                 }
                 
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
+                if (validationTextDanger) {
+                    validationTextDanger.style.display = 'block'; 
+                }
             } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
@@ -470,30 +466,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'none'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'block'; 
+                if (validationText) {
+                    validationText.style.display = 'block'; 
                 }
                 
                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
+                    validationTextDanger.style.display = 'none'; 
+                }
             }
         });
     });
 
-    
-    form.addEventListener('submit', function(event) {
-        
-        location.reload(); 
-    });
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            location.reload(); 
+        });
+    }
 });
 
 
 
 
 
-
 //////////// modal-VALIDATION ///////////////////////////////////////
+
 const validateModalInputs = () => {
     const inputs = document.querySelectorAll('.application__input');
     inputs.forEach(function(input) {
@@ -509,8 +505,8 @@ const validateModalInputs = () => {
                 mark.style.display = 'none';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'block'; 
             }
             
             if (validationTextDanger) {
@@ -524,8 +520,8 @@ const validateModalInputs = () => {
                 mark.style.display = 'block';
             }
 
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
+            if (denger && denger.classList.contains('application__denger')) {
+                denger.style.display = 'none'; 
             }
             
             if (validationTextDanger) {
@@ -539,23 +535,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('modalSub');
     const submitBtn = document.getElementById('submitModalBtn');
 
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            validateModalInputs(); 
 
-       validateModalInputs(); 
+            const inputs = document.querySelectorAll('.application__input');
+            const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
 
-        
-        const inputs = document.querySelectorAll('.application__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
+            if (isSuccess) {
+                form.submit();
+            }
+        });
+    }
 
     const inputs = document.querySelectorAll('.application__input');
-
     inputs.forEach(function(input) {
         input.addEventListener('input', function() {
             const value = input.value.trim();
@@ -575,13 +569,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'block'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'none'; 
+                if (validationText) {
+                    validationText.style.display = 'none'; 
                 }
                 
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
+                if (validationTextDanger) {
+                    validationTextDanger.style.display = 'block'; 
+                }
             } else {
                 input.classList.remove('application__error');
                 input.classList.add('application__success');
@@ -593,13 +587,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     denger.style.display = 'none'; 
                 }
 
-                 if (validationText) {
-                validationText.style.display = 'block'; 
+                if (validationText) {
+                    validationText.style.display = 'block'; 
                 }
                 
                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
+                    validationTextDanger.style.display = 'none'; 
+                }
             }
         });
     });
@@ -608,212 +602,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-//////////// modal-CV-VALIDATION ///////////////////////////////////////
-const validateModalCVInputs = () => {
-    const inputs = document.querySelectorAll('.application__input');
-    inputs.forEach(function(input) {
-        const value = input.value.trim();
-        const mark = input.nextElementSibling;
-        const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
-        const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-        
-        if (value === '') {
-            input.classList.remove('application__success');
-            input.classList.add('application__error');
-            if (mark && mark.classList.contains('application__mark')) {
-                mark.style.display = 'none';
-            }
-
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
-            }
-            
-            if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
-
-        } else {
-            input.classList.remove('application__error');
-            input.classList.add('application__success');
-            if (mark && mark.classList.contains('application__mark')) {
-                mark.style.display = 'block';
-            }
-
-             if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
-            }
-            
-            if (validationTextDanger) {
-                validationTextDanger.style.display = 'none';
-            }
-        }
-    });
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('modalCV');
-    const submitBtn = document.getElementById('submitModalCVBtn');
-
-    submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); 
-
-       validateModalCVInputs(); 
-
-        
-        const inputs = document.querySelectorAll('.application__input');
-        const isSuccess = Array.from(inputs).every(input => input.classList.contains('application__success'));
-
-        if (isSuccess) {
-            
-            form.submit();
-        }
-    });
-
-    const inputs = document.querySelectorAll('.application__input');
-
-    inputs.forEach(function(input) {
-        input.addEventListener('input', function() {
-            const value = input.value.trim();
-            const mark = input.nextElementSibling; 
-            const validationText = input.nextElementSibling.nextElementSibling;
-            const denger = input.nextElementSibling.nextElementSibling.nextElementSibling;
-            const validationTextDanger = input.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-           
-            if (value === '') {
-                input.classList.remove('application__success');
-                input.classList.add('application__error');
-                if (mark && mark.classList.contains('application__mark')) {
-                    mark.style.display = 'none'; 
-                }
-
-                if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'block'; 
-                }
-
-                 if (validationText) {
-                validationText.style.display = 'none'; 
-                }
-                
-                 if (validationTextDanger) {
-                validationTextDanger.style.display = 'block'; 
-            }
-            } else {
-                input.classList.remove('application__error');
-                input.classList.add('application__success');
-                if (mark && mark.classList.contains('application__mark')) {
-                    mark.style.display = 'block'; 
-                }
-
-                if (denger && denger.classList.contains('application__denger')) {
-                    denger.style.display = 'none'; 
-                }
-
-                 if (validationText) {
-                validationText.style.display = 'block'; 
-                }
-                
-                if (validationTextDanger) {
-                validationTextDanger.style.display = 'none'; 
-            }
-            }
-        });
-    });
-
-});
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const form = document.getElementById('form');
-
-//     form.addEventListener('submit', e => {
-//         e.preventDefault(); // Prevent form submission for now
-//         validateForm();
-//     });
-
-//     function validateForm() {
-//         const name = document.getElementById('app-name');
-//         const phone = document.getElementById('app-phone');
-//         const email = document.getElementById('app-email');
-//         const message = document.getElementById('app-message');
-//         const agree = document.getElementById('agree');
-
-//         validateInput(name, 'Name');
-//         validatePhone(phone);
-//         validateEmail(email);
-//         validateInput(message, 'Message');
-//         validateCheckbox(agree);
-//     }
-
-//     function validateInput(inputElement, fieldName) {
-//         const value = inputElement.value.trim();
-//         const errorElement = inputElement.nextElementSibling;
-
-//         if (value === '') {
-//             displayError(inputElement, errorElement, `${fieldName} is required`);
-//         } else {
-//             clearError(inputElement, errorElement);
-//         }
-//     }
-
-//     function validatePhone(phoneElement) {
-//         const phone = phoneElement.value.trim();
-//         const errorElement = phoneElement.nextElementSibling;
-
-//         if (phone === '') {
-//             displayError(phoneElement, errorElement, 'Phone is required');
-//         } else if (!/^\d{10}$/.test(phone)) {
-//             displayError(phoneElement, errorElement, 'Invalid phone number');
-//         } else {
-//             clearError(phoneElement, errorElement);
-//         }
-//     }
-
-//     function validateEmail(emailElement) {
-//         const email = emailElement.value.trim();
-//         const errorElement = emailElement.nextElementSibling;
-
-//         if (email === '') {
-//             displayError(emailElement, errorElement, 'Email is required');
-//         } else if (!isValidEmail(email)) {
-//             displayError(emailElement, errorElement, 'Invalid email format');
-//         } else {
-//             clearError(emailElement, errorElement);
-//         }
-//     }
-
-//     function validateCheckbox(checkboxElement) {
-//         const errorElement = checkboxElement.nextElementSibling.nextElementSibling; // Access the error div
-
-//         if (!checkboxElement.checked) {
-//             displayError(null, errorElement, 'Please agree to the terms');
-//         } else {
-//             clearError(null, errorElement);
-//         }
-//     }
-
-//     function isValidEmail(email) {
-//         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//         return re.test(email);
-//     }
-
-//     function displayError(inputElement, errorElement, message) {
-//         errorElement.textContent = message;
-//         if (inputElement) {
-//             inputElement.classList.add('error');
-//         }
-//         errorElement.style.display = 'block';
-//     }
-
-//     function clearError(inputElement, errorElement) {
-//         if (inputElement) {
-//             inputElement.classList.remove('error');
-//         }
-//         errorElement.textContent = '';
-//         errorElement.style.display = 'none';
-//     }
-// });
 
 
 
@@ -853,26 +641,7 @@ menuShadow.addEventListener('click', (event) => {
 
 /////validation form
 
-// import validator from 'validator';
 
-// const form = document.querySelector("#form");
-// const nameInput = document.querySelector("#name");
-// const phoneInput = document.querySelector("#phone");
-// const messageInput = document.querySelector("#message");
-// const emailInput = document.querySelector("#email");
-
-// let isFormValid = false;
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-
-//   validateInputs()
-// })
-
-// const validateInputs = () => {
-//   const name = validator.isEmpty(nameInput.value.trim());
-//   console.log(name)
-// }
 
 
 
@@ -902,21 +671,7 @@ var mySwiper = new Swiper('#hero-swiper', {
 
 //////video
 
-// const videoImg = document.querySelector('.video__img');
-// const videoFrame = document.querySelector('.video__block');
-// const videoBtn = document.querySelector('.video__btn');
 
-// videoImg.addEventListener('click', () => {
-//   videoImg.classList.toggle('video__img-hidden');
-//   videoFrame.classList.toggle('video__frame');
-//    videoBtn.classList.toggle('video__img-hidden');
-// });
-
-// videoBtn.addEventListener('click', () => {
-//   videoBtn.classList.toggle('video__img-hidden');
-//   videoFrame.classList.toggle('video__frame');
-//   videoImg.classList.toggle('video__img-hidden');
-// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const videoImg = document.querySelector('.video__img');
@@ -1035,55 +790,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navBlockTitles = document.querySelectorAll('.footer__nav-block-title');
-//     const plusIcons = document.querySelectorAll('.footer__plus');
-
-//     navBlockTitles.forEach(function(navBlockTitle, index) {
-//         navBlockTitle.addEventListener('click', function() {
-//             const subMenu = this.nextElementSibling;
-//             subMenu.classList.toggle('open');
-
-            
-//             const plusIcon = plusIcons[index];
-//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
-//         });
-//     });
-
-//     plusIcons.forEach(function(plusIcon, index) {
-//         plusIcon.addEventListener('click', function() {
-//             const subMenu = this.nextElementSibling;
-//             subMenu.classList.toggle('open');
-
-           
-//             const navBlockTitle = navBlockTitles[index];
-//             navBlockTitle.nextElementSibling.classList.toggle('open');
-//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
-//         });
-//     });
-// });
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const footerNavBlocks = document.querySelectorAll('.footer__nav-mob');
-
-//     footerNavBlocks.forEach(function(navBlock) {
-//         const plusIcon = navBlock.querySelector('.footer__plus');
-//         const navBlockTitle = navBlock.querySelector('.footer__nav-block-title');
-//         const subMenu = navBlock.querySelector('.footer__sub-menu');
-
-//         navBlockTitle.addEventListener('click', function() {
-//             subMenu.classList.toggle('open');
-//             plusIcon.classList.toggle('open');
-//         });
-
-//         plusIcon.addEventListener('click', function() {
-//             subMenu.classList.toggle('open');
-//             plusIcon.classList.toggle('open');
-//         });
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     const navBlocks = document.querySelectorAll('.footer__nav-item');
 
@@ -1117,52 +823,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const showMoreBtn = document.getElementById('showMoreBtn');
     const portfolioItems = document.querySelectorAll('.work-portfolio__item');
-    let visibleItems; // Початкова кількість видимих елементів
+    let visibleItems; 
 
-    // Оновлення кількості видимих елементів при завантаженні сторінки
+    
+    if (!showMoreBtn || !portfolioItems || portfolioItems.length === 0) {
+        
+        return;
+    }
+
+    
     updateVisibleItems();
 
-    // Додати обробник події для кліку на кнопку "Показати більше"
+    
     showMoreBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Зупиняємо стандартну дію кнопки
+        event.preventDefault(); 
         
-        // Збільшити кількість видимих елементів на itemsToShow
+        
         visibleItems += getItemsToShow();
-        // Показати елементи
+        
         showItems();
     });
 
-    // Функція, яка визначає кількість елементів, які треба показати в залежності від розміру вікна
+    
     function getItemsToShow() {
         if (window.innerWidth > 1024) {
-            return 9; // Для десктопу
+            return 9; 
         } else if (window.innerWidth > 768) {
-            return 6; // Для планшету
+            return 6; 
         } else {
-            return 3; // Для мобільного телефона
+            return 3; 
         }
     }
 
-    // Функція, яка оновлює кількість видимих елементів при завантаженні сторінки або зміні розміру вікна
+   
     function updateVisibleItems() {
         visibleItems = getItemsToShow();
         showItems();
     }
 
-    // Функція, яка показує або приховує елементи відповідно до кількості visibleItems
+    
     function showItems() {
         portfolioItems.forEach(function(item, index) {
             if (index < visibleItems) {
-                item.style.display = 'flex'; // Показуємо елемент
+                item.style.display = 'flex'; 
             } else {
-                item.style.display = 'none'; // Ховаємо елемент
+                item.style.display = 'none'; 
             }
         });
 
-        // Перевіряємо, чи всі елементи показані, якщо так, то ховаємо кнопку "Показати більше"
+        
         if (visibleItems >= portfolioItems.length) {
             showMoreBtn.style.display = 'none';
         } else {
@@ -1170,9 +884,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Додати обробник події для зміни розміру вікна
+
     window.addEventListener('resize', updateVisibleItems);
 });
+
+
 
 
 ////// swiper project portfolio
@@ -1201,27 +917,7 @@ galleryTop.controller.control = galleryThumbs;
 galleryThumbs.controller.control = galleryTop;
 
 
-// var galleryTop = new Swiper('.gallery-top', {
-//       spaceBetween: 10,
-//       navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//       },
-// 	 		loop: true,
-// 			loopedSlides: 6
-//     });
-//     var galleryThumbs = new Swiper('.gallery-thumbs', {
-//       spaceBetween: 20,
-//       centeredSlides: true,
-//       slidesPerView: 6,
-//       touchRatio: 0.2,
-//       slideToClickedSlide: true,
-// 			loop: true,
-//       loopedSlides: 6,
 
-//     });
-//     galleryTop.controller.control = galleryThumbs;
-//     galleryThumbs.controller.control = galleryTop;
 
 ////history slider
 
@@ -1298,8 +994,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         window.addEventListener('resize', updateVisibleItems);
-    } else {
-        console.error('Елементи не знайдено');
     }
 });
 
@@ -1307,22 +1001,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const toggleTexts = document.querySelectorAll('.toggle-text');
 
-//     toggleTexts.forEach(function(toggleText) {
-//         toggleText.addEventListener('click', function() {
-//             const textBlock = this.nextElementSibling;
-//             if (textBlock.classList.contains('hidden-text')) {
-//                 textBlock.classList.remove('hidden-text');
-//                 textBlock.classList.add('visible');
-//             } else {
-//                 textBlock.classList.remove('visible');
-//                 textBlock.classList.add('hidden-text');
-//             }
-//         });
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const toggleBtns = document.querySelectorAll('.toggle-btn');
@@ -1340,80 +1019,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ///// modal window
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Функція для відкриття модального вікна за його id
-//     function openModal(modalId) {
-//         const modal = document.getElementById(modalId);
-//         if (modal) {
-//             modal.style.display = 'block';
-//         }
-//     }
 
-//     // Функція для закриття модального вікна за його id
-//     function closeModal(modalId) {
-//         const modal = document.getElementById(modalId);
-//         if (modal) {
-//             modal.style.display = 'none';
-//         }
-//     }
-
-//     // Обробники подій для кнопок відкриття модальних вікон
-//     const openModalSubBtn = document.getElementById('openModalSubBtn');
-//     if (openModalSubBtn) {
-//         openModalSubBtn.addEventListener('click', function() {
-//             openModal('myModal1');
-//         });
-//     }
-
-//     const openModal2Btn = document.getElementById('openModal2Btn');
-//     if (openModal2Btn) {
-//         openModal2Btn.addEventListener('click', function() {
-//             openModal('myModal2');
-//         });
-//     }
-
-//     // Обробник події для кнопок закриття модальних вікон
-//     const closeButtons = document.querySelectorAll('.close');
-//     closeButtons.forEach(function(closeBtn) {
-//         closeBtn.addEventListener('click', function() {
-//             const modalId = this.getAttribute('data-modal-id');
-//             closeModal(modalId);
-//         });
-//     });
-
-//     // Обробник події для закриття модального вікна при кліку поза ним
-//     window.addEventListener('click', function(event) {
-//         if (event.target.classList.contains('modal')) {
-//             event.target.style.display = 'none';
-//         }
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     let modalOpen = false;
 
-    // Функція для відкриття модального вікна за його id
+    
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.style.display = 'block';
-            body.classList.add('modal-open'); // Додати клас для блокування прокрутки
+            body.classList.add('modal-open'); 
             modalOpen = true;
         }
     }
 
-    // Функція для закриття модального вікна за його id
+    
     function closeModal(modalId) {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.style.display = 'none';
-            body.classList.remove('modal-open'); // Видалити клас для дозволу прокрутки
+            body.classList.remove('modal-open'); 
             modalOpen = false;
         }
     }
 
-    // Обробники подій для кнопок відкриття модальних вікон
+    
     const openModalSubBtn = document.getElementById('openModalSubBtn');
     if (openModalSubBtn) {
         openModalSubBtn.addEventListener('click', function() {
@@ -1428,7 +1060,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Обробник події для закриття модальних вікон
+    
     const closeButtons = document.querySelectorAll('.close');
     closeButtons.forEach(function(closeBtn) {
         closeBtn.addEventListener('click', function() {
@@ -1437,7 +1069,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обробник події для закриття модального вікна при кліку поза ним
+    
     window.addEventListener('click', function(event) {
         if (event.target.classList.contains('modal') && modalOpen) {
             const modalId = event.target.id;
@@ -1445,135 +1077,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Блокування прокрутки при відкритті модального вікна
+    
     window.addEventListener('scroll', function() {
         if (modalOpen) {
-            window.scrollTo(0, 0); // Повертаємо прокрутку до верху сторінки
+            window.scrollTo(0, 0); 
         }
     });
 });
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const fileUploadInput = document.getElementById('fileUpload');
-  const fileNameElement = document.querySelector('.modal__file-name');
 
-  fileUploadInput.addEventListener('change', function() {
-    const fileName = this.files[0].name;
-    fileNameElement.textContent = fileName;
+
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.container');
+
+  container.addEventListener('change', function(event) {
+    if (event.target && event.target.id === 'fileUpload') {
+      const fileNameElement = document.querySelector('.modal__file-name');
+      const fileName = event.target.files[0].name;
+      fileNameElement.textContent = fileName;
+    }
   });
 });
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const form = document.getElementById('form');
-
-//     // Отримуємо всі поля вводу в формі
-//     const inputs = form.querySelectorAll('input, textarea');
-
-//     // Додаємо обробник подій для кожного поля вводу
-//     inputs.forEach(function(input) {
-//         // Додаємо обробник події input, який викликається при зміні вмісту поля
-//         input.addEventListener('input', function() {
-//             validateInput(input); // Викликаємо функцію валідації для даного поля
-//         });
-
-//         // Додаємо обробник події change, який викликається при зміні значення поля
-//         input.addEventListener('change', function() {
-//             validateInput(input); // Викликаємо функцію валідації для даного поля
-//         });
-//     });
-
-//     // Функція валідації поля
-//     function validateInput(input) {
-//         if (input.validity.valid) {
-//             // Якщо поле валідне, змінюємо його вигляд на валідний стан
-//             input.classList.remove('invalid');
-//             input.classList.add('valid');
-//         } else {
-//             // Якщо поле недійсне, змінюємо його вигляд на недійсний стан
-//             input.classList.remove('valid');
-//             input.classList.add('invalid');
-//         }
-//     }
-
-//     // Додаємо обробник події на відправку форми
-//     form.addEventListener('submit', function(event) {
-//         // Перевіряємо валідність всіх полів перед відправкою форми
-//         inputs.forEach(function(input) {
-//             validateInput(input);
-//         });
-
-//         // Якщо є недійсні поля, перешкоджаємо відправці форми
-//         if (!form.checkValidity()) {
-//             event.preventDefault();
-//             event.stopPropagation();
-//         }
-//     });
-// });
 
 
-/////validation
 
-// const form = document.getElementById('form');
-// const username = document.getElementById('app-name');
-// const phone = document.getElementById('app-phone');
-// const email = document.getElementById('app-email');
 
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-//     validateInputs();
-// });
-
-// const setError = (element, message) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = message;
-//     inputControl.classList.add('error');
-//     inputControl.classList.remove('success');
-// };
-
-// const setSuccess = element => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = 'Looks good';
-//     inputControl.classList.add('success');
-//     inputControl.classList.remove('error');
-// };
-
-// const isValidEmail = email => {
-//     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-//     return re.test(email);
-// };
-
-// const validateInputs = () => {
-//     const nameValue = username.value.trim();
-//     const phoneValue = phone.value.trim();
-//     const emailValue = email.value.trim();
-
-//     if (nameValue === '') {
-//         setError(username, 'Name is required');
-//     } else {
-//         setSuccess(username);
-//     }
-
-//     if (emailValue === '') {
-//         setError(email, 'Email is required');
-//     } else if (!isValidEmail(emailValue)) {
-//         setError(email, 'Provide a valid email address');
-//     } else {
-//         setSuccess(email);
-//     }
-
-//     if (phoneValue === '') {
-//         setError(phone, 'Phone is required');
-//     } else {
-//         setSuccess(phone);
-//     }
-// };
 
 
  document.addEventListener('DOMContentLoaded', function() {

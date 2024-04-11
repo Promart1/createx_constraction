@@ -12,6 +12,10 @@ body {
     padding-right: 15px;
 }
 
+textarea {
+    resize: none;
+}
+
 .block {
     &__title {
         @include main-heading;

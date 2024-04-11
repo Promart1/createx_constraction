@@ -3,6 +3,8 @@
 .hero {
     &__inner {
         position: relative;
+        // max-width: 1920px;
+        // margin: 0 auto;
 
         img {
             width: 100%;
@@ -70,6 +72,7 @@
 
     &__swiper-container {
         width: 100%;
+        max-width: 1920px;
         // max-height: 500px;
         height: 100%;
         overflow: hidden;
@@ -379,11 +382,13 @@
         position: relative;
         overflow: hidden;
         max-width: 1230px;
-        padding-bottom: 56.2%;
+        // padding-bottom: 56.2%;
+        padding-bottom: 40.1%;
         border-radius: 4px;
         border: 1px solid rgba(230, 230, 230, 1);
         background: $main-white;
         display: none;
+        max-height: 500px;
     }
 
     iframe,

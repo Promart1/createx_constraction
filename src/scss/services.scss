@@ -209,24 +209,21 @@
   &__text {
     opacity: 0;
     @include base-regular;
-  display: none;
-  animation: slideDown 1s ease forwards;
+    display: none;
+    animation: slideDown 1s ease forwards;
   }
 
-    @keyframes slideDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-       
-      }
-  
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-       
-      }
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
     }
 
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &__block.expanded .offer__text {
     display: block;
@@ -590,14 +587,13 @@
 }
 
 .portfolio-des {
-    background: $main-white;
-    position: relative;
-    z-index: 3;
-    padding-bottom: 105px;
+  background: $main-white;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 105px;
   &__inner {
     margin-top: 180px;
     position: relative;
-   
   }
 
   &__swiper-button-prev {
@@ -708,8 +704,8 @@
   }
 
   table img {
-  margin-right: auto;
-  margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__table-line-gray {
@@ -737,39 +733,33 @@
     background: $primary;
   }
 
-    
-    &__table-main:hover{
-      transform: scale(1.1);
-     
-      
-     
-    }
+  &__table-main:hover {
+    transform: scale(1.1);
+  }
 
+  .pricing-modal {
+    display: none;
+    /* Початково приховуємо модальне вікно */
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Напівпрозорий чорний колір */
 
-.pricing-modal {
-  display: none;
-  /* Початково приховуємо модальне вікно */
-  position: fixed;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* Напівпрозорий чорний колір */
-
-
-  &__content {
+    &__content {
       background-color: #fefefe;
       margin: 15% auto;
-     
+
       border: 1px solid #888;
       max-width: 390px;
       border: 1px solid $primary;
       border-radius: 4px;
     }
-  
+
     &__close {
       color: $gray-600;
       float: right;
@@ -777,7 +767,7 @@
       font-weight: bold;
       margin-right: 10px;
     }
-  
+
     &__close:hover,
     &__close:focus {
       color: $main-white;
@@ -785,71 +775,66 @@
       cursor: pointer;
     }
 
-&__title-wrapper {
-  background: $primary;
-  padding-top: 29px;
-  padding-bottom: 29px;
-}
+    &__title-wrapper {
+      background: $primary;
+      padding-top: 29px;
+      padding-bottom: 29px;
+    }
 
-&__title {
-  font-weight: 700;
-  font-size: 27px;
-  color: $main-white;
-}
+    &__title {
+      font-weight: 700;
+      font-size: 27px;
+      color: $main-white;
+    }
 
-&__content-wrapper {
-  padding: 24px 58px 40px 58px;
- 
-}
+    &__content-wrapper {
+      padding: 24px 58px 40px 58px;
+    }
 
-&__price {
-  font-size: 20px;
-  color: $gray-900;
-  margin-bottom: 24px;
+    &__price {
+      font-size: 20px;
+      color: $gray-900;
+      margin-bottom: 24px;
 
-  span {
-    font-weight: 700;
-    font-size: 46px;
-    color: $primary;
-    margin-right: 16px;
-    margin-left: 16px;
+      span {
+        font-weight: 700;
+        font-size: 46px;
+        color: $primary;
+        margin-right: 16px;
+        margin-left: 16px;
+      }
+    }
+
+    &__list {
+      text-align: start;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        color: $gray-800;
+      }
+    }
+
+    &__text-spec {
+      color: $gray-600;
+    }
+
+    .view-all__btn {
+      margin-top: 32px;
+    }
   }
-}
-
-&__list {
-  text-align: start;
-}
-
-&__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-
-  img {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 25px;
-    color: $gray-800;
-  }
-}
-
-&__text-spec {
-  color: $gray-600;
-}
-
-.pricing__table-btn {
-  margin-bottom: 0;
-}
-}
-
-
-
-
 
   @include respond-to($m-desktop) {
     &__table-main {
@@ -887,73 +872,76 @@
     }
   }
 
-        @include respond-to($m-mobile) {
-            &__table-main-title {
-                font-size: 12px;
-                line-height: 15px;
-            }
-    
-            &__table-title {
-                font-size: 12px;
-                line-height: 15px;
-            }
-    
-            &__table-subtitle {
-                font-size: 9px;
-                line-height: 15px;
-            }
-    
-            &__table-btn {
-                height: 19px;
-    
-                font-size: 6px;
-    
-                padding: 0 2px;
-                margin-top: 11px;
-                margin-bottom: 11px;
-            }
-    
-            &__table-main {
-                padding-bottom: 11px;
-                width: 65px;
-                padding-top: 11px;
-            }
+  @include respond-to($m-mobile) {
+    &__table-main-title {
+      font-size: 12px;
+      line-height: 15px;
+    }
 
-                         &__table-secondary {
-                             font-size: 10px;
-                             line-height: 15px;
-                            
-                             padding-left: 6px;
-                         }
-            
-                         &__table-line {
-                             height: 38px;
-                         }
-            
-                         img {
-                            width: 14px;
-                            height: 14px;
-                         }
+    &__table-title {
+      font-size: 12px;
+      line-height: 15px;
+    }
 
-                         td {
-                            font-size: 10px;
-                         }
+    &__table-subtitle {
+      font-size: 9px;
+      line-height: 15px;
+    }
 
-                                                  &__inner {
-                                                      margin-top: 80px;
-                                                      padding-top: 30px;
-                                                      padding-bottom: 80px;
-                                                      
-                                                  }
+    &__table-btn {
+      height: 19px;
+
+      font-size: 6px;
+
+      padding: 0 2px;
+      margin-top: 11px;
+      margin-bottom: 11px;
+    }
+
+    &__table-main {
+      padding-bottom: 11px;
+      width: 65px;
+      padding-top: 11px;
+    }
+
+    &__table-secondary {
+      font-size: 10px;
+      line-height: 15px;
+
+      padding-left: 6px;
+    }
+
+    &__table-line {
+      height: 38px;
+    }
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+
+    td {
+      font-size: 10px;
+    }
+
+    &__inner {
+      margin-top: 80px;
+      padding-top: 30px;
+      padding-bottom: 80px;
+    }
+
+        .pricing-modal {
+          &__content-wrapper {
+              padding: 20px 18px 20px 18px;
+            }
         }
-
-        
+  }
 }
 
 .clients-des {
-    &__inner {
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 120px;
-    }
+  &__inner {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
 }

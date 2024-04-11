@@ -507,7 +507,17 @@
   &__china,
   &__australia {
     position: absolute;
+    transition: transform 0.3s ease;
   }
+
+    &__canada:hover,
+    &__usa:hover,
+    &__germany:hover,
+    &__ukraine:hover,
+    &__china:hover,
+    &__australia:hover {
+      transform: scale(1.1);
+    }
 
   &__canada {
     top: 35%;

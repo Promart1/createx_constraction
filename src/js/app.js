@@ -1592,4 +1592,31 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
-        });
+ });
+        
+
+
+
+////////////pricing-modal//////////////
+ 
+document.addEventListener('DOMContentLoaded', function() {
+  const mainItems = document.querySelectorAll('.pricing__table-main');
+
+  mainItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      const modal = document.getElementById('pricingBasic');
+      modal.style.display = 'block';
+
+      const closeBtn = modal.querySelector('.pricing-modal__close');
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  });
+});

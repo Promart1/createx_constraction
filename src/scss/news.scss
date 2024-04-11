@@ -370,8 +370,15 @@
             font-size: 16px;
             margin-bottom: 29px;
             font-family: Ubuntu, sans-serif;
-            color: #9a9ca5;
+            color: $gray-900;
     }
+
+        &__input::placeholder {
+          font-size: 16px;
+            margin-bottom: 29px;
+            font-family: Ubuntu, sans-serif;
+            color: #9a9ca5;
+        }
 
          .application__mark {
            position: absolute;

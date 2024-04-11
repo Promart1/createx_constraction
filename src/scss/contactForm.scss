@@ -107,7 +107,12 @@
     box-sizing: border-box;
     border: 1px solid $gray-400;
     font-size: 16px;
-    color: $gray-800;
+    color: $gray-900;
+  }
+
+  &__select >option:nth-child(1) {
+    font-size: 16px;
+        color: $gray-600;
   }
 
   &__select-wrapper {

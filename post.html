@@ -6,9 +6,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap&_v=20240411133019" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240411133019">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240411133019">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap&_v=20240411192606" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20240411192606">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240411192606">
     <title>About us</title>
 </head>
   <body>
@@ -58,7 +58,7 @@
 
                       <div class="header__content-wrapper header__dropdown">
                         <p class="header__content-text">Call us</p>
-                        <p><a href="tel:(405) 555-0128">(405) 555-0128</a></p>
+                        <p><a href="tel:4055550128">(405) 555-0128</a></p>
                       </div>
                     </div>
                   </li>
@@ -100,7 +100,7 @@
             <div class="main__breadcrumb">
               <a href="./" class="main__link">Homepage</a>
               <span> / </span>
-              <a href="./about.html" class="main__link">News</a>
+              <a href="./news.html" class="main__link">News</a>
               <span> / </span>
               <a href="./post.html" class="main__link"
                 >How to Build Climate Change-Resilient Infrastructure</a
@@ -362,59 +362,89 @@
             <form id="comment-form">
               <div class="comment-form__wrapper">
                 <div class="input__control">
-                  <label for="name" class="comment-form__subtitle">Name*</label>
+                  <label for="post-name" class="comment-form__subtitle"
+                    >Name*</label
+                  >
                   <input
                     type="text"
-                    
+                    id="post-name"
                     name="name"
                     class="comment-form__input"
                     placeholder="Your name"
                   />
-                  <img src="img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="validation-text">Look good!</div>
-          <img src="img/icons/danger.svg" alt="mark" class="application__denger">
-        <div class="validation-text-denger">Please provide a valid input.</div>
+                  <img
+                    src="img/icons/Mark-form.svg"
+                    alt="mark"
+                    class="application__mark"
+                  />
+                  <div class="validation-text">Look good!</div>
+                  <img
+                    src="img/icons/danger.svg"
+                    alt="mark"
+                    class="application__denger"
+                  />
+                  <div class="validation-text-denger">
+                    Please provide a valid input.
+                  </div>
                 </div>
 
                 <div class="input__control">
-                  <label for="email" class="comment-form__subtitle"
+                  <label for="post-email" class="comment-form__subtitle"
                     >Email*</label
                   >
                   <input
                     type="email"
-                    
+                    id="post-email"
                     name="email"
                     class="comment-form__input"
                     placeholder="Your working email"
                   />
-                  <img src="img/icons/Mark-form.svg" alt="mark" class="application__mark">
-          <div class="validation-text">Look good!</div>
-          <img src="img/icons/danger.svg" alt="mark" class="application__denger">
-        <div class="validation-text-denger">Please provide a valid input.</div>
+                  <img
+                    src="img/icons/Mark-form.svg"
+                    alt="mark"
+                    class="application__mark"
+                  />
+                  <div class="validation-text">Look good!</div>
+                  <img
+                    src="img/icons/danger.svg"
+                    alt="mark"
+                    class="application__denger"
+                  />
+                  <div class="validation-text-denger">
+                    Please provide a valid input.
+                  </div>
                 </div>
               </div>
 
               <div class="input__control">
-                <label for="message" class="comment-form__subtitle"
+                <label for="post-message" class="comment-form__subtitle"
                   >Your comment*</label
                 >
                 <textarea
-                  
+                  id="post-message"
                   name="message"
                   rows="4"
                   class="comment-form__comment-input comment-form__input"
                   placeholder="Type comment here"
                 ></textarea>
-                 <img
-            src="img/icons/Mark-form.svg"
-            alt="mark"
-            class="application__mark"
-          />
-          <div></div>
-           <img src="img/icons/danger.svg" alt="mark" class="application__denger">
+                <img
+                  src="img/icons/Mark-form.svg"
+                  alt="mark"
+                  class="application__mark"
+                />
+                <div></div>
+                <img
+                  src="img/icons/danger.svg"
+                  alt="mark"
+                  class="application__denger"
+                />
               </div>
               <div class="application__btn-wrapper">
-                <button type="submit" id="submitBtnComment" class="comment-form__btn">
+                <button
+                  type="submit"
+                  id="submitBtnComment"
+                  class="comment-form__btn"
+                >
                   Post comment
                 </button>
               </div>
@@ -514,11 +544,11 @@
             type="checkbox"
             class="application__checkbox"
             name="agree"
-            id="agree"
+            id="app-agree"
             required
           />
           <span class="application__custom-checkbox"></span>
-          <label for="agree" class="application__agree"
+          <label for="app-agree" class="application__agree"
             >I agree to receive communications from Createx Construction
             Bureau.</label
           >
@@ -697,7 +727,7 @@
   </div>
 </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240411133019"></script>
-    <script src="js/app.min.js?_v=20240411133019"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20240411192606"></script>
+    <script src="js/app.min.js?_v=20240411192606"></script>
   </body>
 </html>

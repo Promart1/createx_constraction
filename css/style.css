@@ -500,8 +500,43 @@ body {
   font-size: 14px;
   margin-bottom: 0;
   font-family: Ubuntu, sans-serif;
-  color: #9a9ca5;
+  color: rgb(30, 33, 44);
   position: relative;
+}
+
+.request-form__input::-webkit-input-placeholder {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.request-form__input::-moz-placeholder {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.request-form__input:-ms-input-placeholder {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.request-form__input::-ms-input-placeholder {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.request-form__input::placeholder {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
 }
 
 .request-form .application__mark {
@@ -1633,6 +1668,11 @@ body {
   padding-bottom: 24px;
   width: 245px;
   padding-top: 32px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  cursor: pointer;
 }
 
 .pricing__table-secondary {
@@ -1676,6 +1716,114 @@ body {
 .pricing__table-btn:hover {
   color: rgb(255, 255, 255);
   background: rgb(255, 90, 48);
+}
+
+.pricing__table-main:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.pricing .pricing-modal {
+  display: none;
+  /* Початково приховуємо модальне вікно */
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Напівпрозорий чорний колір */
+}
+
+.pricing .pricing-modal__content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  max-width: 390px;
+  border: 1px solid rgb(255, 90, 48);
+  border-radius: 4px;
+}
+
+.pricing .pricing-modal__close {
+  color: rgb(154, 156, 165);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.pricing .pricing-modal__close:hover,
+.pricing .pricing-modal__close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pricing .pricing-modal__title-wrapper {
+  background: rgb(255, 90, 48);
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+
+.pricing .pricing-modal__title {
+  font-weight: 700;
+  font-size: 27px;
+  color: rgb(255, 255, 255);
+}
+
+.pricing .pricing-modal__content-wrapper {
+  padding: 24px 58px 40px 58px;
+}
+
+.pricing .pricing-modal__price {
+  font-size: 20px;
+  color: rgb(30, 33, 44);
+  margin-bottom: 24px;
+}
+
+.pricing .pricing-modal__price span {
+  font-weight: 700;
+  font-size: 46px;
+  color: rgb(255, 90, 48);
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.pricing .pricing-modal__list {
+  text-align: start;
+}
+
+.pricing .pricing-modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.pricing .pricing-modal__item img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.pricing .pricing-modal__item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(66, 69, 81);
+}
+
+.pricing .pricing-modal__text-spec {
+  color: rgb(154, 156, 165);
+}
+
+.pricing .pricing-modal .pricing__table-btn {
+  margin-bottom: 0;
 }
 
 .clients-des__inner {
@@ -2433,6 +2581,21 @@ body {
 .map__china,
 .map__australia {
   position: absolute;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.map__canada:hover,
+.map__usa:hover,
+.map__germany:hover,
+.map__ukraine:hover,
+.map__china:hover,
+.map__australia:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .map__canada {
@@ -3023,6 +3186,41 @@ body {
   font-size: 16px;
   margin-bottom: 29px;
   font-family: Ubuntu, sans-serif;
+  color: rgb(30, 33, 44);
+}
+
+.comment-form__input::-webkit-input-placeholder {
+  font-size: 16px;
+  margin-bottom: 29px;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.comment-form__input::-moz-placeholder {
+  font-size: 16px;
+  margin-bottom: 29px;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.comment-form__input:-ms-input-placeholder {
+  font-size: 16px;
+  margin-bottom: 29px;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.comment-form__input::-ms-input-placeholder {
+  font-size: 16px;
+  margin-bottom: 29px;
+  font-family: Ubuntu, sans-serif;
+  color: #9a9ca5;
+}
+
+.comment-form__input::placeholder {
+  font-size: 16px;
+  margin-bottom: 29px;
+  font-family: Ubuntu, sans-serif;
   color: #9a9ca5;
 }
 
@@ -3201,7 +3399,12 @@ body {
           box-sizing: border-box;
   border: 1px solid rgb(215, 218, 221);
   font-size: 16px;
-  color: rgb(66, 69, 81);
+  color: rgb(30, 33, 44);
+}
+
+.contact-form__select > option:nth-child(1) {
+  font-size: 16px;
+  color: rgb(154, 156, 165);
 }
 
 .contact-form__select-wrapper {

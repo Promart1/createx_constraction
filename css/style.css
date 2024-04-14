@@ -123,6 +123,11 @@ textarea {
   background: rgb(255, 66, 66);
 }
 
+.disabled-link {
+  pointer-events: none;
+  cursor: default;
+}
+
 .hero__inner {
   position: relative;
 }
@@ -2465,6 +2470,14 @@ textarea {
   margin-top: 10px;
 }
 
+.team {
+  position: relative;
+}
+
+.team .services-content__left {
+  z-index: 0;
+}
+
 .team__inner {
   margin-top: 185px;
   text-align: center;
@@ -2578,6 +2591,10 @@ textarea {
 .map__main-img {
   margin-top: 60px;
   position: relative;
+}
+
+.map__list {
+  max-width: 1920px;
 }
 
 .map__canada,
@@ -4565,6 +4582,12 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1260px) {
+  .services__bg {
+    height: 1200px;
+  }
+}
+
 @media only screen and (max-width: 1250px) {
   .values__inner {
     margin-top: 100px;
@@ -4593,10 +4616,6 @@ textarea {
 
   .services__inner {
     top: 55%;
-  }
-
-  .services__bg {
-    height: 1200px;
   }
 
   .portfolio__title {
@@ -5654,7 +5673,7 @@ textarea {
 
   .clients__inner {
     margin-top: 80px;
-    padding-top: 0;
+    padding-top: 40px;
   }
 
   .clients__title {
@@ -5668,6 +5687,10 @@ textarea {
   .figures__bg {
     top: -130%;
     left: -90%;
+  }
+
+  .clients-des__inner {
+    margin-top: 0;
   }
 
   .quotation__block {
@@ -5764,6 +5787,7 @@ textarea {
 
   .portfolio__swiper-button-prev {
     top: var(--swiper-navigation-top-offset, 80%);
+    left: var(--swiper-navigation-sides-offset, 0);
   }
 
   .portfolio__swiper-button-next {

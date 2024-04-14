@@ -943,5 +943,11 @@
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 120px;
+
+    @include respond-to($s-tablet) {
+        margin-top: 0;
+        
+    
+      }
   }
 }

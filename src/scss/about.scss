@@ -381,6 +381,12 @@
 }
 
 .team {
+position: relative;
+
+.services-content__left {
+z-index: 0;
+}
+
   &__inner {
     margin-top: 185px;
     text-align: center;
@@ -496,9 +502,9 @@
   //   display: none;
   // }
 
-  // &__list {
-  //     display: none;
-  // }
+  &__list {
+      max-width: 1920px;
+  }
 
   &__canada,
   &__usa,

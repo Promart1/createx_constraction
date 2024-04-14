@@ -601,96 +601,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const form = document.getElementById('form');
-
-//     form.addEventListener('submit', e => {
-//         e.preventDefault(); // Prevent form submission for now
-//         validateForm();
-//     });
-
-//     function validateForm() {
-//         const name = document.getElementById('app-name');
-//         const phone = document.getElementById('app-phone');
-//         const email = document.getElementById('app-email');
-//         const message = document.getElementById('app-message');
-//         const agree = document.getElementById('agree');
-
-//         validateInput(name, 'Name');
-//         validatePhone(phone);
-//         validateEmail(email);
-//         validateInput(message, 'Message');
-//         validateCheckbox(agree);
-//     }
-
-//     function validateInput(inputElement, fieldName) {
-//         const value = inputElement.value.trim();
-//         const errorElement = inputElement.nextElementSibling;
-
-//         if (value === '') {
-//             displayError(inputElement, errorElement, `${fieldName} is required`);
-//         } else {
-//             clearError(inputElement, errorElement);
-//         }
-//     }
-
-//     function validatePhone(phoneElement) {
-//         const phone = phoneElement.value.trim();
-//         const errorElement = phoneElement.nextElementSibling;
-
-//         if (phone === '') {
-//             displayError(phoneElement, errorElement, 'Phone is required');
-//         } else if (!/^\d{10}$/.test(phone)) {
-//             displayError(phoneElement, errorElement, 'Invalid phone number');
-//         } else {
-//             clearError(phoneElement, errorElement);
-//         }
-//     }
-
-//     function validateEmail(emailElement) {
-//         const email = emailElement.value.trim();
-//         const errorElement = emailElement.nextElementSibling;
-
-//         if (email === '') {
-//             displayError(emailElement, errorElement, 'Email is required');
-//         } else if (!isValidEmail(email)) {
-//             displayError(emailElement, errorElement, 'Invalid email format');
-//         } else {
-//             clearError(emailElement, errorElement);
-//         }
-//     }
-
-//     function validateCheckbox(checkboxElement) {
-//         const errorElement = checkboxElement.nextElementSibling.nextElementSibling; // Access the error div
-
-//         if (!checkboxElement.checked) {
-//             displayError(null, errorElement, 'Please agree to the terms');
-//         } else {
-//             clearError(null, errorElement);
-//         }
-//     }
-
-//     function isValidEmail(email) {
-//         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//         return re.test(email);
-//     }
-
-//     function displayError(inputElement, errorElement, message) {
-//         errorElement.textContent = message;
-//         if (inputElement) {
-//             inputElement.classList.add('error');
-//         }
-//         errorElement.style.display = 'block';
-//     }
-
-//     function clearError(inputElement, errorElement) {
-//         if (inputElement) {
-//             inputElement.classList.remove('error');
-//         }
-//         errorElement.textContent = '';
-//         errorElement.style.display = 'none';
-//     }
-// });
 
 
 
@@ -730,26 +640,7 @@ menuShadow.addEventListener('click', (event) => {
 
 /////validation form
 
-// import validator from 'validator';
 
-// const form = document.querySelector("#form");
-// const nameInput = document.querySelector("#name");
-// const phoneInput = document.querySelector("#phone");
-// const messageInput = document.querySelector("#message");
-// const emailInput = document.querySelector("#email");
-
-// let isFormValid = false;
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-
-//   validateInputs()
-// })
-
-// const validateInputs = () => {
-//   const name = validator.isEmpty(nameInput.value.trim());
-//   console.log(name)
-// }
 
 
 
@@ -779,21 +670,7 @@ var mySwiper = new Swiper('#hero-swiper', {
 
 //////video
 
-// const videoImg = document.querySelector('.video__img');
-// const videoFrame = document.querySelector('.video__block');
-// const videoBtn = document.querySelector('.video__btn');
 
-// videoImg.addEventListener('click', () => {
-//   videoImg.classList.toggle('video__img-hidden');
-//   videoFrame.classList.toggle('video__frame');
-//    videoBtn.classList.toggle('video__img-hidden');
-// });
-
-// videoBtn.addEventListener('click', () => {
-//   videoBtn.classList.toggle('video__img-hidden');
-//   videoFrame.classList.toggle('video__frame');
-//   videoImg.classList.toggle('video__img-hidden');
-// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const videoImg = document.querySelector('.video__img');
@@ -912,54 +789,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navBlockTitles = document.querySelectorAll('.footer__nav-block-title');
-//     const plusIcons = document.querySelectorAll('.footer__plus');
-
-//     navBlockTitles.forEach(function(navBlockTitle, index) {
-//         navBlockTitle.addEventListener('click', function() {
-//             const subMenu = this.nextElementSibling;
-//             subMenu.classList.toggle('open');
-
-            
-//             const plusIcon = plusIcons[index];
-//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
-//         });
-//     });
-
-//     plusIcons.forEach(function(plusIcon, index) {
-//         plusIcon.addEventListener('click', function() {
-//             const subMenu = this.nextElementSibling;
-//             subMenu.classList.toggle('open');
-
-           
-//             const navBlockTitle = navBlockTitles[index];
-//             navBlockTitle.nextElementSibling.classList.toggle('open');
-//             plusIcon.src = subMenu.classList.contains('open') ? 'img/icons/minus.svg' : 'img/icons/plus.svg';
-//         });
-//     });
-// });
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const footerNavBlocks = document.querySelectorAll('.footer__nav-mob');
-
-//     footerNavBlocks.forEach(function(navBlock) {
-//         const plusIcon = navBlock.querySelector('.footer__plus');
-//         const navBlockTitle = navBlock.querySelector('.footer__nav-block-title');
-//         const subMenu = navBlock.querySelector('.footer__sub-menu');
-
-//         navBlockTitle.addEventListener('click', function() {
-//             subMenu.classList.toggle('open');
-//             plusIcon.classList.toggle('open');
-//         });
-
-//         plusIcon.addEventListener('click', function() {
-//             subMenu.classList.toggle('open');
-//             plusIcon.classList.toggle('open');
-//         });
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const navBlocks = document.querySelectorAll('.footer__nav-item');
@@ -994,62 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const showMoreBtn = document.getElementById('showMoreBtn');
-//     const portfolioItems = document.querySelectorAll('.work-portfolio__item');
-//     let visibleItems; // Початкова кількість видимих елементів
 
-//     // Оновлення кількості видимих елементів при завантаженні сторінки
-//     updateVisibleItems();
-
-//     // Додати обробник події для кліку на кнопку "Показати більше"
-//     showMoreBtn.addEventListener('click', function(event) {
-//         event.preventDefault(); // Зупиняємо стандартну дію кнопки
-        
-//         // Збільшити кількість видимих елементів на itemsToShow
-//         visibleItems += getItemsToShow();
-//         // Показати елементи
-//         showItems();
-//     });
-
-//     // Функція, яка визначає кількість елементів, які треба показати в залежності від розміру вікна
-//     function getItemsToShow() {
-//         if (window.innerWidth > 1024) {
-//             return 9; // Для десктопу
-//         } else if (window.innerWidth > 768) {
-//             return 6; // Для планшету
-//         } else {
-//             return 3; // Для мобільного телефона
-//         }
-//     }
-
-//     // Функція, яка оновлює кількість видимих елементів при завантаженні сторінки або зміні розміру вікна
-//     function updateVisibleItems() {
-//         visibleItems = getItemsToShow();
-//         showItems();
-//     }
-
-//     // Функція, яка показує або приховує елементи відповідно до кількості visibleItems
-//     function showItems() {
-//         portfolioItems.forEach(function(item, index) {
-//             if (index < visibleItems) {
-//                 item.style.display = 'flex'; // Показуємо елемент
-//             } else {
-//                 item.style.display = 'none'; // Ховаємо елемент
-//             }
-//         });
-
-//         // Перевіряємо, чи всі елементи показані, якщо так, то ховаємо кнопку "Показати більше"
-//         if (visibleItems >= portfolioItems.length) {
-//             showMoreBtn.style.display = 'none';
-//         } else {
-//             showMoreBtn.style.display = 'flex';
-//         }
-//     }
-
-//     // Додати обробник події для зміни розміру вікна
-//     window.addEventListener('resize', updateVisibleItems);
-// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -1334,64 +1108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /////validation
 
-// const form = document.getElementById('form');
-// const username = document.getElementById('app-name');
-// const phone = document.getElementById('app-phone');
-// const email = document.getElementById('app-email');
 
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-//     validateInputs();
-// });
-
-// const setError = (element, message) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = message;
-//     inputControl.classList.add('error');
-//     inputControl.classList.remove('success');
-// };
-
-// const setSuccess = element => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = 'Looks good';
-//     inputControl.classList.add('success');
-//     inputControl.classList.remove('error');
-// };
-
-// const isValidEmail = email => {
-//     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-//     return re.test(email);
-// };
-
-// const validateInputs = () => {
-//     const nameValue = username.value.trim();
-//     const phoneValue = phone.value.trim();
-//     const emailValue = email.value.trim();
-
-//     if (nameValue === '') {
-//         setError(username, 'Name is required');
-//     } else {
-//         setSuccess(username);
-//     }
-
-//     if (emailValue === '') {
-//         setError(email, 'Email is required');
-//     } else if (!isValidEmail(emailValue)) {
-//         setError(email, 'Provide a valid email address');
-//     } else {
-//         setSuccess(email);
-//     }
-
-//     if (phoneValue === '') {
-//         setError(phone, 'Phone is required');
-//     } else {
-//         setSuccess(phone);
-//     }
-// };
 
 
  document.addEventListener('DOMContentLoaded', function() {

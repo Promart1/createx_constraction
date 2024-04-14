@@ -104,3 +104,9 @@ textarea {
         }
     }
 }
+
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+    
+}

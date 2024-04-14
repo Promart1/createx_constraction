@@ -890,15 +890,18 @@
     // &__btn:hover {
     //   background: $danger;
     // }
+@media only screen and (max-width: 1260px) {
+    &__bg {
+            height: 1200px;
+        }
+}
+
 
     @include respond-to($l-desktop) {
         &__inner {
             top: 55%;
         }
 
-        &__bg {
-            height: 1200px;
-        }
     }
 
     @include respond-to($m-tablet) {
@@ -1103,6 +1106,7 @@ box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
 
         &__swiper-button-prev {
             top: var(--swiper-navigation-top-offset, 90%);
+           
         }
 
         &__swiper-button-next {
@@ -1131,6 +1135,7 @@ box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
 
         &__swiper-button-prev {
             top: var(--swiper-navigation-top-offset, 80%);
+            left: var(--swiper-navigation-sides-offset, 0);
         }
 
         &__swiper-button-next {
@@ -1183,7 +1188,7 @@ box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
     @include respond-to($s-tablet) {
         &__inner {
             margin-top: 80px;
-            padding-top: 0;
+            padding-top: 40px;
         }
 
         &__title {
